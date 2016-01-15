@@ -142,7 +142,7 @@ A way to create 3D interactive images is with the package \ttfamily rgl: \normal
 \begin{lstlisting}
 library(rgl)
 data(quakes)
-plot3d(x=quakes[, 2], y=quakes[, 1], z=quakes[, 3], xlab="Longitude", ylab="Latitude", zlab="Depth")
+plot3d(x=quakes$long, y=quakes$lat, z=quakes$depth, xlab="Longitude", ylab="Latitude", zlab="Depth")
 \end{lstlisting}
 %g <- expand.grid(x = 1:10, y = 5:15)
 %g$z<-g$x^2
@@ -168,6 +168,7 @@ To save a static plot in \ttfamily R \normalfont as a PDF, use function \ttfamil
 \begin{lstlisting}
 # To save the image to the desktop:
 setwd("~/Desktop")
+pdf("filename.pdf")
 wireframe(volcano, col.regions = terrain.colors(100), asp = 1, color.key=TRUE, drape=TRUE, scales = list(arrows = FALSE))
 dev.off()
 \end{lstlisting}
@@ -185,7 +186,7 @@ To save a dynamic plot in \ttfamily R \normalfont as a PDF, use function \ttfami
 # To save the image to the desktop:
 setwd("~/Desktop")
 # Step 1: Produce the 3D image:
-plot3d(x=quakes[, 2], y=quakes[, 1], z=quakes[, 3], xlab="Longitude", ylab="Latitude", zlab="Depth")
+plot3d(x=quakes$long, y=quakes$lat, z=quakes$depth, xlab="Longitude", ylab="Latitude", zlab="Depth")
 # Step 2: Can rotate before taking a snapshot:
 rgl.snapshot("quakes.png")
 \end{lstlisting}

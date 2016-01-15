@@ -20,7 +20,7 @@
 \beamer@sectionintoc {5}{Simulation Plots}{60}{0}{5}
 \beamer@subsectionintoc {5}{1}{Preliminaries}{61}{0}{5}
 \beamer@subsectionintoc {5}{2}{Performing the Simulation and Visualizing the Results}{62}{0}{5}
-\beamer@subsectionintoc {5}{3}{Exercise V}{68}{0}{5}
+\beamer@subsectionintoc {5}{3}{Exercise V: Homework Problem}{68}{0}{5}
 \beamer@sectionintoc {6}{Solutions to the Exercises}{69}{0}{6}
 \beamer@subsectionintoc {6}{1}{Solution to Exercise I}{70}{0}{6}
 \beamer@subsectionintoc {6}{2}{Solution to Exercise II}{71}{0}{6}

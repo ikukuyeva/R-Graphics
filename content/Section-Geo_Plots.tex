@@ -17,8 +17,8 @@ To overlay a map to a plot containing latitude and longitude, load the package \
 \begin{lstlisting}
 data(quakes)
 library(maps)
-plot(quakes[, 2], quakes[, 1], xlim=c(100, 190), ylim=c(-40, 0))
-map("world", add=T)
+plot(quakes$long, quakes$lat, xlim=c(100, 190), ylim=c(-40, 0))
+map("world", add=TRUE)
 \end{lstlisting}
 
      \column{0.50\textwidth}
@@ -36,19 +36,19 @@ map("world", add=T)
 To include information on magnitude of earthquake, use \ttfamily cex \normalfont argument of the \ttfamily plot() \normalfont function:
 \begin{lstlisting}
 # Step 1: Recode magnitude to have 3 categories only
-ind<-which(mag<5)
-ind2<-which(mag<6 & mag >=5)
-ind3<-which(mag>=6)
-color<-rep(NA, length(mag))
+ind<-which(quakes$mag<5)
+ind2<-which(quakes$mag<6 & quakes$mag >=5)
+ind3<-which(quakes$mag>=6)
+color<-rep(NA, length(quakes$mag))
 color[ind]<-1; color[ind2]<-2; color[ind3]<-3
 
 
 
 
 # Step 2: Plot
-plot(quakes[, 2], quakes[, 1], cex=color, pch=19, col=color, xlim=c(100, 190), ylim=c(-40,0), xlab="Longitude", ylab="Latitude")
+plot(quakes$long, quakes$lat, cex=color, pch=19, col=color, xlim=c(100, 190), ylim=c(-40,0), xlab="Longitude", ylab="Latitude")
 legend("topright", pch=19, col=1:3, c("Mag<5", "5<=Mag<6", "Mag>6"), pt.cex=1:3)
-map("world", add=T)
+map("world", add=TRUE)
 \end{lstlisting}
 
 \newpage
@@ -76,7 +76,7 @@ m <- map('world',plot=FALSE)
 # Projection is Azimuthal with equal-area
 map('world',proj='azequalarea',orient=c(longitude=0,latitude=180,rotation=0))
 map.grid(m,col=2)
-points(mapproject(list(y=quakes[which(quakes[, 4]>=6), 1],x=quakes[which(quakes[, 4]>=6), 2])),col="blue",pch="x",cex=2)
+points(mapproject(list(                       y=quakes$lat[which(quakes$mag>=6)],       x=quakes$long[which(quakes$mag>=6)])),    col="blue",pch="x",cex=2)
 \end{lstlisting}
 
 \newpage
@@ -91,7 +91,7 @@ points(mapproject(list(y=quakes[which(quakes[, 4]>=6), 1],x=quakes[which(quakes[
 	\begin{alertblock}{Bonus Feature of the \ttfamily maps \normalfont package:}
 		To determine in which part of the world the observations are (based on latitude and longitude), use \ttfamily map.where(): \normalfont
 			\begin{lstlisting}		
-				in.what.country<-map.where(database="world", quakes[, 2], quakes[, 1])
+				in.what.country<-map.where(database="world", quakes$long, quakes$lat)
 			\end{lstlisting}
 		To determine which observations are in the ocean: \normalfont
 			\begin{lstlisting}

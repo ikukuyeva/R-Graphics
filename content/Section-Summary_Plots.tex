@@ -129,7 +129,7 @@ legend("topright", c("Mean", "Median"), pch = 16, col = c("blue", "red"))
 One of the methods to test for normality of a variable is to look at the histogram (the sample density is in red, the theoretical normal density in blue):
   		\begin{lstlisting}
 data(presidents)		
-hist(presidents, prob=T, ylim=c(0, 0.04), breaks=20)
+hist(presidents, prob=TRUE, ylim=c(0, 0.04), breaks=20)
 lines(density(presidents, na.rm=TRUE), col="red")
 mu<-mean(presidents, na.rm=TRUE) 
 sigma<-sd(presidents, na.rm=TRUE)
@@ -152,10 +152,10 @@ Another method of looking at the distribution of the data is via boxplot:
   		\begin{lstlisting}
 data(quakes)		
 # Subset the magnitude:
-ind<-ifelse(quakes[, 4]<4.5, 0, 1)
+ind<-ifelse(quakes$mag<4.5, 0, 1)
 ind<-as.factor(ind)
 library(lattice)
-bwplot(quakes[, 4]~ind, xlab=c("Mag<4.5", "Mag>=4.5"), ylab="Magnitude")
+bwplot(quakes$mag~ind, xlab=c("Mag<4.5", "Mag>=4.5"), ylab="Magnitude")
 		\end{lstlisting}
 %boxplot(quakes[, 4]~ind)
 %# Alternatively:

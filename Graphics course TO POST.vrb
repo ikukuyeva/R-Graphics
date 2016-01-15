@@ -1,0 +1,20 @@
+\frametitle {Online Resources for R}
+%\begin{description}[<+->]
+%\item[Download R:] http://cran.stat.ucla.edu/
+%\item[Search Engine for R:] http://rseek.org
+%\item[R Reference Card:] http://cran.r-project.org/doc/contrib/Short-refcard.pdf
+%\item[UCLA Statistics Information Portal:] http://info.stat.ucla.edu/grad/
+%\item[UCLA Statistical Consulting Center:] http://scc.stat.ucla.edu
+%\end{description}
+
+\begin{description}
+\item[Download R:] {\small \textit{\urlwofont{http://cran.stat.ucla.edu/}}}
+\item[Search Engine for R:] {\small \textit{\urlwofont{http://rseek.org}}}
+\item[R Reference Card:] $\:$ \\
+{\small \textit{\urlwofont{http://cran.r-project.org/doc/contrib/Short-refcard.pdf}}}
+\item[R Graphics Gallery:] $\:$ \\
+ {\small \textit{\urlwofont{http://research.stowers-institute.org/efg/R/}}}
+\item [R Graph Gallery:]  {\small \textit{\urlwofont{http://addictedtor.free.fr/graphiques/}}}
+\item[UCLA Statistics Information Portal:] \small{ \textit{\urlwofont{http://info.stat.ucla.edu/grad/}}}
+\item[UCLA Statistical Consulting Center:] \small{ \textit{\urlwofont{http://scc.stat.ucla.edu}}}
+\end{description}
