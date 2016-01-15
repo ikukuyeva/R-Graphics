@@ -1,0 +1,143 @@
+\ProvidesPackage{beamerouterthemeSCC}
+% ----------------------------------------------------------------------
+% Unofficial UCLA SCC Latex Beamer Outer Theme
+% Adapted by Denise Ferrari  <denise@stat.ucla.edu>
+% Date: 03/17/2009
+% ----------------------------------------------------------------------
+%  Copyright 2003 by Till Tantau <tantau@users.sourceforge.net>.
+%  This program can be redistributed and/or modified under the terms
+%  of the GNU Public License, version 2.
+% ----------------------------------------------------------------------
+% ----------------------------------------------------------------------
+%  To use the SCC outer theme, place this style file in 
+%  the same folder as your tex file
+% ----------------------------------------------------------------------
+% ----------------------------------------------------------------------
+
+% Color definitions
+\setbeamercolor{section in head/foot}{parent=palette tertiary}
+\setbeamercolor{subsection in head/foot}{parent=palette secondary}
+\setbeamercolor{author in head/foot}{parent=subsection in head/foot}
+\setbeamercolor{title in head/foot}{parent=section in head/foot}
+
+% Footline
+\def\beamer@theme@footline@empty{}
+\def\beamer@theme@footline@authorinstitute{
+  \defbeamertemplate*{footline}{SCC theme}
+  {%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+      \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+      \hfill%
+      {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+    \end{beamercolorbox}
+  }
+}
+\def\beamer@theme@footline@authortitle{
+  \defbeamertemplate*{footline}{SCC theme}
+  {%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+      \leavevmode{\usebeamerfont{title in head/foot}\insertshorttitle}%
+      \hfill%
+      {\usebeamerfont{author in head/foot}\usebeamercolor[fg]{author in head/foot}\insertshortauthor}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+    \end{beamercolorbox}
+  }
+}
+\def\beamer@theme@footline@institutetitle{
+  \defbeamertemplate*{footline}{SCC theme}
+  {%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+      \leavevmode{\usebeamerfont{title in head/foot}\insertshorttitle}%
+      \hfill%
+      {\usebeamerfont{institute in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+    \end{beamercolorbox}
+  }
+}
+\def\beamer@theme@footline@authorinstitutetitle{
+  \defbeamertemplate*{footline}{SCC theme}
+  {%
+    \begin{beamercolorbox}[colsep=1.5pt]{upper separation line foot}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{author in head/foot}%
+      \leavevmode{\usebeamerfont{author in head/foot}\insertshortauthor}%
+%      \hfill%
+%      {\usebeamerfont{author in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{title in head/foot}%
+      {\usebeamerfont{title in head/foot}\insertshorttitle}%
+      \hfill%
+      {\usebeamerfont{author in head/foot}\usebeamercolor[fg]{institute in head/foot}\insertshortinstitute}%
+    \end{beamercolorbox}%
+    \begin{beamercolorbox}[colsep=1.5pt]{lower separation line foot}
+    \end{beamercolorbox}
+  }
+}
+\newif\ifbeamer@theme@subsection
+\beamer@theme@subsectiontrue
+
+\DeclareOptionBeamer{footline}{\csname beamer@theme@footline@#1\endcsname}
+\DeclareOptionBeamer{subsection}[true]{\csname beamer@theme@subsection#1\endcsname}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+
+% Head
+\defbeamertemplate*{headline}{SCC theme}
+{%
+  \begin{beamercolorbox}[colsep=1.5pt]{upper separation line head}
+  \end{beamercolorbox}
+  \begin{beamercolorbox}{section in head/foot}
+    \vskip2pt\insertnavigation{\paperwidth}\vskip2pt
+  \end{beamercolorbox}%
+  \ifbeamer@theme@subsection%
+    \begin{beamercolorbox}[colsep=1.5pt]{middle separation line head}
+    \end{beamercolorbox}
+    \begin{beamercolorbox}[ht=2.5ex,dp=1.125ex,%
+      leftskip=.3cm,rightskip=.3cm plus1fil]{subsection in head/foot}
+      \usebeamerfont{subsection in head/foot}\insertsubsectionhead
+    \end{beamercolorbox}%
+  \fi%
+  \begin{beamercolorbox}[colsep=1.5pt]{lower separation line head}
+  \end{beamercolorbox}
+}
+
+% Title Page
+\defbeamertemplate*{title page}{SCC theme}
+{
+  \pgfdeclarehorizontalshading{separationtitlepagelineshading}{0.5pt}{color(0cm)=(bg); color(0.5\textwidth)=(structure.fg); color(\textwidth)=(bg)}
+  \begin{center}
+   \ifx\insertinstitute\@empty \else\small\insertinstitute\\[\baselineskip]\fi
+    \pgfuseshading{separationtitlepagelineshading}
+    \vskip\baselineskip
+    \large\inserttitle
+    \vskip\baselineskip
+     \footnotesize\insertauthor\\[\baselineskip]
+     
+     \pgfuseshading{separationtitlepagelineshading}
+     \vskip\baselineskip
+%     \insertlogo
+    \vskip\baselineskip
+      \footnotesize\insertdate
+    \vfill
+    
+  \end{center}
+}
+
+\mode
+<all>

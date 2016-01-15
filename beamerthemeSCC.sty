@@ -1,0 +1,37 @@
+% ----------------------------------------------------------------------
+% Unofficial UCLA SCC Latex Beamer Theme
+% Adapted by Denise Ferrari  <denise@stat.ucla.edu>
+% Date: 03/17/2009
+% ----------------------------------------------------------------------
+%  Copyright 2007 by Till Tantau 
+% This file may be distributed and/or modified
+% 1. under the LaTeX Project Public License and/or
+% 2. under the GNU Public License.
+% ----------------------------------------------------------------------
+% ----------------------------------------------------------------------
+% To use the SCC theme, place this style file in 
+% the same folder as your tex file and include the 
+% following line:
+%
+% \usetheme[compress]{SCC}
+%
+% ----------------------------------------------------------------------
+% ----------------------------------------------------------------------
+
+\ProvidesPackage{beamerthemeSCC}
+\DeclareOptionBeamer{compress}{\beamer@compresstrue}
+\ProcessOptionsBeamer
+
+\mode<presentation>
+\useinnertheme{rounded}
+\usecolortheme{SCC}
+\useoutertheme[footline=authorinstitutetitle]{SCC}
+
+\setbeamertemplate{blocks}[rounded][shadow=true]
+%\setbeamertemplate{navigation symbols}{}
+
+\setbeamerfont{block title}{size={}}
+\logo{\includegraphics[height=0.9cm]{logo.png}}
+
+\mode
+<all>

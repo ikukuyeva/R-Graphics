@@ -1,0 +1,82 @@
+% --------------------------------------------------- Slide --
+\section{Structuring a Presentation: The Interactive Global Structure}
+% ------------------------------------------------------------
+\subsection{Adding Hyperlinks and Buttons}
+% ------------------------------------------------------------
+\begin{frame}
+  \begin{itemize}
+  \item<1-> First item.
+  \item<2-> Second item.
+  \item<3-> Third item.
+  \end{itemize}
+  \hyperlink{jumptosecond}{\beamergotobutton{Jump to second slide}}
+  \hypertarget<2>{jumptosecond}{}
+\end{frame}
+% --------------------------------------------------- Slide --
+\begin{frame}[label=threeitems]
+  \begin{itemize}
+  \item<1-> First item.
+  \item<2-> Second item.
+  \item<3-> Third item.
+  \end{itemize}
+  \hyperlink{threeitems<2>}{\beamergotobutton{Jump to second slide}}
+\end{frame}
+% --------------------------------------------------- Slide --
+\frame{
+  \begin{theorem}
+    ...
+  \end{theorem}
+  \begin{overprint}
+  \onslide<1>
+    \hfill\hyperlinkframestartnext{\beamerskipbutton{Skip proof}}
+  \onslide<2>
+    \begin{proof}
+      ...
+    \end{proof}
+  \end{overprint}
+}
+ --------------------------------------------------- Slide --
+ \frame<1>[label=mytheorem]
+ {
+   \begin{theorem}
+     ...
+   \end{theorem}
+   \begin{overprint}
+   \onslide<1>
+     \hfill\hyperlink{mytheorem<2>}{\beamergotobutton{Go to proof details}}
+   \onslide<2>
+     \begin{proof}
+       ...
+     \end{proof}
+     \hfill\hyperlink{mytheorem<1>}{\beamerreturnbutton{Return}}
+   \end{overprint}
+ }
+ \appendix
+ \againframe<2>{mytheorem}
+ % --------------------------------------------------- Slide --
+ \subsection{Repeating a Frame at a Later Point}
+ % ------------------------------------------------------------
+ \frame<1-2>[label=myframe]
+ {
+   \begin{itemize}
+   \item<alert@1> First subject.
+   \item<alert@2> Second subject.
+   \item<alert@3> Third subject.
+   \end{itemize}
+ }
+ \frame
+ {
+   Some stuff explaining more on the second matter.
+ }
+ \againframe<3>{myframe}
+ --------------------------------------------------- Slide --
+ \subsection{Adding Anticipated Zooming}
+ % ------------------------------------------------------------
+ \begin{frame}<1>[label=zooms]
+   \frametitle<1>{A Complicated Picture}
+   \framezoom<1><2>[border](0cm,0cm)(2cm,1.5cm)
+   \framezoom<1><3>[border](1cm,3cm)(2cm,1.5cm)
+   \framezoom<1><4>[border](3cm,2cm)(3cm,2cm)
+   \pgfimage[height=8cm]{complicatedimagefilename}
+ \end{frame}
+ \againframe<2->[plain]{zooms}

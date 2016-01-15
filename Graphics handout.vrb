@@ -1,0 +1,18 @@
+\frametitle {Simulations IV}
+To visually see its maximum and minimum values, look at the contours of the function:
+
+    \begin{columns}[Tc]
+      \column{0.36\textwidth}
+
+\begin{lstlisting}
+contour(x,y,z)
+\end{lstlisting}
+
+     \column{0.64\textwidth}
+   \begin{figure}[ht]
+       \begin{center}
+\includegraphics[scale=0.33]{images/contourSim.pdf}
+\end{center}
+   \end{figure}
+\end{columns}
+

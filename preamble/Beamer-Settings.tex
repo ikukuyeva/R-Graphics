@@ -1,0 +1,43 @@
+% *****************************************
+% Theme
+% *****************************************
+
+% use compress for circles to be on one line
+% o/w take it out
+% \usetheme{SCC}
+\usetheme[compress]{SCC}
+
+% *****************************************
+% Packages
+% *****************************************
+\usepackage{graphicx}
+\usepackage{amssymb}
+\usepackage{epstopdf}
+\usepackage{listings}
+\usepackage{hyperref}
+\usepackage{color}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+\lstloadlanguages{R} 
+\lstset{language=R,%
+basicstyle=\small\ttfamily,%
+stringstyle=\color{magenta},%
+showstringspaces=false,%
+keywordstyle=\color{red}\mdseries\underbar,%
+commentstyle=\color{green}\textsl,%
+xleftmargin=4ex,%
+numbers=left,%
+numberstyle=\tiny,%
+stepnumber=1,%
+firstnumber=1,%
+breaklines=true%
+}
+
+% *****************************************
+% New Commands
+% *****************************************
+\newcommand{\urlwofont}[1]
+{
+\urlstyle{same}\url{#1}
+}
