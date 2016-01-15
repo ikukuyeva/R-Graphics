@@ -93,6 +93,32 @@ plot(name.zoo)
  \frametitle{Multivariate Time Series Plots}
  \framesubtitle{Approach 2}
 
+To plot more than variables one at a time, use \ttfamily xyplot()\normalfont :
+		\begin{lstlisting}
+library(lattice)
+data(EuStockMarkets)
+z<-EuStockMarkets
+xyplot(z, screen=c(1,1,2,2), col=1:4, strip=FALSE, key=list(title="EuStockMarkets", 
+columns=2, points=FALSE, lines=TRUE, col=1:4, txt=list(colnames(z))))
+		\end{lstlisting}
+\end{frame}
+
+\begin{frame}[fragile]
+ \frametitle{Multivariate Time Series Plots}
+ \framesubtitle{Approach 2}
+
+       \begin{center}
+         \includegraphics[width=0.58\textwidth]{images/xyplotLattice.pdf}
+        \end{center}
+\end{frame}
+
+
+
+%%%%%% New frame
+\begin{frame}[fragile]
+ \frametitle{Multivariate Time Series Plots}
+ \framesubtitle{Approach 3}
+
 To plot more than variables one at a time, use \ttfamily mvtsplot()\normalfont :\footnote{For documentation, go to: www.jstatsoft.org/v25/c01/paper}
 %\begin{itemize}
 %	\item For documentation, go to: www.jstatsoft.org/v25/c01/paper 
@@ -119,26 +145,26 @@ mvtsplot(name.zoo)
         \end{center}
 \end{frame}
 
-%%%%%% New frame
-\begin{frame}[allowframebreaks, fragile]
- \frametitle{Multivariate Time Series Plots}
- \framesubtitle{Approach 3}
-
-To plot more than variables one at a time, use \ttfamily xyplot(): \normalfont
-		\begin{lstlisting}
-# After processing data as in Approach 1
-# load both libraries:
-library(lattice)
-library(zoo)
-data(EuStockMarkets)
-z<-EuStockMarkets
-xyplot(z, screen = c(1,1,2,2), col = 1:4, strip = FALSE, key = list(title="EuStockMarkets", columns=2, points=FALSE, lines=TRUE, col=1:4, text=list(colnames(z))))
-		\end{lstlisting}
-
-       \begin{center}
-         \includegraphics[scale=0.37]{images/stockPlot2.pdf}
-        \end{center}
-\end{frame}
+%%%%%%% New frame
+%\begin{frame}[allowframebreaks, fragile]
+% \frametitle{Multivariate Time Series Plots}
+% \framesubtitle{Approach 3}
+%
+%To plot more than variables one at a time, use \ttfamily xyplot(): \normalfont
+%		\begin{lstlisting}
+%# After processing data as in Approach 1
+%# load both libraries:
+%library(lattice)
+%library(zoo)
+%data(EuStockMarkets)
+%z<-EuStockMarkets
+%xyplot(z, screen = c(1,1,2,2), col = 1:4, strip = FALSE, key = list(title="EuStockMarkets", columns=2, points=FALSE, lines=TRUE, col=1:4, text=list(colnames(z))))
+%		\end{lstlisting}
+%
+%       \begin{center}
+%         \includegraphics[scale=0.37]{images/stockPlot2.pdf}
+%        \end{center}
+%\end{frame}
 %
 %%___________________________________
 %\subsection{Customizing Plots}
@@ -160,8 +186,8 @@ xyplot(z, screen = c(1,1,2,2), col = 1:4, strip = FALSE, key = list(title="EuSto
 
 % ------------------------------------------------------------
 % ------------------------------------------------------------
-\subsection{Exercise II}
+\subsection{Exercise I}
 \begin{frame}
-	\frametitle{Exercise II}
+	\frametitle{Exercise I}
 	Analyze the \ttfamily EuStockMarkets \normalfont data using the function \ttfamily mtvsplot()\normalfont.  What stands out and why?
 \end{frame}

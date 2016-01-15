@@ -1,0 +1,16 @@
+#####################################################################
+### Introduction to Exploratory Data Analysis with R
+### Presenter: Irina Kukuyeva
+### August 17, 2010
+#####################################################################
+
+### Solution to Exercise I
+source("http://www.biostat.jhsph.edu/~rpeng/RR/mvtsplot/mvtsplot.R")
+mvtsplot(EuStockMarkets)
+
+### Solution to Exercise II
+ozone<-read.table("http://www.ats.ucla.edu/stat/R/faq/ozone.csv", sep=",", header=T)
+attach(ozone)
+plot(Lat~Lon, xlim=c(-125, -113), ylim=c(31,42))
+map("state", "california", add=TRUE)
+

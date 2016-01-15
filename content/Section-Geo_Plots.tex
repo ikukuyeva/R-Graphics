@@ -36,12 +36,12 @@ map("world", add=T)
 To include information on magnitude of earthquake, use \ttfamily cex \normalfont argument of the \ttfamily plot() \normalfont function:
 \begin{lstlisting}
 # Step 1: Recode magnitude to have 3 categories only
-ind<-rep(NA, length(mag))
 ind<-which(mag<5)
 ind2<-which(mag<6 & mag >=5)
 ind3<-which(mag>=6)
 color<-rep(NA, length(mag))
 color[ind]<-1; color[ind2]<-2; color[ind3]<-3
+
 
 
 
@@ -106,9 +106,9 @@ points(mapproject(list(y=quakes[which(quakes[, 4]>=6), 1],x=quakes[which(quakes[
 
 % ------------------------------------------------------------
 % ------------------------------------------------------------
-\subsection{Exercise III}
+\subsection{Exercise II}
 \begin{frame}
-	\frametitle{Exercise III}
+	\frametitle{Exercise II}
 	For the \ttfamily ozone \normalfont data set \footnote{\ttfamily http://www.ats.ucla.edu/stat/R/faq/ozone.csv\normalfont}, determine the region of the world that the observations correspond to and overlay the appropriate map.
 \end{frame}
 %ozone<-read.table("http://www.ats.ucla.edu/stat/R/faq/ozone.csv", sep=",", header=T)
