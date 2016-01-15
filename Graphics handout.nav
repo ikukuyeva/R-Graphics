@@ -135,40 +135,49 @@
 \headcommand {\beamer@subsectionentry {0}{4}{3}{56}{\ttfamily rgl \normalfont library}}\headcommand {\beamer@subsectionpages {51}{55}}
 \headcommand {\slideentry {4}{3}{1}{56/56}{\ttfamily rgl \normalfont library}{0}}
 \headcommand {\beamer@framepages {56}{56}}
-\headcommand {\beamer@subsectionentry {0}{4}{4}{57}{Exercise IV}}\headcommand {\beamer@subsectionpages {56}{56}}
-\headcommand {\slideentry {4}{4}{1}{57/57}{Exercise IV}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{4}{57}{Saving Plots as a PDF}}\headcommand {\beamer@subsectionpages {56}{56}}
+\headcommand {\slideentry {4}{4}{1}{57/57}{Saving Plots as a PDF}{0}}
 \headcommand {\beamer@framepages {57}{57}}
-\headcommand {\sectionentry {5}{Simulation Plots}{58}{Simulation Plots}{0}}
-\headcommand {\beamer@sectionpages {47}{57}}
-\headcommand {\beamer@subsectionpages {57}{57}}
-\headcommand {\slideentry {5}{0}{2}{58/58}{}{0}}
+\headcommand {\slideentry {4}{4}{2}{58/58}{Saving Plots as a PDF}{0}}
 \headcommand {\beamer@framepages {58}{58}}
-\headcommand {\beamer@subsectionentry {0}{5}{1}{59}{Preliminaries}}\headcommand {\beamer@subsectionpages {58}{58}}
-\headcommand {\slideentry {5}{1}{1}{59/59}{Preliminaries}{0}}
+\headcommand {\beamer@subsectionentry {0}{4}{5}{59}{Exercise IV}}\headcommand {\beamer@subsectionpages {57}{58}}
+\headcommand {\slideentry {4}{5}{1}{59/59}{Exercise IV}{0}}
 \headcommand {\beamer@framepages {59}{59}}
-\headcommand {\beamer@subsectionentry {0}{5}{2}{60}{Performing the Simulation and Visualizing the Results}}\headcommand {\beamer@subsectionpages {59}{59}}
-\headcommand {\slideentry {5}{2}{1}{60/60}{Performing the Simulation and Visualizing the Results}{0}}
+\headcommand {\sectionentry {5}{Simulation Plots}{60}{Simulation Plots}{0}}
+\headcommand {\beamer@sectionpages {47}{59}}
+\headcommand {\beamer@subsectionpages {59}{59}}
+\headcommand {\slideentry {5}{0}{2}{60/60}{}{0}}
 \headcommand {\beamer@framepages {60}{60}}
-\headcommand {\slideentry {5}{2}{2}{61/61}{Performing the Simulation and Visualizing the Results}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{1}{61}{Preliminaries}}\headcommand {\beamer@subsectionpages {60}{60}}
+\headcommand {\slideentry {5}{1}{1}{61/61}{Preliminaries}{0}}
 \headcommand {\beamer@framepages {61}{61}}
-\headcommand {\slideentry {5}{2}{3}{62/62}{Performing the Simulation and Visualizing the Results}{0}}
+\headcommand {\beamer@subsectionentry {0}{5}{2}{62}{Performing the Simulation and Visualizing the Results}}\headcommand {\beamer@subsectionpages {61}{61}}
+\headcommand {\slideentry {5}{2}{1}{62/62}{Performing the Simulation and Visualizing the Results}{0}}
 \headcommand {\beamer@framepages {62}{62}}
-\headcommand {\beamer@subsectionentry {0}{5}{3}{63}{Exercise V}}\headcommand {\beamer@subsectionpages {60}{62}}
-\headcommand {\slideentry {5}{3}{1}{63/63}{Exercise V}{0}}
-\headcommand {\beamer@framepages {63}{63}}
-\headcommand {\sectionentry {6}{Links}{64}{Useful Links for R}{0}}
-\headcommand {\beamer@sectionpages {58}{63}}
-\headcommand {\beamer@subsectionpages {63}{63}}
-\headcommand {\slideentry {6}{0}{2}{64/64}{}{0}}
+\headcommand {\slideentry {5}{2}{1}{62/63}{Performing the Simulation and Visualizing the Results}{0}}
+\headcommand {\beamer@framepages {62}{63}}
+\headcommand {\slideentry {5}{2}{2}{64/64}{Performing the Simulation and Visualizing the Results}{0}}
 \headcommand {\beamer@framepages {64}{64}}
-\headcommand {\beamer@partpages {1}{67}}
-\headcommand {\beamer@subsectionpages {64}{67}}
-\headcommand {\beamer@sectionpages {64}{67}}
-\headcommand {\beamer@documentpages {67}}
-\headcommand {\def \inserttotalframenumber {67}}
-\headcommand {\slideentry {6}{0}{3}{65/65}{}{0}}
-\headcommand {\beamer@framepages {65}{65}}
-\headcommand {\slideentry {6}{0}{4}{66/66}{}{0}}
+\headcommand {\slideentry {5}{2}{2}{64/65}{Performing the Simulation and Visualizing the Results}{0}}
+\headcommand {\beamer@framepages {64}{65}}
+\headcommand {\slideentry {5}{2}{3}{66/66}{Performing the Simulation and Visualizing the Results}{0}}
 \headcommand {\beamer@framepages {66}{66}}
-\headcommand {\slideentry {6}{0}{5}{67/67}{}{0}}
-\headcommand {\beamer@framepages {67}{67}}
+\headcommand {\slideentry {5}{2}{3}{66/67}{Performing the Simulation and Visualizing the Results}{0}}
+\headcommand {\beamer@framepages {66}{67}}
+\headcommand {\beamer@subsectionentry {0}{5}{3}{68}{Exercise V}}\headcommand {\beamer@subsectionpages {62}{67}}
+\headcommand {\slideentry {5}{3}{1}{68/68}{Exercise V}{0}}
+\headcommand {\beamer@framepages {68}{68}}
+\headcommand {\beamer@partpages {1}{71}}
+\headcommand {\beamer@subsectionpages {69}{71}}
+\headcommand {\beamer@sectionpages {69}{71}}
+\headcommand {\beamer@documentpages {71}}
+\headcommand {\def \inserttotalframenumber {71}}
+\headcommand {\sectionentry {6}{Links}{69}{Useful Links for R}{0}}
+\headcommand {\beamer@sectionpages {60}{68}}
+\headcommand {\beamer@subsectionpages {68}{68}}
+\headcommand {\slideentry {6}{0}{2}{69/69}{}{0}}
+\headcommand {\beamer@framepages {69}{69}}
+\headcommand {\slideentry {6}{0}{3}{70/70}{}{0}}
+\headcommand {\beamer@framepages {70}{70}}
+\headcommand {\slideentry {6}{0}{4}{71/71}{}{0}}
+\headcommand {\beamer@framepages {71}{71}}

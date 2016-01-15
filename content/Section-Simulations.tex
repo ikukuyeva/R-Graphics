@@ -49,8 +49,10 @@ outer(x,y,fcn)
 %%%%%%%%%%%%%%%%%%%
 \subsection{Performing the Simulation and Visualizing the Results}
 %________________________________
-\begin{frame}[fragile]
+\begin{frame}[fragile, allowframebreaks]
 \frametitle{Simulations}
+\framesubtitle{Visualize with \ttfamily persp() \normalfont}
+
 Suppose we want to know what the function $y\times sin(x)$ looks like:
 
 \begin{lstlisting}
@@ -61,11 +63,9 @@ f <- function(x,y) { r <- y*sin(x)}
 z <- outer(x,y,f)
 persp(x, y, z, col = "lightblue", shade = 0.1, ticktype = "detailed", expand=0.7)
 \end{lstlisting}
-\end{frame}
+% set.seed(04262010)
 
-%______
-\begin{frame}[fragile]
-\frametitle{Simulations}
+\newpage
    \begin{figure}[ht]
        \begin{center}
 		\includegraphics[width = 3.5in]{images/simulation.png}
@@ -74,31 +74,59 @@ persp(x, y, z, col = "lightblue", shade = 0.1, ticktype = "detailed", expand=0.7
 \end{frame}
 
 %_________
-\begin{frame}[fragile]
+\begin{frame}[fragile, allowframebreaks]
 \frametitle{Simulations}
+\framesubtitle{Visualize with \ttfamily image() \normalfont}
+
 To visually see its maximum and minimum values, look at the contours of the function:
 
-    \begin{columns}[Tc]
-      \column{0.36\textwidth}
-
 \begin{lstlisting}
-contour(x,y,z)
+# Format the data appropriate for the image() function:
+x.seq<-seq(from=range(x)[1], to=range(x)[2], length=100)
+y.seq<-seq(from=range(y)[1], to=range(y)[2], length=100)
+n1<-length(x.seq)
+n2<-length(y.seq)
+mat1<-matrix(z, nrow=n1, ncol=n2, byrow=FALSE)
+image(x.seq, y.seq, mat1)
+contour(x.seq, y.seq, mat1, add=TRUE)
 \end{lstlisting}
 
-     \column{0.64\textwidth}
+\newpage
    \begin{figure}[ht]
        \begin{center}
-		\includegraphics[scale=0.33]{images/contourSim.pdf}
+		\includegraphics[width = 2.5in]{images/contourSim.pdf}
 	\end{center}
    \end{figure}
-\end{columns}
-
 \end{frame}
-
 
 %g <- expand.grid(x = 1:10, y = 5:15)
 %g$z<-g$x^2
 %wireframe(g$z~g$x*g$y, scales = list(arrows = FALSE), drape = TRUE, colorkey = TRUE)
+
+\begin{frame}[fragile, allowframebreaks]
+\frametitle{Simulations}
+\framesubtitle{Visualize with \ttfamily plot3d() \normalfont}
+
+Suppose we want to know what the function $y\times sin(x)$ looks like with a dynamic plot:
+
+\begin{lstlisting}
+# Sample from the random uniform:
+x1 <- sort(runif(10000, min=0, max=10))
+y1 <- x1+runif(1000, min=0,  max=20)
+z1<-y1*sin(x1)
+librray(rgl)
+plot3d(x1, y1, z1)
+
+\end{lstlisting}
+
+\newpage
+   \begin{figure}[ht]
+       \begin{center}
+		\includegraphics[width = 2in]{images/plot3dSin1.png}
+		\includegraphics[width = 2in]{images/plot3dSin2.png}
+	\end{center}
+   \end{figure}
+\end{frame}
 
 
 % ------------------------------------------------------------
