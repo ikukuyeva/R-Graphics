@@ -1,4 +1,4 @@
-This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.28)  17 AUG 2009 21:20
+This is pdfTeXk, Version 3.1415926-1.40.9 (Web2C 7.5.7) (format=pdflatex 2008.12.28)  11 NOV 2009 17:44
 entering extended mode
 \write18 enabled.
  %&-line parsing enabled.
@@ -835,7 +835,7 @@ Package hyperref Warning: Option `pdfauthor' has already been used,
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 12.
 
-<logo.png, id=140, 384.43625pt x 242.9075pt>
+<logo.png, id=194, 384.43625pt x 242.9075pt>
 File: logo.png Graphic file (type png)
  <use logo.png> [1{/usr/local/texlive/2008/texmf-var/fonts/map/pdftex/updmap/pd
 ftex.map}
@@ -846,226 +846,213 @@ File: logo.png Graphic file (type png)
  <use logo.png> [2
 
 ])
-(./content/Section-Prelim.tex (./Graphics course.toc)
-
-Class beamer Warning: Frame text is shrunk by a factor of 19.10553 percent inst
-ead of 6 percent on input line 20.
-
+(./content/Section-Prelim.tex
 File: logo.png Graphic file (type png)
-<use logo.png> [3
+ <use logo.png> [3
 
-]
-Overfull \hbox (4.75394pt too wide) in paragraph at lines 45--45
-\OT1/cmtt/m/n/10 http://cran.r-project.org/ 
- []
-
-LaTeX Font Info:    Try loading font information for U+msa on input line 45.
-(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
-File: umsa.fd 2002/01/19 v2.2g AMS font definitions
-)
-LaTeX Font Info:    Try loading font information for U+msb on input line 45.
-
-(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsb.fd
-File: umsb.fd 2002/01/19 v2.2g AMS font definitions
-)
-<images/Rwindow.png, id=423, 845.1575pt x 842.14626pt>
-File: images/Rwindow.png Graphic file (type png)
-
-<use images/Rwindow.png>
-File: logo.png Graphic file (type png)
- <use logo.png> [4
-
- <./images/Rwindow.png>]
-\openout3 = `"Graphics course.vrb"'.
-
-
-(./Graphics course.vrb <images/help.png, id=497, 834.11626pt x 730.73pt>
-File: images/help.png Graphic file (type png)
-
-<use images/help.png>
-Overfull \hbox (18.43869pt too wide) in paragraph at lines 13--14
- [] 
- []
-
-)
-Overfull \vbox (7.79796pt too high) detected at line 71
- []
-
-File: logo.png Graphic file (type png)
-<use logo.png> [5
-
- <./images/help.png>]
-\openout3 = `"Graphics course.vrb"'.
-
- (./Graphics course.vrb)
-File: logo.png Graphic file (type png)
- <use logo.png>
-[6
-
-]
-\openout3 = `"Graphics course.vrb"'.
-
- (./Graphics course.vrb)
-File: logo.png Graphic file (type png)
- <use logo.png> [7
-
-]
-\openout3 = `"Graphics course.vrb"'.
-
- (./Graphics course.vrb)
-File: logo.png Graphic file (type png)
-
-<use logo.png> [8
-
-]) (./content/Section-Summary_Plots.tex (./Graphics course.toc)
+])
+(./content/Section-Summary_Plots.tex (./Graphics course.toc)
 
 Class beamer Warning: Frame text is shrunk by a factor of 13.17139 percent inst
 ead of 6 percent on input line 5.
 
 File: logo.png Graphic file (type png)
-<use logo.png> [9
+<use logo.png> [4
 
 ]
 \openout3 = `"Graphics course.vrb"'.
 
- (./Graphics course.vrb)
+ (./Graphics course.vrb
+LaTeX Font Info:    Try loading font information for U+msa on input line 5.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsa.fd
+File: umsa.fd 2002/01/19 v2.2g AMS font definitions
+)
+LaTeX Font Info:    Try loading font information for U+msb on input line 5.
+
+(/usr/local/texlive/2008/texmf-dist/tex/latex/amsfonts/umsb.fd
+File: umsb.fd 2002/01/19 v2.2g AMS font definitions
+)
+<images/Unplot3.pdf, id=658, 505.89pt x 505.89pt>
+File: images/Unplot3.pdf Graphic file (type pdf)
+ <use images/Unplot3.pdf>)
 File: logo.png Graphic file (type png)
- <use logo.png> [10
+
+<use logo.png> [5
 
 ]
+Overfull \vbox (11.25784pt too high) detected at line 32
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png> [6
+
+
+ <./images/Unplot3.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
-
-(./Graphics course.vrb
-<images/segbarplot.pdf, id=945, 299.22765pt x 270.85263pt>
+ (./Graphics course.vrb
+<images/segbarplot.pdf, id=851, 299.22765pt x 270.85263pt>
 File: images/segbarplot.pdf Graphic file (type pdf)
 
 <use images/segbarplot.pdf>)
 File: logo.png Graphic file (type png)
- <use logo.png> [11
+ <use logo.png> [7
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [8
+
 
  <./images/segbarplot.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
-
-(./Graphics course.vrb <images/pie.pdf, id=1083, 177.98883pt x 222.48604pt>
-File: images/pie.pdf Graphic file (type pdf)
-
-<use images/pie.pdf>)
+ (./Graphics course.vrb
+<images/dotPlot.pdf, id=1105, 505.89pt x 505.89pt>
+File: images/dotPlot.pdf Graphic file (type pdf)
+ <use images/dotPlot.pdf>)
 File: logo.png Graphic file (type png)
- <use logo.png> [12
 
- <./images/pie.pdf>]
+<use logo.png> [9
+
+]
+Overfull \vbox (10.69434pt too high) detected at line 96
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png> [10
+
+
+ <./images/dotPlot.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
-
-(./Graphics course.vrb
-<images/hist_meanmed.pdf, id=1174, 334.69641pt x 285.68506pt>
+ (./Graphics course.vrb
+<images/hist_meanmed.pdf, id=1295, 505.89pt x 505.89pt>
 File: images/hist_meanmed.pdf Graphic file (type pdf)
 
 <use images/hist_meanmed.pdf>
-Overfull \hbox (5.12334pt too wide) in paragraph at lines 16--17
+Overfull \hbox (8.19455pt too wide) in paragraph at lines 16--17
  [] 
  []
 
 )
 File: logo.png Graphic file (type png)
- <use logo.png> [13
+ <use logo.png> [11
 
  <./images/hist_meanmed.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/presHist.pdf, id=1323, 505.89pt x 505.89pt>
+<images/presHist.pdf, id=1394, 505.89pt x 505.89pt>
 File: images/presHist.pdf Graphic file (type pdf)
  <use images/presHist.pdf>)
 File: logo.png Graphic file (type png)
 
-<use logo.png> [14
+<use logo.png> [12
 
 ]
-Overfull \vbox (7.89653pt too high) detected at line 160
+Overfull \vbox (7.89653pt too high) detected at line 144
  []
 
 File: logo.png Graphic file (type png)
-<use logo.png> [15
+<use logo.png> [13
 
 
  <./images/presHist.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/bwplot.pdf, id=1470, 505.89pt x 505.89pt>
+<images/bwplot.pdf, id=1586, 505.89pt x 505.89pt>
 File: images/bwplot.pdf Graphic file (type pdf)
  <use images/bwplot.pdf>)
 File: logo.png Graphic file (type png)
 
-<use logo.png> [16
+<use logo.png> [14
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [17
+ <use logo.png> [15
 
 
  <./images/bwplot.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
 
-(./Graphics course.vrb <images/beanPlot.pdf, id=1617, 505.89pt x 505.89pt>
+(./Graphics course.vrb <images/beanPlot.pdf, id=1777, 505.89pt x 505.89pt>
 File: images/beanPlot.pdf Graphic file (type pdf)
 
 <use images/beanPlot.pdf>)
 File: logo.png Graphic file (type png)
- <use logo.png> [18
+ <use logo.png> [16
 
 ]
-Overfull \vbox (26.62686pt too high) detected at line 200
+Overfull \vbox (26.62686pt too high) detected at line 184
  []
 
 File: logo.png Graphic file (type png)
-<use logo.png> [19
+<use logo.png> [17
 
 
  <./images/beanPlot.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/scatterPlot.pdf, id=1764, 505.89pt x 505.89pt>
+<images/scatterPlot.pdf, id=1967, 505.89pt x 505.89pt>
 File: images/scatterPlot.pdf Graphic file (type pdf)
 
 <use images/scatterPlot.pdf>)
 File: logo.png Graphic file (type png)
- <use logo.png> [20
+ <use logo.png> [18
 
 ]
-Overfull \vbox (5.12103pt too high) detected at line 217
+Overfull \vbox (5.12103pt too high) detected at line 201
  []
 
 File: logo.png Graphic file (type png)
-<use logo.png> [21
+<use logo.png> [19
 
 
  <./images/scatterPlot.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/qq.png, id=1910, 744.7825pt x 707.64375pt>
+<images/qq.png, id=2158, 744.7825pt x 707.64375pt>
 File: images/qq.png Graphic file (type png)
  <use images/qq.png>)
 File: logo.png Graphic file (type png)
 
-<use logo.png> [22
+<use logo.png> [20
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [23
+ <use logo.png> [21
 
 
  <./images/qq.png (PNG copy)>]
 \openout3 = `"Graphics course.vrb"'.
 
 
-(./Graphics course.vrb <images/xyPlot.pdf, id=2052, 505.89pt x 505.89pt>
+(./Graphics course.vrb
+<images/beanplotSurvey.png, id=2344, 700.6175pt x 630.355pt>
+File: images/beanplotSurvey.png Graphic file (type png)
+
+<use images/beanplotSurvey.png>)
+File: logo.png Graphic file (type png)
+ <use logo.png> [22
+
+]
+Overfull \vbox (3.22339pt too high) detected at line 238
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png> [23
+
+
+ <./images/beanplotSurvey.png (PNG copy)>]
+\openout3 = `"Graphics course.vrb"'.
+
+
+(./Graphics course.vrb <images/xyPlot.pdf, id=2529, 505.89pt x 505.89pt>
 File: images/xyPlot.pdf Graphic file (type pdf)
 
 <use images/xyPlot.pdf>)
@@ -1073,7 +1060,7 @@ File: logo.png Graphic file (type png)
  <use logo.png> [24
 
 ]
-Overfull \vbox (0.58641pt too high) detected at line 281
+Overfull \vbox (0.58641pt too high) detected at line 286
  []
 
 File: logo.png Graphic file (type png)
@@ -1084,7 +1071,7 @@ File: logo.png Graphic file (type png)
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/xyPlotInd.png, id=2200, 747.79375pt x 672.5125pt>
+<images/xyPlotInd.png, id=2722, 747.79375pt x 672.5125pt>
 File: images/xyPlotInd.png Graphic file (type png)
 
 <use images/xyPlotInd.png>)
@@ -1096,27 +1083,20 @@ File: logo.png Graphic file (type png)
  <use logo.png> [27
 
 
- <./images/xyPlotInd.png (PNG copy)>]) (./content/Section-TS_Plots.tex
-(./Graphics course.toc)
+ <./images/xyPlotInd.png (PNG copy)>]
 File: logo.png Graphic file (type png)
  <use logo.png> [28
+
+]) (./content/Section-TS_Plots.tex
+(./Graphics course.toc)
+File: logo.png Graphic file (type png)
+ <use logo.png> [29
 
 ]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/daxPlot.pdf, id=2422, 505.89pt x 505.89pt>
-File: images/daxPlot.pdf Graphic file (type pdf)
- <use images/daxPlot.pdf>)
-File: logo.png Graphic file (type png)
-
-<use logo.png> [29
-
- <./images/daxPlot.pdf>]
-\openout3 = `"Graphics course.vrb"'.
-
- (./Graphics course.vrb
-<images/Mtvsplot1.pdf, id=2496, 722.7pt x 433.62pt>
+<images/Mtvsplot1.pdf, id=3101, 722.7pt x 433.62pt>
 File: images/Mtvsplot1.pdf Graphic file (type pdf)
  <use images/Mtvsplot1.pdf>)
 File: logo.png Graphic file (type png)
@@ -1138,50 +1118,61 @@ File: logo.png Graphic file (type png)
  <./images/Mtvsplot1.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
- (./Graphics course.vrb
-<images/Mtvsplot2.pdf, id=2715, 722.7pt x 433.62pt>
-File: images/Mtvsplot2.pdf Graphic file (type pdf)
- <use images/Mtvsplot2.pdf>)
+ (./Graphics course.vrb)
 File: logo.png Graphic file (type png)
+
 <use logo.png> [33
 
 ]
-Overfull \vbox (7.89764pt too high) detected at line 114
+\openout3 = `"Graphics course.vrb"'.
+
+ (./Graphics course.vrb
+<images/Mtvsplot2.pdf, id=3479, 722.7pt x 433.62pt>
+File: images/Mtvsplot2.pdf Graphic file (type pdf)
+ <use images/Mtvsplot2.pdf>)
+Overfull \vbox (14.89764pt too high) detected at line 120
  []
 
 File: logo.png Graphic file (type png)
 <use logo.png> [34
 
-
  <./images/Mtvsplot2.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/stockPlot2.png, id=2861, 1038.88126pt x 783.92876pt>
-File: images/stockPlot2.png Graphic file (type png)
+<images/stockPlot2.pdf, id=3576, 505.89pt x 505.89pt>
+File: images/stockPlot2.pdf Graphic file (type pdf)
 
-<use images/stockPlot2.png>)
+<use images/stockPlot2.pdf>)
 File: logo.png Graphic file (type png)
  <use logo.png> [35
 
 ]
-Overfull \vbox (20.61641pt too high) detected at line 136
+Overfull \vbox (10.69862pt too high) detected at line 141
  []
 
 File: logo.png Graphic file (type png)
 <use logo.png> [36
 
 
- <./images/stockPlot2.png>]) (./content/Section-Geo_Plots.tex (./Graphics cours
-e.toc)
+ <./images/stockPlot2.pdf>]
 File: logo.png Graphic file (type png)
  <use logo.png> [37
+
+])
+(./content/Section-Geo_Plots.tex (./Graphics course.toc)
+
+Class beamer Warning: Frame text is shrunk by a factor of 8.21075 percent inste
+ad of 6 percent on input line 5.
+
+File: logo.png Graphic file (type png)
+<use logo.png> [38
 
 ]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/Fuji.pdf, id=3083, 1084.05pt x 722.7pt>
+<images/Fuji.pdf, id=3959, 1084.05pt x 722.7pt>
 File: images/Fuji.pdf Graphic file (type pdf)
  <use images/Fuji.pdf>
 Overfull \hbox (2.84521pt too wide) in paragraph at lines 16--17
@@ -1190,25 +1181,48 @@ Overfull \hbox (2.84521pt too wide) in paragraph at lines 16--17
 
 )
 File: logo.png Graphic file (type png)
- <use logo.png> [38
+ <use logo.png> [39
 
  <./images/Fuji.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/Fuji2.pdf, id=3158, 505.89pt x 505.89pt>
+<images/fujiColor.pdf, id=4057, 722.7pt x 433.62pt>
+File: images/fujiColor.pdf Graphic file (type pdf)
+ <use images/fujiColor.pdf>)
+File: logo.png Graphic file (type png)
+<use logo.png> [40
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [41
+
+
+]
+Overfull \vbox (5.64142pt too high) detected at line 59
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png> [42
+
+
+ <./images/fujiColor.pdf>]
+\openout3 = `"Graphics course.vrb"'.
+
+ (./Graphics course.vrb
+<images/Fuji2.pdf, id=4339, 505.89pt x 505.89pt>
 File: images/Fuji2.pdf Graphic file (type pdf)
  <use images/Fuji2.pdf>)
 File: logo.png Graphic file (type png)
 
-<use logo.png> [39
+<use logo.png> [43
 
 ]
-Overfull \vbox (22.69434pt too high) detected at line 56
+Overfull \vbox (22.69434pt too high) detected at line 87
  []
 
 File: logo.png Graphic file (type png)
-<use logo.png> [40
+<use logo.png> [44
 
 
  <./images/Fuji2.pdf>]
@@ -1217,18 +1231,26 @@ File: logo.png Graphic file (type png)
  (./Graphics course.vrb)
 File: logo.png Graphic file (type png)
 
-<use logo.png> [41
+<use logo.png> [45
 
-]) (./content/Section-3D_Plots.tex (./Graphics course.toc)
+]
 File: logo.png Graphic file (type png)
+ <use logo.png> [46
 
-<use logo.png> [42
+]) (./content/Section-3D_Plots.tex
+(./Graphics course.toc)
+
+Class beamer Warning: Frame text is shrunk by a factor of 13.17139 percent inst
+ead of 6 percent on input line 6.
+
+File: logo.png Graphic file (type png)
+<use logo.png> [47
 
 ]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/wireframe.pdf, id=3455, 505.89pt x 505.89pt>
+<images/wireframe.pdf, id=4819, 505.89pt x 505.89pt>
 File: images/wireframe.pdf Graphic file (type pdf)
 
 <use images/wireframe.pdf>
@@ -1237,30 +1259,101 @@ Overfull \hbox (2.84521pt too wide) in paragraph at lines 18--19
  []
 
 )
+Overfull \vbox (9.57121pt too high) detected at line 31
+ []
+
 File: logo.png Graphic file (type png)
- <use logo.png> [43
+<use logo.png> [48
 
  <./images/wireframe.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/levelplot.png, id=3531, 676.5275pt x 597.23125pt>
-File: images/levelplot.png Graphic file (type png)
+<images/levelplot.pdf, id=4915, 505.89pt x 505.89pt>
+File: images/levelplot.pdf Graphic file (type pdf)
 
-<use images/levelplot.png>
-Overfull \hbox (2.84521pt too wide) in paragraph at lines 15--16
+<use images/levelplot.pdf>
+Overfull \hbox (2.84521pt too wide) in paragraph at lines 14--15
+ [] 
+ []
+
+)
+Overfull \vbox (2.64795pt too high) detected at line 51
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png> [49
+
+ <./images/levelplot.pdf>]
+\openout3 = `"Graphics course.vrb"'.
+
+ (./Graphics course.vrb
+<images/image.pdf, id=5012, 505.89pt x 505.89pt>
+File: images/image.pdf Graphic file (type pdf)
+ <use images/image.pdf>
+Overfull \hbox (8.99232pt too wide) in paragraph at lines 16--17
+ [] 
+ []
+
+)
+Overfull \vbox (2.64795pt too high) detected at line 73
+ []
+
+File: logo.png Graphic file (type png)
+<use logo.png> [50
+
+ <./images/image.pdf>]
+\openout3 = `"Graphics course.vrb"'.
+
+ (./Graphics course.vrb
+<images/ggplotPlot1.pdf, id=5108, 1445.4pt x 722.7pt>
+File: images/ggplotPlot1.pdf Graphic file (type pdf)
+
+<use images/ggplotPlot1.pdf>
+Overfull \hbox (10.69911pt too wide) in paragraph at lines 29--30
  [] 
  []
 
 )
 File: logo.png Graphic file (type png)
- <use logo.png> [44
+ <use logo.png> [51
 
- <./images/levelplot.png (PNG copy)>]
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [52
+
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [53
+
+
+ <./images/ggplotPlot1.pdf>]
+\openout3 = `"Graphics course.vrb"'.
+
+ (./Graphics course.vrb
+<images/ggplotPlot2.pdf, id=5392, 1445.4pt x 722.7pt>
+File: images/ggplotPlot2.pdf Graphic file (type pdf)
+
+<use images/ggplotPlot2.pdf>
+Overfull \hbox (10.69911pt too wide) in paragraph at lines 15--16
+ [] 
+ []
+
+)
+File: logo.png Graphic file (type png)
+ <use logo.png> [54
+
+]
+File: logo.png Graphic file (type png)
+ <use logo.png> [55
+
+
+ <./images/ggplotPlot2.pdf>]
 \openout3 = `"Graphics course.vrb"'.
 
 
-(./Graphics course.vrb <images/Fiji_RGL.png, id=3602, 522.95375pt x 509.905pt>
+(./Graphics course.vrb <images/Fiji_RGL.png, id=5582, 522.95375pt x 509.905pt>
 File: images/Fiji_RGL.png Graphic file (type png)
 
 <use images/Fiji_RGL.png>
@@ -1270,84 +1363,132 @@ Overfull \hbox (2.84521pt too wide) in paragraph at lines 18--19
 
 )
 File: logo.png Graphic file (type png)
- <use logo.png> [45
+ <use logo.png> [56
 
- <./images/Fiji_RGL.png (PNG copy)>])
-(./content/Section-Simulations.tex (./Graphics course.toc)
+ <./images/Fiji_RGL.png (PNG copy)>]
 File: logo.png Graphic file (type png)
  <use logo.png>
-[46
+[57
+
+]) (./content/Section-Simulations.tex (./Graphics course.toc)
+
+Class beamer Warning: Frame text is shrunk by a factor of 8.21075 percent inste
+ad of 6 percent on input line 6.
+
+File: logo.png Graphic file (type png)
+<use logo.png> [58
 
 ]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb)
 File: logo.png Graphic file (type png)
- <use logo.png> [47
+ <use logo.png> [59
 
 ]
 \openout3 = `"Graphics course.vrb"'.
 
- (./Graphics course.vrb)
-File: logo.png Graphic file (type png)
 
-<use logo.png> [48
+(./Graphics course.vrb)
+File: logo.png Graphic file (type png)
+ <use logo.png> [60
 
 ]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/simulation.png, id=3894, 728.7225pt x 507.8975pt>
+<images/simulation.png, id=6054, 728.7225pt x 507.8975pt>
 File: images/simulation.png Graphic file (type png)
 
 <use images/simulation.png>)
 File: logo.png Graphic file (type png)
- <use logo.png> [49
+ <use logo.png> [61
 
  <./images/simulation.png (PNG copy)>]
 \openout3 = `"Graphics course.vrb"'.
 
  (./Graphics course.vrb
-<images/contourSim.pdf, id=3966, 505.89pt x 505.89pt>
+<images/contourSim.pdf, id=6148, 505.89pt x 505.89pt>
 File: images/contourSim.pdf Graphic file (type pdf)
 
 <use images/contourSim.pdf>)
-Overfull \vbox (13.66647pt too high) detected at line 89
+Overfull \vbox (13.66647pt too high) detected at line 96
  []
 
 File: logo.png Graphic file (type png)
-<use logo.png> [50
+<use logo.png> [62
 
- <./images/contourSim.pdf>]) (./content/Section-Resources.tex (./Graphics cours
-e.toc)
+ <./images/contourSim.pdf>]
 File: logo.png Graphic file (type png)
- <use logo.png> [51
+ <use logo.png> [63
+
+])
+(./content/Section-Solutions.tex (./Graphics course.toc)
+
+Class beamer Warning: Frame text is shrunk by a factor of 17.32178 percent inst
+ead of 6 percent on input line 2.
+
+File: logo.png Graphic file (type png)
+<use logo.png> [64
+
+]
+\openout3 = `"Graphics course.vrb"'.
+
+ (./Graphics course.vrb)
+File: logo.png Graphic file (type png)
+ <use logo.png> [65
+
+]
+\openout3 = `"Graphics course.vrb"'.
+
+
+(./Graphics course.vrb)
+File: logo.png Graphic file (type png)
+ <use logo.png> [66
+
+]
+\openout3 = `"Graphics course.vrb"'.
+
+ (./Graphics course.vrb)
+File: logo.png Graphic file (type png)
+
+<use logo.png> [67
+
+]
+\openout3 = `"Graphics course.vrb"'.
+
+ (./Graphics course.vrb)
+File: logo.png Graphic file (type png)
+ <use logo.png> [68
+
+]
+\openout3 = `"Graphics course.vrb"'.
+
+
+(./Graphics course.vrb)
+File: logo.png Graphic file (type png)
+ <use logo.png> [69
+
+]) (./content/Section-Resources.tex
+(./Graphics course.toc)
+File: logo.png Graphic file (type png)
+ <use logo.png> [70
+
+]
+\openout3 = `"Graphics course.vrb"'.
+
+ (./Graphics course.vrb)
+File: logo.png Graphic file (type png)
+
+<use logo.png> [71
 
 ]
 File: logo.png Graphic file (type png)
- <use logo.png> [52
+ <use logo.png> [72
 
 ]
 File: logo.png Graphic file (type png)
-
-<use logo.png> [53
-
-]
-File: logo.png Graphic file (type png)
- <use logo.png> [54
-
-]
-File: logo.png Graphic file (type png)
- <use logo.png> [55
-
-]
-File: logo.png Graphic file (type png)
- <use logo.png>
-[56
-
-]
-File: logo.png Graphic file (type png)
- <use logo.png> [57
+ <use logo.png> [73
 
 ])
 \tf@nav=\write5
@@ -1359,20 +1500,21 @@ File: logo.png Graphic file (type png)
 \tf@snm=\write7
 \openout7 = `"Graphics course.snm"'.
 
- (./Graphics course.aux)
+
+(./Graphics course.aux)
 
 LaTeX Font Warning: Size substitutions with differences
 (Font)              up to 1.0pt have occurred.
 
  ) 
 Here is how much of TeX's memory you used:
- 15495 strings out of 493876
- 270647 string characters out of 1150567
- 490677 words of memory out of 3000000
- 18122 multiletter control sequences out of 10000+50000
- 18763 words of font info for 72 fonts, out of 3000000 for 5000
+ 15581 strings out of 493876
+ 270308 string characters out of 1150567
+ 514375 words of memory out of 3000000
+ 18153 multiletter control sequences out of 10000+50000
+ 17326 words of font info for 67 fonts, out of 3000000 for 5000
  714 hyphenation exceptions out of 8191
- 50i,19n,92p,325b,1996s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 49i,19n,86p,325b,1918s stack positions out of 5000i,500n,10000p,200000b,50000s
 </usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmsltt10.pfb></usr
 /local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmss10.pfb></usr/local/te
 xlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmss12.pfb></usr/local/texlive/200
@@ -1384,9 +1526,9 @@ uesky/cm/cmssi10.pfb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm
 fb></usr/local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmtt12.pfb></usr/
 local/texlive/2008/texmf-dist/fonts/type1/bluesky/cm/cmtt8.pfb></usr/local/texl
 ive/2008/texmf-dist/fonts/type1/bluesky/cm/cmtt9.pfb>
-Output written on "Graphics course.pdf" (57 pages, 4108571 bytes).
+Output written on "Graphics course.pdf" (73 pages, 5099000 bytes).
 PDF statistics:
- 4649 PDF objects out of 5155 (max. 8388607)
- 138 named destinations out of 1000 (max. 131072)
- 379 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 7365 PDF objects out of 7423 (max. 8388607)
+ 175 named destinations out of 1000 (max. 131072)
+ 458 words of extra memory for PDF output out of 10000 (max. 10000000)
 

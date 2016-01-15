@@ -5,28 +5,19 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{3D Plots}
 \subsection{\ttfamily lattice \normalfont library}
-%\begin{frame}
-%\frametitle{3D Plots}
-
-%		- lattice, plot3d ...\\
-%		- changing plotting options \\
-%		- contourplot, wireframe, levelplot \\
-%		-rgl, scatterplot3d \\
-%		
-%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\title{3D Images}
+\frametitle{3D Images with Package \ttfamily lattice \normalfont}
 
-One way to create 3D images is with the package \ttfamily lattice: \normalfont 
+\vspace{0.1in}
+\bf{Method 1:} \normalfont Using \ttfamily wireframe(): \normalfont 
 
     \begin{columns}
       \column{0.50\textwidth}
-\bf{Method 1:} \normalfont Using \ttfamily wireframe(): \normalfont 
 \begin{lstlisting}
 library(lattice)
-wireframe(volcano, color.palette = terrain.colors, asp = 1, color.key=TRUE, drape=TRUE, scales = list(arrows = FALSE))
+wireframe(volcano, col.regions = terrain.colors(100), asp = 1, color.key=TRUE, drape=TRUE, scales = list(arrows = FALSE))
 \end{lstlisting}
 %g <- expand.grid(x = 1:10, y = 5:15)
 %g$z<-g$x^2
@@ -41,33 +32,110 @@ wireframe(volcano, color.palette = terrain.colors, asp = 1, color.key=TRUE, drap
 
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\title{3D Images}
+\frametitle{3D Images with Package \ttfamily lattice \normalfont}
+
+\bf{Method 2:} \normalfont Same image with the \ttfamily levelplot() \normalfont function:
 
     \begin{columns}
       \column{0.50\textwidth}
-\bf{Method 2:} \normalfont Same image with the \ttfamily levelplot(): \normalfont 
-
 \begin{lstlisting}
 library(lattice)
-levelplot(volcano, color.palette = terrain.colors, asp = 1, color.key=TRUE, drape=TRUE, scales = list(arrows = FALSE))
-contour(volcano, add=TRUE, lwd=1.3, labcex=1.3)
+levelplot(volcano, asp=1, col.regions=terrain.colors)
 \end{lstlisting}
 
      \column{0.50\textwidth}
        \begin{center}
-\includegraphics[width = 55mm]{images/levelplot.png}
+\includegraphics[width = 55mm]{images/levelplot.pdf}
+\end{center}
+\end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{3D Images with Package \ttfamily lattice \normalfont}
+
+\bf{Method 3:} \normalfont Same image with the \ttfamily image() \normalfont function:
+    \begin{columns}
+      \column{0.52\textwidth}
+      
+\begin{lstlisting}
+x<-10*(1:nrow(volcano))
+y<-10*(1:ncol(volcano))
+image(x, y, volcano, col = terrain.colors(100), axes = TRUE)
+contour(x, y, volcano, add = TRUE, col = 1)
+\end{lstlisting}
+
+     \column{0.48\textwidth}
+       \begin{center}
+\includegraphics[width = 55mm]{images/image.pdf}
 \end{center}
 \end{columns}
 \end{frame}
 % plot3d(iris)
 
 %%%%%%%%%%%%%%%%%%%%%%%
+\subsection{\ttfamily ggplot2 \normalfont library} 
+%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile, allowframebreaks]
+\frametitle{3D Images with Package \ttfamily ggplot2 \normalfont}
+
+Another way to create 3D images is with the package \ttfamily ggplot2: \normalfont 
+
+%\bf{Method 1:} \normalfont Using \ttfamily wireframe(): \normalfont 
+\begin{lstlisting}
+# Step 1: Load the data
+data(quakes)
+attach(quakes)
+# Step 2: Create a categorical variable for earthquake magnitude
+ind<-rep(NA, length(mag))
+ind<-which(mag<5)
+ind2<-which(mag<6 & mag >=5)
+ind3<-which(mag>=6)
+color<-rep(NA, length(mag))
+color[ind]<-1; color[ind2]<-2; color[ind3]<-3
+color<-as.factor(color)
+
+# Step 3: Plot
+library(ggplot2)
+ggplot(data=quakes, aes(long, lat))+
+	geom_point(aes(long, lat))+
+	borders("world")+
+	coord_cartesian(xlim=c(100,190), ylim=c(-40,0))
+\end{lstlisting}
+
+\newpage
+       \begin{center}
+		\includegraphics[scale=0.22]{images/ggplotPlot1.pdf}
+	\end{center}
+\end{frame}
+
+\begin{frame}[fragile, allowframebreaks]
+\frametitle{3D Images with Package \ttfamily ggplot2 \normalfont}
+
+To include information on magnitude of earthquake, use \ttfamily geom\_point(): \normalfont 
+
+%\bf{Method 1:} \normalfont Using \ttfamily wireframe(): \normalfont 
+\begin{lstlisting}
+ggplot(data=quakes, aes(long, lat))+
+	borders("world")+
+	coord_cartesian(xlim=c(100,190), ylim=c(-40,0))+	
+	geom_point(data=quakes, colour=as.numeric(color), size=2*as.numeric(color))
+\end{lstlisting}
+
+\newpage
+       \begin{center}
+		\includegraphics[scale=0.22]{images/ggplotPlot2.pdf}
+	\end{center}
+\end{frame}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%
 \subsection{\ttfamily rgl \normalfont library} 
 %%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\title{3D Images}
+\frametitle{3D Images with Package \ttfamily rgl \normalfont}
 
-Another way to create 3D images is with the package \ttfamily rgl: \normalfont 
+A way to create 3D interactive images is with the package \ttfamily rgl: \normalfont 
 
     \begin{columns}
       \column{0.50\textwidth}
@@ -90,3 +158,8 @@ plot3d(x=quakes[, 2], y=quakes[, 1], z=quakes[, 3], xlab="Longitude", ylab="Lati
 
 % ------------------------------------------------------------
 % ------------------------------------------------------------
+\subsection{Exercise IV}
+\begin{frame}
+	\frametitle{Exercise IV}
+	Use the \ttfamily rgl \normalfont library to create a 3D plot of the \ttfamily ozone \normalfont data set \footnote{\ttfamily http://www.ats.ucla.edu/stat/R/faq/ozone.csv\normalfont}.
+\end{frame}

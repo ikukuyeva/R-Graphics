@@ -3,9 +3,12 @@
 % ------------------------------------------------------------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\section{Simulations}
+\section{Simulation Plots}
+\subsection{Preliminaries}
+%_______________________
+
 \begin{frame}[fragile]
-\frametitle{Simulations I}
+\frametitle{Simulations}
 \framesubtitle{Preliminaries: The function \ttfamily outer() \normalfont}
 
     \begin{columns}[Tc]
@@ -44,8 +47,10 @@ outer(x,y,fcn)
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%
+\subsection{Performing the Simulation and Visualizing the Results}
+%________________________________
 \begin{frame}[fragile]
-\frametitle{Simulations II}
+\frametitle{Simulations}
 Suppose we want to know what the function $y\times sin(x)$ looks like:
 
 \begin{lstlisting}
@@ -58,8 +63,9 @@ persp(x, y, z, col = "lightblue", shade = 0.1, ticktype = "detailed", expand=0.7
 \end{lstlisting}
 \end{frame}
 
+%______
 \begin{frame}[fragile]
-\frametitle{Simulations III}
+\frametitle{Simulations}
    \begin{figure}[ht]
        \begin{center}
 		\includegraphics[width = 3.5in]{images/simulation.png}
@@ -67,8 +73,9 @@ persp(x, y, z, col = "lightblue", shade = 0.1, ticktype = "detailed", expand=0.7
    \end{figure}
 \end{frame}
 
+%_________
 \begin{frame}[fragile]
-\frametitle{Simulations IV}
+\frametitle{Simulations}
 To visually see its maximum and minimum values, look at the contours of the function:
 
     \begin{columns}[Tc]
@@ -96,3 +103,18 @@ contour(x,y,z)
 
 % ------------------------------------------------------------
 % ------------------------------------------------------------
+\subsection{Exercise V}
+\begin{frame}
+	\frametitle{Exercise V}
+	Visualize the following function:
+	\begin{equation}
+		z \hspace{0.01in} =\hspace{0.01in} \frac{sin(\frac{3}{2}x)}{y}
+	\end{equation}	
+\end{frame}
+
+%# Sample from the random uniform:
+%x <- sort(runif(100, min=0, max=10))
+%y <- x+runif(1)
+%f <- function(x,y) { r <- sin(1.5*x)/y}
+%z <- outer(x,y,f)
+%persp(x, y, z, col = terrain.colors(length(z)/4), shade = 0.1, ticktype = "detailed", expand=0.7)

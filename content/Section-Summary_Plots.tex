@@ -2,61 +2,60 @@
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 
-\section[Summary]{Summary Plots}
+\section[Summary Plots]{Summary Plots}
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\subsection{Preliminaries}
+\subsection{Basic Plots}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile, allowframebreaks]
+  \frametitle{Basic Plot}
+      
+      		\begin{lstlisting}
+			# Step 1: Load the Data
+			library(alr3)
+			data(UN2)
+			attach(UN2)
+			# Step 2: Subset appropriately
+			ind<-which(Purban>50)
+			# Step 3: Plot		
+			plot(logFertility~logPPgdp, xlab="logPPgdp", ylab="logFertility", main="logGDP vs logFertility Plot")
+			points(logFertility[ind]~logPPgdp[ind], col="red", pch=19)
+			legend("topright", pch=c(1,19), col=1:2, c("Purban<50", "Purban>=50"))
+		\end{lstlisting}
+%
+\newpage
+       \begin{center}
+         \includegraphics[width=0.65\textwidth]{images/Unplot3.pdf}
+        \end{center}
 
-\begin{frame}[fragile]
 
-\frametitle{Loading data into R \footnote{This and the next three slides are modified from the SCC Mini-Course\\ "Introductory Statistics with R" by Mine \c{C}etinkaya}}
-
-\begin{lstlisting}
-survey = read.table("http://www.stat.ucla.edu/~mine/students_survey_2008.txt", header = TRUE, sep = "\t")
-# To see the variable names
-names(survey)
-# To refer to the variables by name:
-attach(survey)
-\end{lstlisting}
-
-			\begin{beamerboxesrounded}[shadow=true]{}
-			\ttfamily \tiny
-			\begin{verbatim}
- [1] "gender"      "hand"        "eyecolor"    "glasses"     "california" 
- [6] "birthmonth"  "birthday"    "birthyear"   "ageinmonths" "height"     
-[11] "graduate"    "oncampus"    "time"        "walk"        "hsclass"    
-[16] "HSCA"        "calculus"    "AP"          "cell"        "ipod"       
-[21] "sleep"       "alcohol"     "speed"       "UCLA"        "book"       
-[26] "relax"       "instructor"  "tire"        "Quarter"   
-			\end{verbatim}
-			\end{beamerboxesrounded}
-\normalsize
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Segmented Bar Charts}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[fragile]
+%____________
+\begin{frame}[fragile, allowframebreaks]
   \frametitle{Segmented bar charts}
 
-Displays two categorical variables at a time:
-    \begin{columns}
-      \column{0.60\textwidth}
+Displays two categorical variables at a time: \footnote{This and the next three slides are modified from the SCC Mini-Course "Introductory Statistics with R" by Mine \c{C}etinkaya}
+
 \tiny
 \begin{lstlisting}
+survey = read.table("http://www.stat.ucla.edu/~mine/students_survey_2008.txt", header = TRUE, sep = "\t")
+attach(survey)
 barplot(table(gender, hand), col = c("skyblue", "blue"), main = "Segmented Bar Plot \n of Gender")
 legend("topleft", c("females","males"), col = c("skyblue", "blue"), pch = 16, inset = 0.05)
 \end{lstlisting}
 
-     \column{0.40\textwidth}
+\newpage
+    \begin{columns}
+      \column{0.50\textwidth}
+      
        \begin{center}
-\includegraphics[width = 40mm]{images/segbarplot.pdf}
+\includegraphics[width = 53mm]{images/segbarplot.pdf}
 \end{center}
 
+     \column{0.50\textwidth}
 \begin{center}
-\scalebox{0.7}{%
+\scalebox{1.2}{%
 \begin{tabular}{|r|r|r|r|}
   \hline
  & ambidextrous & left & right \\ \hline
@@ -67,52 +66,37 @@ female &   9 &  67 & 806 \\
 \end{tabular}}
 \end{center}
 \normalsize
-
 \end{columns}
 
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Pie Charts}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%_______________________
+\begin{frame}[fragile, allowframebreaks]
+  \frametitle{Dot charts}
 
-\begin{frame}[fragile]
-  \frametitle{Pie charts}
-
-Pie charts display counts as percentages of individuals in each category:
-    \begin{columns}
-      \column{0.50\textwidth}
+To compare values for variables in each category:
 
 \begin{lstlisting}
-table(gender)
+# Step 1: Load the data
+data(iris)
+attach(iris)
+# Step 2: Calculate means for each species:
+aggregate(iris[, -5], list(Species = Species), mean)->a
+# Step 3: Assign row names
+row.names(a)<-a[, 1]
+# Step 4: Plot
+dotchart(t(a[, -1]), xlim = c(0,10), main="Plots of Means for Iris Data Set", xlab="Mean Value")
 \end{lstlisting}
 
-\begin{table}[ht]
-\begin{center}
-\begin{tabular}{|r|r|}
-  \hline
- & gender \\ 
-  \hline
-female & 882 \\ 
-  male & 443 \\ 
-   \hline
-\end{tabular}
-\end{center}
-\end{table}
-
-\begin{lstlisting}
-pie(table(gender))
-\end{lstlisting}
-
-     \column{0.50\textwidth}
+\newpage
        \begin{center}
-\includegraphics[width = 40mm]{images/pie.pdf}
-\end{center}
-\end{columns}
+		\includegraphics[width = 70mm]{images/dotPlot.pdf}
+	\end{center}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Histograms}
+\subsection{Looking at Distributions}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[fragile]
@@ -120,16 +104,16 @@ pie(table(gender))
   \framesubtitle{Adding Summary Statistics to Plots}
 Add the mean and median to a histogram:
     \begin{columns}
-      \column{0.60\textwidth}
+      \column{0.61\textwidth}
 
 \begin{lstlisting}
 hist(ageinmonths, main="Histogram of Age (Mo)")
-abline(v=mean(ageinmonths), col = "blue")
-abline(v=median(ageinmonths), col = "green")
-legend("topright", c("Mean", "Median"), pch = 16, col = c("blue", "green"))
+abline(v=mean(ageinmonths), col = "blue", lwd=3)
+abline(v=median(ageinmonths), col = "red", lwd=3)
+legend("topright", c("Mean", "Median"), pch = 16, col = c("blue", "red"))
 \end{lstlisting}
 
-     \column{0.40\textwidth}
+     \column{0.39\textwidth}
 \begin{center}
 \includegraphics[width = 45mm]{images/hist_meanmed.pdf}
 \end{center}
@@ -170,11 +154,11 @@ data(quakes)
 # Subset the magnitude:
 ind<-ifelse(quakes[, 4]<4.5, 0, 1)
 ind<-as.factor(ind)
-boxplot(quakes[, 4]~ind)
-# Alternatively:
 library(lattice)
 bwplot(quakes[, 4]~ind, xlab=c("Mag<4.5", "Mag>=4.5"), ylab="Magnitude")
 		\end{lstlisting}
+%boxplot(quakes[, 4]~ind)
+%# Alternatively:
 
         \begin{center}
          \includegraphics[width=0.6\textwidth]{images/bwplot.pdf}
@@ -219,6 +203,7 @@ scatterplot.matrix(quakes[, 1:4])
 %%%% Check equality of distributions:
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Checking Equality of Distributions}
+\framesubtitle{Approach 1}
 
 A method of checking equality of distributions is via \ttfamily qq(): \normalfont
   		\begin{lstlisting}
@@ -233,6 +218,25 @@ qq(gender~ageinmonths)
         \end{center}
 \end{frame}
 
+%%%%% New frame
+\begin{frame}[allowframebreaks, fragile]
+\frametitle{Checking Equality of Distributions}
+\framesubtitle{Approach 2}
+
+Another method for checking equality of distributions is via \ttfamily beanplot(): \normalfont
+
+	\begin{lstlisting}
+		survey = read.table("http://www.stat.ucla.edu/~mine/students_survey_2008.txt", header = TRUE, sep = "\t")
+		attach(survey)
+		beanplot(ageinmonths ~ gender, data=survey, col=list(grey(0.5),c(grey(0.8),"white")), border = NA, overallline = "median", ll=0.01, side="both")
+		legend("bottomleft",fill=c(grey(0.5),grey(0.8)), legend=c("Female","Male"))
+	\end{lstlisting}
+	
+        \begin{center}
+	         \includegraphics[width=0.65\textwidth]{images/beanplotSurvey.png}
+        \end{center}
+\end{frame}
+
 %split.screen(c(1,2))        # split display into two screens
 %split.screen(c(2,1),2)      # split bottom half in two
 %screen(1)                   # prepare screen 1 for output
@@ -243,7 +247,8 @@ qq(gender~ageinmonths)
 %screen(1, FALSE)            # return to screen 1, but do not clear
 %close.screen(all = TRUE)    # exit split-screen mode
 
-
+%_______________________
+\subsection{\ttfamily Identify\normalfont-ing Observations}
 %%%%%%% New frame
 \begin{frame}[fragile, allowframebreaks]
 \frametitle{\ttfamily Identify\normalfont-ing Observations}
@@ -306,3 +311,12 @@ qq(gender~ageinmonths)
 
 % ------------------------------------------------------------
 % ------------------------------------------------------------
+
+% Exercise: compare distributions of Iris data
+% ID outlier in dataset
+
+\subsection{Exercise I}
+\begin{frame}
+	\frametitle{Exercise I}
+	Compare the distributions of the sepal widths for the three species of irises (using the \ttfamily iris \normalfont data set).
+\end{frame}
