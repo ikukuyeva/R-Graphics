@@ -8,12 +8,13 @@
 \subsection{Scatterplot}
 %%%%% New frame
 \begin{frame}[allowframebreaks, fragile]
-\frametitle{Scatterplot (v.0)}
+\frametitle{Scatterplot (v0.1)}
 
 To get a quick peak into the numerical variables in the data \ttfamily scatterplotMatrix(): \normalfont
   		\begin{lstlisting}[ basicstyle=\small ]
 # Load package `car' to use scatterplotMatrix():	
 library(car)	
+# Load data `quakes' from base R:
 data(quakes)
 scatterplotMatrix(
 	x = quakes[, 1:4], 
@@ -21,6 +22,7 @@ scatterplotMatrix(
 	reg.line = FALSE
 	)
 		\end{lstlisting}
+% col=rgb(0.4, 0.2, 0.2, alpha=0.5)
 
         \begin{center}
          \includegraphics[width=0.63\textwidth]{images/scatterPlot_v0.pdf}
@@ -28,7 +30,7 @@ scatterplotMatrix(
 \end{frame}
 
 \begin{frame}[allowframebreaks, fragile]
-\frametitle{Scatterplot (v.1)}
+\frametitle{Scatterplot (v0.2)}
 
 To get a quick peak into the numerical variables and the trends in the data, modify arguments of \ttfamily scatterplotMatrix(): \normalfont
   		\begin{lstlisting}
@@ -46,6 +48,40 @@ scatterplotMatrix(
         \end{center}
 \end{frame}
 
+\begin{frame}[allowframebreaks, fragile]
+\frametitle{Scatterplot (v0.3)}
+
+To improve the color scheme, modify arguments of \ttfamily scatterplotMatrix().  
+  		\begin{lstlisting}[ basicstyle=\tiny]
+
+library(car)		
+data(quakes)
+scatterplotMatrix(
+	x = quakes[, 1:4], 
+	reg.line = FALSE,
+	col=c(3,
+		"orangered",
+		rgb(176/256, 196/256, 222/256, alpha=0.5)
+		), 
+	pch=19,
+	lwd=3
+	)
+		\end{lstlisting}
+\normalfont
+\framebreak
+You can specify a color in R via: 
+\begin{itemize}
+	\item Number (e.g. 1 = black, 2 = red, etc.)
+	\item Name (e.g. "black", "red", "dodgerblue")
+	\item RGB (e.g. c(0,0,0) = black, c(1,0,0) = red, etc.)
+	\item Please see \url{http://research.stowers-institute.org/efg/R/Color/Chart/} for color references. 
+\end{itemize}
+
+\noindent Note the order of color arguments. \normalfont
+        \begin{center}
+         \includegraphics[width=0.63\textwidth]{images/scatterPlot_v3.pdf}
+        \end{center}
+\end{frame}
 
 %%%%% New frame
 \subsection{Histogram}
