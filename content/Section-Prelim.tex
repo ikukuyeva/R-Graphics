@@ -1,11 +1,64 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+\part{Preliminaries}
 %%%% Disclaimer
 \normalfont
 \begin{frame}
 	\begin{center}
   		\begin{block}{Disclaimer} 
-The author assumes you are familiar with \ttfamily R \normalfont and are comfortable subsetting. \\
+The author assumes you are not familiar with \ttfamily R \normalfont and need not have programmed before. \\
+		\end{block}
+	\end{center} 
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+  		\begin{block}{Why R?} 
+			\begin{itemize}
+				\item Absolutely free!
+				\item Used in industry and academia.
+				\item Has a great community:
+					\begin{itemize}
+						\item StackOverflow
+						\item Blogs
+						\item Meetup groups
+						\item MOOCs
+						\item many, many others
+					\end{itemize}
+				\item Has over 7500 packages available for use (for free!).
+				\item Transparent code (e.g. easier to check for bugs).
+			\end{itemize}
+		\end{block}
+	\end{center} 
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+  		\begin{block}{Overview of R per John Chambers [1]:} 
+			"To understand computations in R, two slogans are helpful:
+			\begin{itemize}
+			        \item Everything that exists is an object.
+			        \item Everything that happens is a function call."
+			\end{itemize}
+		\end{block}
+	\end{center} 
+
+R is flexible: 
+	\begin{itemize}
+		\item Objects can be variables, data sets, etc. and can be self-created, downloaded off the web (or elsewhere) and loaded from package(s).
+		\item Functions (which do something to objects) can also be self-created, downloaded off the web (or elsewhere) and loaded from package(s).
+		\item A package (1 of 7500+) is a collection of data sets and/or functions unified with a common theme.
+	\end{itemize}
+\end{frame}
+
+\begin{frame}
+	\begin{center}
+  		\begin{block}{Goal of the tutorial} 
+Visualizations:
+	\begin{itemize}
+		\item what plot to use to examine a variable or variables?
+		\item how easy to use is R for visualizations?
+		\item how flexible is R for visualizations?
+	\end{itemize}		
 		\end{block}
 	\end{center} 
 \end{frame}
@@ -14,59 +67,6 @@ The author assumes you are familiar with \ttfamily R \normalfont and are comfort
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%% Section: Preliminaries
-
-%\section[Prelim]{Preliminaries}
-
-%% Subsection: Software Installation
-
-%\subsection{Software Installation}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\frame{
-%  \frametitle{Installing R on a Mac}
-%    \begin{columns}
-%      \column{0.50\textwidth}
-%        \begin{enumerate}
-%           \item Go to \small \ttfamily http://cran.r-project.org/ \normalfont \normalsize and select \itshape MacOS X \normalfont
-%           \item Select to download the latest version: 2.9.2 (2009-08-24)
-%           \item Install and Open.  The R window should look like this:
-%        \end{enumerate}
-%%
-%      \column{0.50\textwidth}
-%       \begin{center}
-%         \includegraphics[width=1\textwidth]{images/Rwindow.png}
-%        \end{center}
-%      \end{columns}
-%}
-
-%\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-%% Subsection: R Help
-
-%\subsection{R Help}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\begin{frame}[fragile]
-%\frametitle{R Help}
-
-%\begin{columns}
-%\column{0.4\textwidth}
-%For help with any function in R, put a question mark before the function name to determine what arguments to use, examples and background information.
-
-%\begin{lstlisting}
-%?plot
-%\end{lstlisting}
-
-%\column{0.6\textwidth}
-%\begin{center}
-%\includegraphics[width=1.1\textwidth]{images/help}
-%\end{center}
-%\end{columns}
-
-%\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
