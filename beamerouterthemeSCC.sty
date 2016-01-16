@@ -141,3 +141,16 @@
 
 \mode
 <all>
+
+%% Per http://tex.stackexchange.com/questions/79388/how-to-collect-all-parts-in-beamer
+%% to get parts to show on their own slide.
+% for the list of parts
+\makeatletter
+\AtBeginPart{%
+    \addtocontents{parttoc}{\protect\beamer@partintoc{\the\c@part}{\beamer@partnameshort}{\the\c@page}}%
+    \frame{\partpage}%
+}
+\newcommand{\parttableofcontents}{\@starttoc{parttoc}}
+\newcommand{\beamer@partintoc}[3]{#2\par}
+\makeatother
+
