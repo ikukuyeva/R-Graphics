@@ -1,9 +1,10 @@
 % TOC
 \begin{frame}[shrink=6]
-	\frametitle{Outline}
-	\tableofcontents[hideallsubsections]
+	\frametitle{Tutorial Outline}
+	%\tableofcontents[hideallsubsections]
+	\parttableofcontents
 \end{frame}
-
+%
 % Before any section, show a slide that highlights the current section 
 \AtBeginSection[]
 {
@@ -11,3 +12,13 @@
 		\tableofcontents[currentsection,hideothersubsections]
 	\end{frame}
 }
+
+%%% Per http://tex.stackexchange.com/questions/79388/how-to-collect-all-parts-in-beamer
+%% for slides to announce the start of a new section
+%\AtBeginSection[]% do nothing for \section*
+%{
+%	\frame{
+%		\sectionpage
+%	}
+%}
+
