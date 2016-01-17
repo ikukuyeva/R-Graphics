@@ -1,3 +1,6 @@
+% http://www.r-bloggers.com/time-series-plots-in-r/
+% http://www.fromthebottomoftheheap.net/2013/10/23/time-series-plots-with-lattice-and-ggplot/
+
 
 % ------------------------------------------------------------
 % ------------------------------------------------------------
@@ -55,7 +58,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Multivariate Plots}
+\subsection{Multivariate Plots: Approach 1}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
@@ -63,37 +66,7 @@
  \frametitle{Multivariate Time Series Plots}
  \framesubtitle{Approach 1}
 
-To plot more than variables one at a time, use \ttfamily plot(): \normalfont 
-	\begin{lstlisting}
-# Convert data to a time series via ts() or zoo():
-data(airquality)
-a<-airquality[, 1:3]
-time<-ts(1:nrow(a), start=c(1973, 5), frequency=365)
-# If your data is stored as a data frame,
-# coerce it to be a matrix via as.matrix()
-class(a)
-a.mat<-as.matrix(a)
-
-
-# Make a time series of the two (or more variables)
-library(zoo)
-name.zoo<-zoo(cbind(a.mat[, 1], a.mat[, 2]))
-colnames(name.zoo)<-c("Ozone", "Solar")
-#### Plot the variables
-plot(name.zoo)
-	\end{lstlisting}
-
-       \begin{center}
-         \includegraphics[width=1\textwidth]{images/Mtvsplot1.pdf}
-        \end{center}
-\end{frame}
-
-%%%%%% New frame
-\begin{frame}[fragile]
- \frametitle{Multivariate Time Series Plots}
- \framesubtitle{Approach 2}
-
-To plot more than variables one at a time, use \ttfamily mvtsplot()\normalfont :\footnote{For documentation, go to: www.jstatsoft.org/v25/c01/paper}
+To plot more than variables one at a time, use \ttfamily mvtsplot()\normalfont [5]:
 %\begin{itemize}
 %	\item For documentation, go to: www.jstatsoft.org/v25/c01/paper 
 %	\item Go to: http://www.biostat.jhsph.edu/$\sim$rpeng/RR/mvtsplot/
@@ -101,42 +74,121 @@ To plot more than variables one at a time, use \ttfamily mvtsplot()\normalfont :
 %	\item Plot your data
 % \end{itemize}
 		\begin{lstlisting}
-# Load the R Code for the function
-source("http://www.biostat.jhsph.edu/~rpeng/RR/mvtsplot/mvtsplot.R")		
-# After processing data as in Approach 1
-# Plot the variables
-mvtsplot(name.zoo)
-# Purple=low, grey=medium, green=high, white=missing values
+library(mvtsplot)		
+# Data = Daily Closing of Stock Indices:
+data(EuStockMarkets)
+# Purple=low, grey=medium, 
+# green=high, white=missing values:
+mvtsplot(EuStockMarkets)
 		\end{lstlisting}
-\end{frame}
-
-\begin{frame}[fragile]
- \frametitle{Multivariate Time Series Plots}
- \framesubtitle{Approach 2}
 
        \begin{center}
-         \includegraphics[width=1\textwidth]{images/Mtvsplot2.pdf}
+         \includegraphics[width=0.6\textwidth]{images/Mtvsplot1.pdf}
+        \end{center}
+
+\end{frame}
+
+\subsection{Multivariate Plots: Approach 2}
+\begin{frame}[fragile, allowframebreaks]
+ \frametitle{Multivariate Time Series Plots}
+ \framesubtitle{Approach 2 (v0.2)}
+
+Another way to plot more than one variable at a time, is via \ttfamily xyplot()\normalfont :
+
+    \begin{lstlisting}
+library(lattice) 
+data(EuStockMarkets)
+xyplot(EuStockMarkets)
+   \end{lstlisting}
+
+
+       \begin{center}
+         \includegraphics[width=0.6\textwidth]{images/stockPlot0.pdf}
+        \end{center}
+\end{frame}
+
+\begin{frame}[fragile, allowframebreaks]
+ \frametitle{Multivariate Time Series Plots}
+ \framesubtitle{Approach 2 (v0.2)}
+
+To customize the output, modify controls of \ttfamily xyplot()\normalfont :
+
+    \begin{lstlisting}[ basicstyle=\small]
+library(lattice)
+library(reshape2)   
+data(EuStockMarkets)
+# Stack data per [2]:
+df = cbind.data.frame(
+  "id"=1:nrow(EuStockMarkets),
+  EuStockMarkets
+  )
+df_stacked = melt(
+  df,
+  id="id"
+  )
+# Adding labels per [3]:
+xyplot( df_stacked$value ~ df_stacked$id, 
+  groups=df_stacked$variable,
+  auto.key = list(space = "right"),
+  scales = list(y = list(rot = 45),
+                x = list(
+                  at=c(0,500, 1000, 1500),
+                  labels=seq(from=1992, to=1998, by=2)
+                  )
+                ),
+  xlab="Time",
+  ylab="Value"
+  )
+    \end{lstlisting}
+%% To modify legend's tick marks
+%% per http://grokbase.com/t/r/r-help/073mmn16mn/r-lattice-key-legend-with-both-points-and-lines
+%%
+% xyplot(1:10 ~ 1:10,
+%   key = list(
+%     text = list(c("prices", "means")),
+%     lines = list(
+%     pch = c("*", ""), type = c("p", "l"),
+%     cex = 2, col = "red", lwd = 3)
+%     )
+% )
+       \begin{center}
+         \includegraphics[width=0.6\textwidth]{images/stockPlot1.pdf}
         \end{center}
 \end{frame}
 
 %%%%%% New frame
+\subsection{Multivariate Plots: Approach 3}
 \begin{frame}[allowframebreaks, fragile]
  \frametitle{Multivariate Time Series Plots}
  \framesubtitle{Approach 3}
 
-To plot more than variables one at a time, use \ttfamily xyplot(): \normalfont
+Another way to plot more than one variable at a time, is via \ttfamily ggplot()\normalfont :
 		\begin{lstlisting}
-# After processing data as in Approach 1
-# load both libraries:
-library(lattice)
-library(zoo)
+library(ggplot2)
+library(reshape2)   
 data(EuStockMarkets)
-z<-EuStockMarkets
-xyplot(z, screen = c(1,1,2,2), col = 1:4, strip = FALSE, key = list(title="EuStockMarkets", columns=2, points=FALSE, lines=TRUE, col=1:4, text=list(colnames(z))))
+df = cbind.data.frame(
+  "id"=1:nrow(EuStockMarkets),
+  EuStockMarkets
+  )
+df_stacked = melt(
+  df,
+  id="id"
+  )
+# Ading labels per [4]:
+ggplot(
+  data = df_stacked,
+  aes(x = id, y = value, color = variable)
+  ) +
+  geom_point() +
+  scale_x_discrete(name="Time",
+    breaks=seq(from=0, to=1500, by=500),
+    labels=seq(from=1992, to=1998, by=2)
+    )
 		\end{lstlisting}
 
        \begin{center}
-         \includegraphics[scale=0.37]{images/stockPlot2.pdf}
+         \includegraphics[scale=0.4]{images/stockPlot2.pdf}
         \end{center}
 \end{frame}
 %
@@ -158,10 +210,22 @@ xyplot(z, screen = c(1,1,2,2), col = 1:4, strip = FALSE, key = list(title="EuSto
 %%        \end{center}
 %\end{frame}
 
-% ------------------------------------------------------------
-% ------------------------------------------------------------
-\subsection{Exercise II}
-\begin{frame}
-	\frametitle{Exercise II}
-	Analyze the \ttfamily EuStockMarkets \normalfont data using the function \ttfamily mtvsplot()\normalfont.  What stands out and why?
-\end{frame}
+% % ------------------------------------------------------------
+% % ------------------------------------------------------------
+% \subsection{Exercise II}
+% \begin{frame}
+% 	\frametitle{Exercise II}
+% 	Analyze the approval ratings of the President of the United States in the data set\ttfamily presidents. \normalfont  What stands out and why?
+%   \vspace{5pt}
+%   Hints:
+%     \begin{itemize}
+%       \item Load the required package \ttfamily datasets\normalfont for this exercise.
+%       \item Load the data set \ttfamily presidents.\normalfont
+%       \item Convert the data set to be into matrix format, one row per year:
+%           \begin{lstlisting}
+%             presidents_mat = matrix(presidents, ncol=4, byrow=TRUE)
+%           \end{lstlisting}
+%       \item Plot the data set.
+%       \item Examine the result.
+%     \end{itemize}
+% \end{frame}
