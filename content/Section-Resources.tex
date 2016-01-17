@@ -1,6 +1,113 @@
+\part{Overview of R}
 % ------------------------------------------------------------
+% Section: Set-up
+
+\section[Set-up]{Set-up}
+
+% Subsection: Software Installation
+
+\subsection{Software Installation}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}
+  \frametitle{Installing R and RStudio}
+    \begin{columns}
+      \column{0.65\textwidth}
+        \begin{enumerate}
+           \item[R:] Go to \small \url{http://cran.r-project.org/}, select your operating system and download the latest version: 3.2.3 (Release 2015/12/10).
+           \item[RStudio:] Go to \small \url{https://www.rstudio.com/products/rstudio/download/}, select your operating system and download the installer (if available).
+        \end{enumerate}
+%
+      \column{0.35\textwidth}
+       \begin{center}
+         \includegraphics[width=1\textwidth]{images/Rwindow.png}
+        \end{center}
+      \end{columns}
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% TODO: package installation
+
+\subsection{Package Installation}
+
+\begin{frame}[fragile]
+  \frametitle{Package Installation}
+
+  To install a package in R, use \ttfamily install.packages()\normalfont:
+  \begin{lstlisting}
+install.packages("lattice")
+install.packages("ggplot2")
+# OR
+install.packages( c("lattice", "ggplot2") )
+  \end{lstlisting}
+
+\end{frame}
+
+%---
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Subsection: R Help
+
+\subsection{R Help}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}[fragile]
+\frametitle{R Help: Approach 1}
+
+  \begin{columns}
+  \column{0.4\textwidth}
+  For help with any function in R, put a question mark before the function name to determine what arguments to use, examples and background information.
+
+  \begin{lstlisting}
+?plot
+  \end{lstlisting}
+
+  \column{0.6\textwidth}
+    \begin{center}
+    \includegraphics[width=1.1\textwidth]{images/Rhelp}
+    \end{center}
+  \end{columns}
+
+\end{frame}
+%%%---
+
+\begin{frame}[fragile]
+\frametitle{R Help: Approaches 2 and 3}
+
+  \begin{columns}
+  \column{0.6\textwidth}
+  \begin{itemize}
+    \item For help with any function in R, search answers on StackOverflow (SO).
+    \item For help with any function in R, when all else fails, ask a question on StackOverflow.  Don't forget to follow the SO tips: \url{http://stackoverflow.com/help/how-to-ask}
+  \end{itemize}
+
+  \column{0.4\textwidth}
+  \begin{center}
+  \includegraphics[width=0.95\textwidth]{images/SO}
+  \end{center}
+  \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%% 
+
+\section{Reading Your Data into R}
+\begin{frame}
+  \frametitle{Reading Your Data into R}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%% 
+
+\section{Most Common Error Messages}
+\begin{frame}
+  \frametitle{Most Common Error Messages}
+
+\end{frame}
+
+
 %%%%%%%%%%%%%%%%% Online Resources
-\section[Links]{Useful Links for R}
+\section[Online Resources]{Online Resources for R}
 \begin{frame}[fragile]
   \frametitle{Online Resources for R}
 %\begin{description}[<+->] 
@@ -13,16 +120,36 @@
 
 \begin{description}
 	\item[Download R:] {\small \textit{\urlwofont{http://cran.stat.ucla.edu/}}}
-	\item[Search Engine for R:] {\small \textit{\urlwofont{http://rseek.org}}}
+	% \item[Search Engine for R:] {\small \textit{\urlwofont{http://rseek.org}}}
 	\item[R Reference Card:] $\:$ \\
 		{\small \textit{\urlwofont{http://cran.r-project.org/doc/contrib/Short-refcard.pdf}}}
 	\item[R Graphics Gallery:] $\:$ \\
 		 {\small \textit{\urlwofont{http://research.stowers-institute.org/efg/R/}}}
 	\item [R Graph Gallery:]  {\small \textit{\urlwofont{http://addictedtor.free.fr/graphiques/}}}
-	\item[UCLA Statistics Information Portal:] \small{ \textit{\urlwofont{http://info.stat.ucla.edu/grad/}}}
-	\item[UCLA Statistical Consulting Center:] \small{ \textit{\urlwofont{http://scc.stat.ucla.edu}}}
+	% \item[UCLA Statistics Information Portal:] \small{ \textit{\urlwofont{http://info.stat.ucla.edu/grad/}}}
+	% \item[UCLA Statistical Consulting Center:] \small{ \textit{\urlwofont{http://scc.stat.ucla.edu}}}
 \end{description}
 \end{frame}
+
+
+% http://adv-r.had.co.nz/ 
+% http://www.statmethods.net/interface/packages.html package install
+% List of packages https://cran.r-project.org/web/packages/
+% Gallery: http://rgraphgallery.blogspot.com/search/label/barchart
+% Steam charts: http://www.r-bloggers.com/data-mountains-and-streams-stacked-area-plots-in-r/
+
+\section{References}
+
+\begin{frame}
+  \begin{itemize}
+    \item[1.] \url{http://adv-r.had.co.nz/}
+    \item[2.] \url{http://www.sixhat.net/how-to-plot-multpile-data-series-with-ggplot.html}
+    \item[3.] \url{http://stackoverflow.com/questions/17584248/exact-axis-ticks-and-labels-in-r-lattice-xyplot}
+    \item[4.] \url{https://rstudio-pubs-static.s3.amazonaws.com/3364_d1a578f521174152b46b19d0c83cbe7e.html}
+    \item[5.] \url{www.jstatsoft.org/v25/c01/paper}
+  \end{itemize}
+\end{frame}
+
 %_________________________________ Part
 %%%%%%%%%%%%%%%%%% Section: Exercise
 
