@@ -212,20 +212,24 @@ ggplot(
 
 % % ------------------------------------------------------------
 % % ------------------------------------------------------------
-% \subsection{Exercise II}
-% \begin{frame}
-% 	\frametitle{Exercise II}
-% 	Analyze the approval ratings of the President of the United States in the data set\ttfamily presidents. \normalfont  What stands out and why?
-%   \vspace{5pt}
-%   Hints:
-%     \begin{itemize}
-%       \item Load the required package \ttfamily datasets\normalfont for this exercise.
-%       \item Load the data set \ttfamily presidents.\normalfont
-%       \item Convert the data set to be into matrix format, one row per year:
-%           \begin{lstlisting}
-%             presidents_mat = matrix(presidents, ncol=4, byrow=TRUE)
+\subsection{Exercise II}
+\begin{frame}[fragile]
+	\frametitle{Exercise II}
+	Analyze the approval ratings of the President of the United States in the data set\ttfamily presidents. \normalfont  What stands out and why?\\
+  \vspace{10pt}
+  \noindent Hints: \small
+    \begin{itemize}
+      \item Load the data set \ttfamily presidents.\normalfont
+      \item Convert the data set to be in matrix format, one row per year.
+%           \begin{lstlisting}[ basicstyle=\footnotesize]
+% presidents_mat = matrix(
+%   presidents, 
+%   ncol=4, 
+%   byrow=TRUE
+%   )
 %           \end{lstlisting}
-%       \item Plot the data set.
-%       \item Examine the result.
-%     \end{itemize}
-% \end{frame}
+      \item Plot the data set.
+      \item Examine the result.
+    \end{itemize}
+    \normalsize
+\end{frame}
