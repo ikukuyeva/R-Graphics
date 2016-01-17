@@ -1,6 +1,9 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \part{Preliminaries}
 %%%% Disclaimer
+%%% --------------------------
+\section{Motivation}
+%%% --------------------------
 \normalfont
 \begin{frame}
 	\begin{center}
@@ -8,6 +11,18 @@
 The author assumes you are not familiar with \ttfamily R \normalfont and need not have programmed before. \\
 		\end{block}
 	\end{center} 
+\end{frame}
+
+%---
+\begin{frame}
+	\begin{center}
+  		\begin{block}{Goals of the tutorial} 
+			\begin{enumerate}
+				\item Convince you to use open source software
+				\item Motivate visualizations
+			\end{enumerate}
+		\end{block}
+	\end{center}
 \end{frame}
 
 \begin{frame}
@@ -31,6 +46,23 @@ The author assumes you are not familiar with \ttfamily R \normalfont and need no
 	\end{center} 
 \end{frame}
 
+
+\begin{frame}
+	\begin{center}
+  		\begin{block}{Why visualize?} 
+			\begin{itemize}
+				\item Capture uncertainty in the data
+				\item Explore potential relationships/trends/missing patterns (or absence thereof)
+				\item Convey key information
+			\end{itemize}		
+		\end{block}
+	\end{center} 
+\end{frame}
+%---
+
+%%% --------------------------
+\section{Introduction to R}
+%%% --------------------------
 \begin{frame}
 	\begin{center}
   		\begin{block}{Overview of R per John Chambers [1]:} 
@@ -50,17 +82,133 @@ The author assumes you are not familiar with \ttfamily R \normalfont and need no
 % 	\end{itemize}
 \end{frame}
 
-\begin{frame}
-	\begin{center}
-  		\begin{block}{Goal of the tutorial} 
-Visualizations:
+%----
+%%% --------------------------
+\subsection{Most Common Data Types}
+%%% --------------------------
+\begin{frame}[fragile]
+	\frametitle{Most Common Data Types in R}
+	\framesubtitle{Vectors}
+
 	\begin{itemize}
-		\item what plot to use to examine a variable or variables?
-		\item how easy to use is R for visualizations?
-		\item how flexible is R for visualizations?
-	\end{itemize}		
-		\end{block}
-	\end{center} 
+		\item[vector:] contains observations of the same type (e.g. all numbers, letters)
+			\begin{itemize}
+				\item e.g. movie ratings (on scale 0-10) of the last movie that 5 people saw
+				\begin{lstlisting}
+c(8,7,10,3,9)
+				\end{lstlisting} 
+				\begin{verbatim}
+[1]  8  7 10  3  9
+				\end{verbatim}				
+			\end{itemize}
+	\end{itemize}
+\end{frame}
+
+%---
+\begin{frame}[fragile]
+	\frametitle{Most Common Data Types in R}
+	\framesubtitle{Lists}
+
+	\begin{itemize}
+		\item[list:] contains observations of (same or) different types and (same or) different lengths
+			\begin{itemize}
+				\item e.g. movie ratings of each movie that 5 people saw last month 
+			\end{itemize}
+		\end{itemize}
+
+   \begin{columns}
+     \column{0.5\textwidth}
+		\begin{lstlisting}
+list(
+	c(8,NA,8),
+	c(7,7,3),
+	10,
+	c(3,4,4,NA),
+	c(9,10,9,2)
+	)
+		\end{lstlisting}
+
+     \column{0.5\textwidth}
+      \begin{center}
+{ \tiny
+				\begin{verbatim} 
+[[1]]
+[1]  8 NA  8
+
+[[2]]
+[1] 7 7 3
+
+[[3]]
+[1] 10
+
+[[4]]
+[1]  3  4  4 NA
+
+[[5]]
+[1]  9 10  9  2
+			\end{verbatim} \normalsize
+}
+       \end{center}
+     \end{columns}
+
+\end{frame}
+
+
+%---
+\begin{frame}[fragile]
+	\frametitle{Most Common Data Types in R}
+	\framesubtitle{Matrices}
+
+	\begin{itemize}
+		\item[matix:] has rows and columns of numbers
+			\begin{itemize}
+				\item e.g. movie ratings of 5 people of last 3 movies that each person saw 
+			\end{itemize}
+		\end{itemize}
+
+   \begin{columns}
+     \column{0.45\textwidth}
+     	\begin{center}
+		\begin{lstlisting}[ basicstyle=\tiny]
+	matrix(
+	  c(
+	    8,NA,8,
+	    7,7,3,
+		3,4,4,
+		9,10,9,
+		10,10,9
+		),
+	  nrow=5,
+	  ncol=3,
+	  byrow=TRUE
+	  )
+		\end{lstlisting}
+     	\end{center}
+     \column{0.45\textwidth}
+      \begin{center}
+{ \small
+				\begin{verbatim} 
+     [,1] [,2] [,3]
+[1,]    8   NA    8
+[2,]    7    7    3
+[3,]    3    4    4
+[4,]    9   10    9
+[5,]   10   10    9
+			\end{verbatim} \normalsize
+}
+       \end{center}
+     \end{columns}
+\end{frame}
+
+%---
+\begin{frame}[fragile]
+	\frametitle{Most Common Data Types in R}
+	\framesubtitle{Data Frames}
+
+	\begin{itemize}
+		\item[data.frame:]
+	\end{itemize}
+
 \end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
