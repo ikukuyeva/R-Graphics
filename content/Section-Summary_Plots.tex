@@ -9,6 +9,7 @@
 %%%%% New frame
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Scatterplot (v0.1)}
+  \framesubtitle{Data = Fiji Earthquakes Since 1964}
 
 To get a quick peak into the numerical variables in the data \ttfamily scatterplotMatrix(): \normalfont
   		\begin{lstlisting}[ basicstyle=\small ]
@@ -53,7 +54,6 @@ scatterplotMatrix(
 
 To improve the color scheme, modify arguments of \ttfamily scatterplotMatrix().  
   		\begin{lstlisting}[ basicstyle=\tiny]
-
 library(car)		
 data(quakes)
 scatterplotMatrix(
@@ -87,11 +87,11 @@ You can specify a color in R via:
 \subsection{Histogram}
 \begin{frame}[fragile, allowframebreaks]
 \frametitle{'Nicer' Histogram (v0.1)}
+  \framesubtitle{Data = Tooth Growth of Guinea Pigs}
 
 To compare the frequencies of two variables side-by-side, use \ttfamily beanplot(): \normalfont
 
 	\begin{lstlisting}
-library(datasets)
 library(beanplot)
 data(ToothGrowth)
 beanplot(
@@ -113,7 +113,6 @@ beanplot(
 To make the visual slightly more readable:
 
 	\begin{lstlisting}[ basicstyle=\tiny ]
-library(datasets)
 library(beanplot)
 data(ToothGrowth)
 beanplot(
