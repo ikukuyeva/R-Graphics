@@ -13,15 +13,20 @@
 
 To overlay a map to a plot containing latitude and longitude, load the package \ttfamily maps: \normalfont 
     \begin{columns}
-      \column{0.50\textwidth}
-\begin{lstlisting}
+      \column{0.55\textwidth}
+\begin{lstlisting}[ basicstyle=\footnotesize]
 data(quakes)
 library(maps)
-plot(quakes$long, quakes$lat, xlim=c(100, 190), ylim=c(-40, 0))
+plot(
+	quakes$long, 
+	quakes$lat, 
+	xlim=c(100, 190), 
+	ylim=c(-40, 0)
+	)
 map("world", add=TRUE)
 \end{lstlisting}
 
-     \column{0.50\textwidth}
+     \column{0.45\textwidth}
        \begin{center}
 \includegraphics[width = 55mm]{images/Fuji.pdf}
 \end{center}
@@ -86,23 +91,23 @@ points(mapproject(list(                       y=quakes$lat[which(quakes$mag>=6)]
 
 \end{frame}
 
-%%%%%%%%%%%
-\begin{frame}[fragile]
-	\begin{alertblock}{Bonus Feature of the \ttfamily maps \normalfont package:}
-		To determine in which part of the world the observations are (based on latitude and longitude), use \ttfamily map.where(): \normalfont
-			\begin{lstlisting}		
-				in.what.country<-map.where(database="world", quakes$long, quakes$lat)
-			\end{lstlisting}
-		To determine which observations are in the ocean: \normalfont
-			\begin{lstlisting}
-				# Number of points in ocean after filtering:
-				ind<-sum(is.na(in.what.country)); ind
-				# Number of observations: 1000
-				# Number in Ocean: 993
-			\end{lstlisting}
-	\end{alertblock}
+% %%%%%%%%%%%
+% \begin{frame}[fragile]
+% 	\begin{alertblock}{Bonus Feature of the \ttfamily maps \normalfont package:}
+% 		To determine in which part of the world the observations are (based on latitude and longitude), use \ttfamily map.where(): \normalfont
+% 			\begin{lstlisting}		
+% 				in.what.country<-map.where(database="world", quakes$long, quakes$lat)
+% 			\end{lstlisting}
+% 		To determine which observations are in the ocean: \normalfont
+% 			\begin{lstlisting}
+% 				# Number of points in ocean after filtering:
+% 				ind<-sum(is.na(in.what.country)); ind
+% 				# Number of observations: 1000
+% 				# Number in Ocean: 993
+% 			\end{lstlisting}
+% 	\end{alertblock}
 
-\end{frame}
+% \end{frame}
 
 % ------------------------------------------------------------
 % ------------------------------------------------------------
