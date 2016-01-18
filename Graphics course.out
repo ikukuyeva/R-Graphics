@@ -1,29 +1,46 @@
-\BOOKMARK [2][]{Outline0.1}{Summary Plots}{}
-\BOOKMARK [3][]{Outline0.1.1.5}{Basic Plots}{Outline0.1}
-\BOOKMARK [3][]{Outline0.1.2.11}{Looking at Distributions}{Outline0.1}
-\BOOKMARK [3][]{Outline0.1.3.24}{Identify-ing Observations}{Outline0.1}
-\BOOKMARK [3][]{Outline0.1.4.28}{Exercise I}{Outline0.1}
-\BOOKMARK [2][]{Outline0.2}{Time Series Plots}{}
-\BOOKMARK [3][]{Outline0.2.1.30}{Multivariate Plots}{Outline0.2}
-\BOOKMARK [3][]{Outline0.2.2.37}{Exercise II}{Outline0.2}
-\BOOKMARK [2][]{Outline0.3}{Geographical Plots}{}
-\BOOKMARK [3][]{Outline0.3.1.39}{Maps}{Outline0.3}
-\BOOKMARK [3][]{Outline0.3.2.43}{Projection Maps}{Outline0.3}
-\BOOKMARK [3][]{Outline0.3.3.46}{Exercise III}{Outline0.3}
-\BOOKMARK [2][]{Outline0.4}{3D Plots}{}
-\BOOKMARK [3][]{Outline0.4.1.48}{lattice library}{Outline0.4}
-\BOOKMARK [3][]{Outline0.4.2.51}{ggplot2 library}{Outline0.4}
-\BOOKMARK [3][]{Outline0.4.3.56}{rgl library}{Outline0.4}
-\BOOKMARK [3][]{Outline0.4.4.57}{Saving Plots as a PDF}{Outline0.4}
-\BOOKMARK [3][]{Outline0.4.5.59}{Exercise IV}{Outline0.4}
-\BOOKMARK [2][]{Outline0.5}{Simulation Plots}{}
-\BOOKMARK [3][]{Outline0.5.1.61}{Preliminaries}{Outline0.5}
-\BOOKMARK [3][]{Outline0.5.2.62}{Performing the Simulation and Visualizing the Results}{Outline0.5}
-\BOOKMARK [3][]{Outline0.5.3.68}{Exercise V: Homework Problem}{Outline0.5}
-\BOOKMARK [2][]{Outline0.6}{Solutions to the Exercises}{}
-\BOOKMARK [3][]{Outline0.6.1.70}{Solution to Exercise I}{Outline0.6}
-\BOOKMARK [3][]{Outline0.6.2.71}{Solution to Exercise II}{Outline0.6}
-\BOOKMARK [3][]{Outline0.6.3.72}{Solution to Exercise III}{Outline0.6}
-\BOOKMARK [3][]{Outline0.6.4.73}{Solution to Exercise IV}{Outline0.6}
-\BOOKMARK [3][]{Outline0.6.5.74}{Solution to Exercise V}{Outline0.6}
-\BOOKMARK [2][]{Outline0.7}{Useful Links for R}{}
+\BOOKMARK [1][]{Outline1}{Preliminaries}{}% 1
+\BOOKMARK [2][]{Outline1.1}{Motivation}{Outline1}% 2
+\BOOKMARK [2][]{Outline1.2}{Why R?}{Outline1}% 3
+\BOOKMARK [2][]{Outline1.3}{Why visualize?}{Outline1}% 4
+\BOOKMARK [2][]{Outline1.4}{Tips for Visulizations}{Outline1}% 5
+\BOOKMARK [1][]{Outline2}{Introduction to R}{}% 6
+\BOOKMARK [2][]{Outline2.5}{Overview of R}{Outline2}% 7
+\BOOKMARK [2][]{Outline2.6}{Most Common Data Types}{Outline2}% 8
+\BOOKMARK [2][]{Outline2.7}{Creating Objects}{Outline2}% 9
+\BOOKMARK [2][]{Outline2.8}{Functions}{Outline2}% 10
+\BOOKMARK [3][]{Outline2.8.1.24}{\(Very\) Brief Overview of Functions}{Outline2.8}% 11
+\BOOKMARK [3][]{Outline2.8.2.25}{Adding Functionality to Base R}{Outline2.8}% 12
+\BOOKMARK [2][]{Outline2.9}{Importing Data Sets into R}{Outline2}% 13
+\BOOKMARK [3][]{Outline2.9.1.27}{Using Data Available in R}{Outline2.9}% 14
+\BOOKMARK [3][]{Outline2.9.2.28}{Importing Data from a Previous R Session}{Outline2.9}% 15
+\BOOKMARK [3][]{Outline2.9.3.29}{Importing Data from the Internet}{Outline2.9}% 16
+\BOOKMARK [3][]{Outline2.9.4.30}{Importing Data from Your Computer}{Outline2.9}% 17
+\BOOKMARK [2][]{Outline2.10}{Manual}{Outline2}% 18
+\BOOKMARK [1][]{Outline3}{Visualizations}{}% 19
+\BOOKMARK [2][]{Outline3.11}{Summary Plots}{Outline3}% 20
+\BOOKMARK [3][]{Outline3.11.1.35}{Scatterplot}{Outline3.11}% 21
+\BOOKMARK [3][]{Outline3.11.2.42}{Histogram}{Outline3.11}% 22
+\BOOKMARK [3][]{Outline3.11.3.46}{Exercise I}{Outline3.11}% 23
+\BOOKMARK [2][]{Outline3.12}{Time Series Plots}{Outline3}% 24
+\BOOKMARK [3][]{Outline3.12.1.48}{Multivariate Plots: Approach 1}{Outline3.12}% 25
+\BOOKMARK [3][]{Outline3.12.2.50}{Multivariate Plots: Approach 2}{Outline3.12}% 26
+\BOOKMARK [3][]{Outline3.12.3.55}{Multivariate Plots: Approach 3}{Outline3.12}% 27
+\BOOKMARK [3][]{Outline3.12.4.58}{Exercise II}{Outline3.12}% 28
+\BOOKMARK [2][]{Outline3.13}{Geographical Plots}{Outline3}% 29
+\BOOKMARK [3][]{Outline3.13.1.60}{Maps}{Outline3.13}% 30
+\BOOKMARK [3][]{Outline3.13.2.64}{Projection Maps}{Outline3.13}% 31
+\BOOKMARK [3][]{Outline3.13.3.66}{Exercise III}{Outline3.13}% 32
+\BOOKMARK [2][]{Outline3.14}{Interactive Plots}{Outline3}% 33
+\BOOKMARK [3][]{Outline3.14.1.68}{rgl library}{Outline3.14}% 34
+\BOOKMARK [3][]{Outline3.14.2.69}{??? library}{Outline3.14}% 35
+\BOOKMARK [3][]{Outline3.14.3.70}{shiny library}{Outline3.14}% 36
+\BOOKMARK [3][]{Outline3.14.4.71}{Exercise IV}{Outline3.14}% 37
+\BOOKMARK [1][]{Outline4}{Working with R}{}% 38
+\BOOKMARK [2][]{Outline4.15}{Installation}{Outline4}% 39
+\BOOKMARK [3][]{Outline4.15.1.74}{Software Installation}{Outline4.15}% 40
+\BOOKMARK [3][]{Outline4.15.2.75}{Package Installation}{Outline4.15}% 41
+\BOOKMARK [3][]{Outline4.15.3.76}{Saving Plots as a PDF}{Outline4.15}% 42
+\BOOKMARK [2][]{Outline4.16}{Most Common Error Messages}{Outline4}% 43
+\BOOKMARK [2][]{Outline4.17}{Getting R Help}{Outline4}% 44
+\BOOKMARK [2][]{Outline4.18}{Online Resources for R}{Outline4}% 45
+\BOOKMARK [2][]{Outline4.19}{References}{Outline4}% 46

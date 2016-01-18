@@ -1,4 +1,4 @@
-\frametitle {Online Resources for R}
+\frametitle{Online Resources for R}
 %\begin{description}[<+->]
 %\item[Download R:] http://cran.stat.ucla.edu/
 %\item[Search Engine for R:] http://rseek.org
@@ -8,13 +8,23 @@
 %\end{description}
 
 \begin{description}
-\item[Download R:] {\small \textit{\urlwofont{http://cran.stat.ucla.edu/}}}
-\item[Search Engine for R:] {\small \textit{\urlwofont{http://rseek.org}}}
-\item[R Reference Card:] $\:$ \\
-{\small \textit{\urlwofont{http://cran.r-project.org/doc/contrib/Short-refcard.pdf}}}
-\item[R Graphics Gallery:] $\:$ \\
- {\small \textit{\urlwofont{http://research.stowers-institute.org/efg/R/}}}
-\item [R Graph Gallery:]  {\small \textit{\urlwofont{http://addictedtor.free.fr/graphiques/}}}
-\item[UCLA Statistics Information Portal:] \small{ \textit{\urlwofont{http://info.stat.ucla.edu/grad/}}}
-\item[UCLA Statistical Consulting Center:] \small{ \textit{\urlwofont{http://scc.stat.ucla.edu}}}
+	\item[Download R:] {\small \textit{\urlwofont{http://cran.stat.ucla.edu/}}}
+	% \item[Search Engine for R:] {\small \textit{\urlwofont{http://rseek.org}}}
+	\item[R Reference Card:] $\:$ \\
+		{\small \textit{\urlwofont{http://cran.r-project.org/doc/contrib/Short-refcard.pdf}}}
+	\item[R Graphics Gallery:] $\:$ \\
+		 {\small \textit{\urlwofont{http://research.stowers-institute.org/efg/R/}}}
+	\item [R Graph Gallery:]  {\small \textit{\urlwofont{http://addictedtor.free.fr/graphiques/}}}
+	% \item[UCLA Statistics Information Portal:] \small{ \textit{\urlwofont{http://info.stat.ucla.edu/grad/}}}
+	% \item[UCLA Statistical Consulting Center:] \small{ \textit{\urlwofont{http://scc.stat.ucla.edu}}}
+  \item[More R tutorials:]
+    \begin{itemize}
+      \item[]
+      \item[IK:] {\small \textit{\urlwofont{http://www.kukuyevaconsulting.com/tutorials}}}
+      \item[UCLA IDRE:] {\small \textit{\urlwofont{http://www.ats.ucla.edu/stat/r/}}}
+      \item[UCLA SCC:] {\small \textit{\urlwofont{http://scc.stat.ucla.edu/mini-courses/}}}
+    \end{itemize}
+  \item[JSS:]
+  \item[Stackoverflow:]
+  \item[Blogs:]
 \end{description}
