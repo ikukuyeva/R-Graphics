@@ -83,6 +83,28 @@ You can specify a color in R via:
         \end{center}
 \end{frame}
 
+%---
+\begin{frame}[allowframebreaks, fragile]
+\frametitle{Scatterplot (v0.4)}
+  \framesubtitle{Data = Fiji Earthquakes Since 1964}
+
+Another way to get a quick peak into the numerical variables in the data is via \ttfamily ggpairs(): \normalfont
+  		\begin{lstlisting}[ basicstyle=\small ]
+library(ggplot2)
+library(GGally)
+# Load data `quakes' from base R:
+data(quakes)
+ggpairs(
+	quakes[, 1:4]
+	)
+		\end{lstlisting}
+% col=rgb(0.4, 0.2, 0.2, alpha=0.5)
+
+        \begin{center}
+         \includegraphics[width=0.6\textwidth]{images/scatterPlot_v4.pdf}
+        \end{center}
+\end{frame}
+
 %%%%% New frame
 \subsection{Histogram}
 \begin{frame}[fragile, allowframebreaks]
