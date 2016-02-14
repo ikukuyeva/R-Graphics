@@ -127,7 +127,60 @@ You can specify a color in R via:
 
 \begin{frame}[fragile, allowframebreaks]
 	\frametitle{Histogram}
-To compare the distribution of one variable, use \ttfamily histogram(): \normalfont
+To see the distribution of one variable, use \ttfamily hist(): \normalfont
+
+    \begin{columns}
+      \column{0.40\textwidth}
+  \begin{lstlisting}
+hist(
+  data$Volume, 
+  breaks=1000
+  )
+# Is anything `off'?
+  \end{lstlisting}
+
+     \column{0.60\textwidth}
+        \begin{center}
+           \includegraphics[scale=0.3]{images/histogram.pdf}
+        \end{center}  
+\end{columns}
+
+\newpage      
+
+Let's examine the potential outlier:
+  \begin{lstlisting}
+subset(
+  x = data, 
+  Volume == max(Volume, na.rm=TRUE)
+  )
+  \end{lstlisting}
+{ \tiny
+\begin{verbatim}
+      ï..Year    County Hospital.Name OSHPDID Procedure Volume Longitude Latitude Location
+41783    2005 STATEWIDE     STATEWIDE      NA       PCI  60418        NA       NA         
+\end{verbatim}
+}
+
+\newpage
+
+Entry seems to be an aggregate number, not county/year level.  To remove the outlier:
+
+    \begin{columns}
+      \column{0.50\textwidth}
+  \begin{lstlisting}[ basicstyle=\footnotesize]
+data_clean = subset(
+  x = data, 
+  County != "STATEWIDE"
+  )
+hist(data_clean$Volume)
+# Is anything `off' now? (Exercise.)
+  \end{lstlisting}
+
+     \column{0.50\textwidth}
+    \begin{center}
+       \includegraphics[scale=0.3]{images/histogram2.pdf}
+    \end{center}   
+\end{columns}
 
 \end{frame}
 
