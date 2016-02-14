@@ -123,21 +123,20 @@
 \end{frame}
 
 %%% --------------------------
-
-%%% --------------------------
-\section[Assignment]{Creating Objects}
+\subsection{Creating Objects}
 %%% --------------------------
 \begin{frame}
-	\begin{center}
 		\begin{block}{Creating objects in R}
-
+Objects can be created in different ways, via:
+			\begin{itemize}
+				\item equal sign: \lstinline$ x = 3 $
+				\item left arrow: \lstinline$ y <- 2 * x + 1 $
+				\item right arrow: \lstinline$ 10 -> z $
+			\end{itemize}
 		\end{block}
-	\end{center} 
 \end{frame}
 
-
 %%% --------------------------
-\section[Functions]{Functions}
 \subsection{(Very) Brief Overview of Functions}
 %%% --------------------------
 \begin{frame}[fragile]
@@ -168,28 +167,19 @@ f(y=3, x=3) # 10
 	\end{center} 
 \end{frame}
 
-%%% --------------------------
-\subsection{Adding Functionality to Base R}
-%%% --------------------------
 
-\begin{frame}
-	\begin{center}
-			%%% What is base R?
-	\end{center} 
-\end{frame}
+\section{Working with Data}
 
-
-
-
-\subsection{Importing Data from the Internet}
+\subsection{Reading Data from File}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % --------------------------------------------------- Slide --
-\begin{frame}[fragile]
- \frametitle{Data from the Internet}
+\begin{frame}[fragile, allowframebreaks]
+ \frametitle{Reading Data from File}
 
-When downloading data from the internet, use \ttfamily read.table(). \normalfont  In the arguments of the function:
+One approach is via \ttfamily read.table(). \normalfont  In the arguments of the function:
   \begin{itemize}
+  \item \ttfamily file: \normalfont specifies the (relative) location, file name and file extension
   \item \ttfamily header: \normalfont if TRUE, tells R to include variables names when importing
   \item \ttfamily sep: \normalfont tells R how the entires in the data set are separated
     \begin{itemize}
@@ -198,9 +188,15 @@ When downloading data from the internet, use \ttfamily read.table(). \normalfont
       \item \ttfamily sep=" ": \normalfont when entries are separated by SPACE
     \end{itemize}
    \end{itemize}
-   	\begin{lstlisting}[ basicstyle=\small]
+
+\newpage   
+   	\begin{lstlisting}[ basicstyle=\tiny]
+filepath = "http://www.ats.ucla.edu/stat/data/test_missing_comma.txt"
+### Other valid paths:
+# filepath = "C:/Documents/test_missing_comma.txt"
+# filepath = "./test_missing_comma.txt"
 data <- read.table(
-	file="http://www.ats.ucla.edu/stat/data/binary.csv", 
+	file=filepath, 
 	header=TRUE, 
 	sep=","
 	)
@@ -209,28 +205,37 @@ data <- read.table(
 \normalsize
 \end{frame}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% --------------------------
+\subsection{Working with Data Frames}
+%%% --------------------------
+\begin{frame}
+	\frametitle{Working with Data Frames}
+	To check that a data set has been read-in correctly: 
+	\begin{itemize}
+		\item View the first 5 lines of the dataset via \ttfamily head(): \normalfont \lstinline$ head(data, 5) $
+		\item View the last 7 lines of the dataset via \ttfamily tail(): \normalfont \lstinline$ tail(data, 7) $
+		\item Check the variable names via \ttfamily names(): \normalfont \lstinline$ names(data) $
+		\item Check the size of the data set via \ttfamily dim(): \normalfont \lstinline$ dim(data) $
+		\item Verify ranges and check for missing data via \ttfamily summary(): \normalfont \lstinline$ summary(data) $
+	\end{itemize}
+\end{frame}
 
-% Data from your Computer
 
-\subsection{Importing Data from Your Computer}
+%%% --------------------------
+\section{Adding Functionality to Base R}
+%%% --------------------------
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}[fragile]
-\frametitle{Importing Data from Your Computer}
-    \begin{enumerate}
- 	\item Check what folder R is working with now: \\
-		\begin{lstlisting}
-getwd()
-		\end{lstlisting}
+	\frametitle{Adding Functionality to Base R}
 
- 	\item Tell R in what folder the data set is stored (if different from (1)).  Suppose your data set is in your 'Documents' folder: \\
-	\begin{lstlisting}
-setwd("C:/Users/ikukuyeva/Documents")
+	\begin{itemize}
+		\item Base R is what you download off CRAN \url{www.cran.r-project.org} 
+		\item Available packages are listed here: \url{https://cran.r-project.org/web/packages/}
+		\item Install an R package(s) via \ttfamily install.packages(): \normalfont 
+   	\begin{lstlisting}
+install.packages("ggplot2")
 	\end{lstlisting}
-
-	\item Now use the \ttfamily read.table() \normalfont command to read in the data, substituting the name of the file for the website.
-    \end{enumerate}
+	\end{itemize} 	
 \end{frame}
 
 
