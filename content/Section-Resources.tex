@@ -99,6 +99,22 @@ Possible causes:
   
 \end{frame}
 
+\subsection{Silent Errors}
+\begin{frame}[fragile]
+  \frametitle{Silent Errors}
+Most common silent errors:
+  \begin{enumerate}
+    \item (Inadvertently) Creating a data set with no rows or columns. 
+    \item (Inadvertently) Recycling (and padding) of entries in a variable with a smaller number of observations than the one it is compared to.  
+  \end{enumerate}
+Possible solutions:
+  \begin{enumerate}
+    \item Always check the dimensionality of the data set after subsetting.
+    \item Always check the lengths of variables ahead of comparison, especially if subsetting just took place.
+  \end{enumerate}   
+\noindent For more caveats and solutions, read the "R Inferno": \url{http://www.burns-stat.com/pages/Tutor/R_inferno.pdf}
+  
+\end{frame}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Section: R Help
