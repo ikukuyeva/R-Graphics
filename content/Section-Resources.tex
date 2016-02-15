@@ -6,42 +6,6 @@
 % Section: Software Installation
 \section{Installation}
 \subsection{Software Installation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}
-  \frametitle{Installing R and RStudio}
-    \begin{columns}
-      \column{0.65\textwidth}
-        \begin{enumerate}
-           \item[R:] Go to \small \url{http://cran.r-project.org/}, select your operating system and download the latest version: 3.2.3 (Release 2015/12/10).
-           \item[RStudio:] Go to \small \url{https://www.rstudio.com/products/rstudio/download/}, select your operating system and download the installer (if available).
-        \end{enumerate}
-%
-      \column{0.35\textwidth}
-       \begin{center}
-         \includegraphics[width=1\textwidth]{images/Rwindow.png}
-        \end{center}
-      \end{columns}
-\end{frame}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Subsection: package installation
-\subsection{Package Installation}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[fragile]
-  \frametitle{Package Installation}
-
-  To install a package in R, use \ttfamily install.packages()\normalfont:
-  \begin{lstlisting}
-install.packages("lattice")
-install.packages("ggplot2")
-# OR
-install.packages( c("lattice", "ggplot2") )
-  \end{lstlisting}
-
-\end{frame}
-
 %---
 %%%%%%%%%%%%%%%%%%%%%%%
 \subsection{Saving Plots as a PDF} 
