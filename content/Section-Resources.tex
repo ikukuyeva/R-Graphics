@@ -46,13 +46,59 @@ rgl.snapshot("quakes.png")
 \end{frame}
 
 %%%%%%%%%%%%%%%%% 
-\section[Error Messages]{Most Common Error Messages}
+\section{Common Bugs and Fixes}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\begin{frame}
-  \frametitle{Most Common Error Messages}
-
+\subsection{Syntax Error}
+\begin{frame}[fragile]
+  \frametitle{\ttfamily Error: syntax error \normalfont}
+Possible causes:
+  \begin{itemize}
+    \item Misspelling the object's name
+    \item Including a "$+$" when copying code from console/website, etc.
+    \item Having an extra parenthesis at the end of a function
+    \item Having an extra bracket when subsetting
+  \end{itemize}
 \end{frame}
+
+\subsection{Trailing $+$}
+\begin{frame}[fragile]
+  \frametitle{Trailing $+$}
+Possible causes:
+  \begin{itemize}
+    \item Not closing a function call with a parenthesis
+    \item Not closing brackets when subsetting
+    \item Not closing a function you wrote with a squiggly brace
+  \end{itemize}
+\end{frame}
+
+\subsection{Error When Performing Operations}
+\begin{frame}[fragile]
+  \frametitle{\ttfamily Error in ... : requires numeric matrix/vector arguments \normalfont}
+Possible causes:
+  \begin{enumerate}
+    \item Objects are data frames, not matrices
+    \item Elements of the vectors are characters \\
+  \end{enumerate}
+  
+Possible solutions:
+  \begin{enumerate}
+    \item Coerce (a copy of) the data set to be a matrix, with the \ttfamily as.matrix() \normalfont command
+    \item Coerce (a copy of) the vector to have numeric entries, with the \ttfamily as.numeric() \normalfont command
+  \end{enumerate} 
+\end{frame}
+
+\subsection{Error in Calling an Object}
+\begin{frame}[fragile]
+  \frametitle{\ttfamily Error: ... object not found \normalfont}
+Possible causes:
+  \begin{enumerate}
+    \item Misspelling the object's name
+    \item Package containing the object has not been loaded
+  \end{enumerate}
+  
+\end{frame}
+
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Section: R Help
