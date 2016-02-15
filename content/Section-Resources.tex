@@ -27,23 +27,23 @@ dev.off()
 
 \end{frame}
 
-\begin{frame}[fragile]
-  \frametitle{Saving Plots as a PDF}
-  \framesubtitle{For Dynamic Plots}
+% \begin{frame}[fragile]
+%   \frametitle{Saving Plots as a PDF}
+%   \framesubtitle{For Dynamic Plots}
 
-  \itshape Note: \normalfont The files will be saved in the folder specified with \ttfamily setwd(). \normalfont
-  To save a dynamic plot in \ttfamily R \normalfont as a PDF, use function \ttfamily rgl.snapshot(): \normalfont
+%   \itshape Note: \normalfont The files will be saved in the folder specified with \ttfamily setwd(). \normalfont
+%   To save a dynamic plot in \ttfamily R \normalfont as a PDF, use function \ttfamily rgl.snapshot(): \normalfont
 
-  \begin{lstlisting}
-# To save the image to the desktop:
-setwd("~/Desktop")
-# Step 1: Produce the 3D image:
-plot3d(x=quakes$long, y=quakes$lat, z=quakes$depth, xlab="Longitude", ylab="Latitude", zlab="Depth")
-# Step 2: Can rotate before taking a snapshot:
-rgl.snapshot("quakes.png")
-  \end{lstlisting}
+%   \begin{lstlisting}
+% # To save the image to the desktop:
+% setwd("~/Desktop")
+% # Step 1: Produce the 3D image:
+% plot3d(x=quakes$long, y=quakes$lat, z=quakes$depth, xlab="Longitude", ylab="Latitude", zlab="Depth")
+% # Step 2: Can rotate before taking a snapshot:
+% rgl.snapshot("quakes.png")
+%   \end{lstlisting}
 
-\end{frame}
+% \end{frame}
 
 %%%%%%%%%%%%%%%%% 
 \section{Common Bugs and Fixes}
