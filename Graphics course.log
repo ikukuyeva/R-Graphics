@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.26)  13 FEB 2016 21:06
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.26)  14 FEB 2016 22:21
 entering extended mode
 **C:/Users/ikukuyeva/Documents/Consulting*Center/Courses/Graphics-repo/Graphics
 *course.tex
@@ -1024,7 +1024,7 @@ thkerncmss.
 LaTeX Font Warning: Font shape `OT1/cmss/m/n' in size <4> not available
 (Font)              size <5> substituted on input line 12.
 
-<logo.jpg, id=168, 603.25375pt x 251.94125pt>
+<logo.jpg, id=188, 603.25375pt x 251.94125pt>
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 12.
@@ -1063,7 +1063,7 @@ Package pdftex.def Info: logo.jpg used on input line 6.
  [4
 
 ]
-<images/r-vs-python-numbers.jpg, id=318, 559.08875pt x 366.36874pt>
+<images/r-vs-python-numbers.jpg, id=338, 559.08875pt x 366.36874pt>
 File: images/r-vs-python-numbers.jpg Graphic file (type jpg)
 
 <use images/r-vs-python-numbers.jpg>
@@ -1102,7 +1102,7 @@ Package pdftex.def Info: logo.jpg used on input line 54.
  [8
 
 ]
-<images/facebook.jpg, id=456, 2376.88pt x 1183.42125pt>
+<images/facebook.jpg, id=476, 2376.88pt x 1183.42125pt>
 File: images/facebook.jpg Graphic file (type jpg)
 
 <use images/facebook.jpg>
@@ -1125,7 +1125,7 @@ Package pdftex.def Info: logo.jpg used on input line 75.
  [10
 
 ]
-<images/geolocation_ex2.jpg, id=525, 889.3225pt x 788.9475pt>
+<images/geolocation_ex2.jpg, id=545, 889.3225pt x 788.9475pt>
 File: images/geolocation_ex2.jpg Graphic file (type jpg)
 
 <use images/geolocation_ex2.jpg>
@@ -1159,18 +1159,41 @@ Package pdftex.def Info: logo.jpg used on input line 104.
  [13
 
 ]
+<images/Rwindow.png, id=673, 769.97662pt x 501.97537pt>
+File: images/Rwindow.png Graphic file (type png)
+
+<use images/Rwindow.png>
+Package pdftex.def Info: images/Rwindow.png used on input line 120.
+(pdftex.def)             Requested size: 107.55333pt x 70.11522pt.
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 123.
+Package pdftex.def Info: logo.jpg used on input line 120.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [14
+
+ <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/R
+window.png>]
+("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
+ course.toc")
+File: logo.jpg Graphic file (type jpg)
+ <use logo.jpg>
+Package pdftex.def Info: logo.jpg used on input line 124.
+(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
+ [15
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 137.
+Package pdftex.def Info: logo.jpg used on input line 143.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [15
+ [16
+
+]
+File: logo.jpg Graphic file (type jpg)
+ <use logo.jpg>
+Package pdftex.def Info: logo.jpg used on input line 157.
+(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
+ [17
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
@@ -1193,34 +1216,34 @@ LaTeX Font Warning: Font shape `OMS/cmss/m/n' undefined
 )
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 168.
+Package pdftex.def Info: logo.jpg used on input line 188.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [16
+ [18
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
  course.toc")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 171.
+Package pdftex.def Info: logo.jpg used on input line 191.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [17
+ [19
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
  course.vrb")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 206.
+Package pdftex.def Info: logo.jpg used on input line 226.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [18
+ [20
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 206.
+Package pdftex.def Info: logo.jpg used on input line 226.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [19
+ [21
 
 
 ]
@@ -1234,41 +1257,41 @@ Overfull \hbox (2.83183pt too wide) in paragraph at lines 64--64
 )
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 313.
-(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [20
-
-]
-File: logo.jpg Graphic file (type jpg)
- <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 313.
-(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [21
-
-
-]
-File: logo.jpg Graphic file (type jpg)
- <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 313.
+Package pdftex.def Info: logo.jpg used on input line 333.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [22
 
-
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 313.
+Package pdftex.def Info: logo.jpg used on input line 333.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
-
-[23
+ [23
 
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 313.
+Package pdftex.def Info: logo.jpg used on input line 333.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [24
+
+
+]
+File: logo.jpg Graphic file (type jpg)
+ <use logo.jpg>
+Package pdftex.def Info: logo.jpg used on input line 333.
+(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
+
+[25
+
+
+]
+File: logo.jpg Graphic file (type jpg)
+ <use logo.jpg>
+Package pdftex.def Info: logo.jpg used on input line 333.
+(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
+ [26
 
 
 ]
@@ -1276,18 +1299,18 @@ Package pdftex.def Info: logo.jpg used on input line 313.
  course.toc")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 317.
+Package pdftex.def Info: logo.jpg used on input line 337.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [25
+ [27
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
  course.vrb")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 331.
+Package pdftex.def Info: logo.jpg used on input line 355.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [26
+ [28
 
 ])
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\content/
@@ -1296,7 +1319,7 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 1.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [27
+ [29
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
@@ -1305,11 +1328,11 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 5.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [28
+ [30
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/data.png, id=1331, 939.20888pt x 422.7795pt>
+ course.vrb" <images/data.png, id=1458, 939.20888pt x 422.7795pt>
 File: images/data.png Graphic file (type png)
 
 <use images/data.png>
@@ -1320,14 +1343,14 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 25.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [29
+ [31
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 25.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [30
+ [32
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/d
@@ -1338,11 +1361,11 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 30.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [31
+ [33
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/scatterPlot_v0.pdf, id=1533, 459.7175pt x 459.7175pt>
+ course.vrb" <images/scatterPlot_v0.pdf, id=1660, 459.7175pt x 459.7175pt>
 File: images/scatterPlot_v0.pdf Graphic file (type pdf)
 
 <use images/scatterPlot_v0.pdf>
@@ -1353,7 +1376,7 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 52.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [32
+ [34
 
 ]
 Overfull \vbox (5.12138pt too high) detected at line 52
@@ -1363,13 +1386,13 @@ File: logo.jpg Graphic file (type jpg)
 <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 52.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [33
+ [35
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/s
 catterPlot_v0.pdf>]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/scatterPlot_v1.pdf, id=1669, 459.7175pt x 459.7175pt>
+ course.vrb" <images/scatterPlot_v1.pdf, id=1796, 459.7175pt x 459.7175pt>
 File: images/scatterPlot_v1.pdf Graphic file (type pdf)
 
 <use images/scatterPlot_v1.pdf>
@@ -1380,7 +1403,7 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 70.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [34
+ [36
 
 ]
 Overfull \vbox (5.12138pt too high) detected at line 70
@@ -1390,13 +1413,13 @@ File: logo.jpg Graphic file (type jpg)
 <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 70.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [35
+ [37
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/s
 catterPlot_v1.pdf>]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/scatterPlot_v3.pdf, id=1804, 459.7175pt x 459.7175pt>
+ course.vrb" <images/scatterPlot_v3.pdf, id=1932, 459.7175pt x 459.7175pt>
 File: images/scatterPlot_v3.pdf Graphic file (type pdf)
 
 <use images/scatterPlot_v3.pdf>
@@ -1407,14 +1430,14 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 103.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [36
+ [38
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 103.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [37
+ [39
 
 
 ]
@@ -1425,13 +1448,13 @@ File: logo.jpg Graphic file (type jpg)
 <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 103.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [38
+ [40
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/s
 catterPlot_v3.pdf>]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/histogram.pdf, id=2007, 459.7175pt x 459.7175pt>
+ course.vrb" <images/histogram.pdf, id=2134, 459.7175pt x 459.7175pt>
 File: images/histogram.pdf Graphic file (type pdf)
 
 <use images/histogram.pdf>
@@ -1440,7 +1463,7 @@ Package pdftex.def Info: images/histogram.pdf used on input line 16.
 Missing character: There is no Ã in font cmtt8!
 Missing character: There is no ¯ in font cmtt8!
 
-<images/histogram2.pdf, id=2008, 459.7175pt x 459.7175pt>
+<images/histogram2.pdf, id=2135, 459.7175pt x 459.7175pt>
 File: images/histogram2.pdf Graphic file (type pdf)
 
 <use images/histogram2.pdf>
@@ -1451,7 +1474,7 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 185.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [39
+ [41
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/h
 istogram.pdf>]
@@ -1460,7 +1483,7 @@ File: logo.jpg Graphic file (type jpg)
 Package pdftex.def Info: logo.jpg used on input line 185.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
 
-[40
+[42
 
 
 ]
@@ -1468,51 +1491,51 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 185.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [41
+ [43
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/h
 istogram2.pdf>]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/beanplot.pdf, id=2213, 459.7175pt x 459.7175pt>
+ course.vrb" <images/beanplot.pdf, id=2340, 459.7175pt x 459.7175pt>
 File: images/beanplot.pdf Graphic file (type pdf)
 
 <use images/beanplot.pdf>
-Package pdftex.def Info: images/beanplot.pdf used on input line 39.
+Package pdftex.def Info: images/beanplot.pdf used on input line 38.
 (pdftex.def)             Requested size: 199.73653pt x 199.73698pt.
 )
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 230.
+Package pdftex.def Info: logo.jpg used on input line 229.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [42
+ [44
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 230.
+Package pdftex.def Info: logo.jpg used on input line 229.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [43
+ [45
 
 
 ]
-Overfull \vbox (11.25925pt too high) detected at line 230
+Overfull \vbox (11.25925pt too high) detected at line 229
  []
 
 File: logo.jpg Graphic file (type jpg)
 <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 230.
+Package pdftex.def Info: logo.jpg used on input line 229.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [44
+ [46
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/b
 eanplot.pdf>]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 242.
+Package pdftex.def Info: logo.jpg used on input line 241.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [45
+ [47
 
 ])
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\content/
@@ -1523,11 +1546,11 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 12.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [46
+ [48
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/Mtvsplot1.pdf, id=2547, 459.7175pt x 459.7175pt>
+ course.vrb" <images/Mtvsplot1.pdf, id=2673, 459.7175pt x 459.7175pt>
 File: images/Mtvsplot1.pdf Graphic file (type pdf)
 
 <use images/Mtvsplot1.pdf>
@@ -1538,20 +1561,20 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 88.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [47
+ [49
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 88.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [48
+ [50
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/M
 tvsplot1.pdf>]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/stockPlot0.pdf, id=2681, 459.7175pt x 459.7175pt>
+ course.vrb" <images/stockPlot0.pdf, id=2808, 459.7175pt x 459.7175pt>
 File: images/stockPlot0.pdf Graphic file (type pdf)
 
 <use images/stockPlot0.pdf>
@@ -1562,20 +1585,20 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 106.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [49
+ [51
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 106.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [50
+ [52
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/s
 tockPlot0.pdf>]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/stockPlot1.pdf, id=2816, 459.7175pt x 459.7175pt>
+ course.vrb" <images/stockPlot1.pdf, id=2942, 459.7175pt x 459.7175pt>
 File: images/stockPlot1.pdf Graphic file (type pdf)
 
 <use images/stockPlot1.pdf>
@@ -1586,14 +1609,14 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 154.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [51
+ [53
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 154.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [52
+ [54
 
 
 ]
@@ -1602,13 +1625,13 @@ File: logo.jpg Graphic file (type jpg)
 <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 154.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [53
+ [55
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/s
 tockPlot1.pdf>]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/stockPlot2.pdf, id=3014, 459.7175pt x 459.7175pt>
+ course.vrb" <images/stockPlot2.pdf, id=3141, 459.7175pt x 459.7175pt>
 File: images/stockPlot2.pdf Graphic file (type pdf)
 
 <use images/stockPlot2.pdf>
@@ -1619,14 +1642,14 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 189.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [54
+ [56
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 189.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [55
+ [57
 
 
 ]
@@ -1635,7 +1658,7 @@ File: logo.jpg Graphic file (type jpg)
 <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 189.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [56
+ [58
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/s
@@ -1646,7 +1669,7 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 197.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [57
+ [59
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
@@ -1655,7 +1678,7 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 240.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [58
+ [60
 
 ])
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\content/
@@ -1666,11 +1689,11 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 5.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [59
+ [61
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/Fuji.pdf, id=3414, 1084.05pt x 722.7pt>
+ course.vrb" <images/Fuji.pdf, id=3541, 1084.05pt x 722.7pt>
 File: images/Fuji.pdf Graphic file (type pdf)
 
 <use images/Fuji.pdf>
@@ -1686,12 +1709,12 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 34.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [60
+ [62
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/F
 uji.pdf>]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/fujiColor.pdf, id=3484, 722.7pt x 433.62pt>
+ course.vrb" <images/fujiColor.pdf, id=3611, 722.7pt x 433.62pt>
 File: images/fujiColor.pdf Graphic file (type pdf)
 
 <use images/fujiColor.pdf>
@@ -1702,14 +1725,14 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 64.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [61
+ [63
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 64.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [62
+ [64
 
 
 ]
@@ -1720,13 +1743,13 @@ File: logo.jpg Graphic file (type jpg)
 <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 64.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [63
+ [65
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/f
 ujiColor.pdf>]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/Fuji2.pdf, id=3683, 505.89pt x 505.89pt>
+ course.vrb" <images/Fuji2.pdf, id=3809, 505.89pt x 505.89pt>
 File: images/Fuji2.pdf Graphic file (type pdf)
 
 <use images/Fuji2.pdf>
@@ -1737,7 +1760,7 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 92.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [64
+ [66
 
 ]
 Overfull \vbox (22.69434pt too high) detected at line 92
@@ -1747,7 +1770,7 @@ File: logo.jpg Graphic file (type jpg)
 <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 92.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [65
+ [67
 
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/F
@@ -1756,7 +1779,7 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 118.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [66
+ [68
 
 ])
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\content/
@@ -1765,7 +1788,7 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 1.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [67
+ [69
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
@@ -1774,29 +1797,6 @@ File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
 Package pdftex.def Info: logo.jpg used on input line 7.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [68
-
-]
-<images/Rwindow.png, id=3972, 769.97662pt x 501.97537pt>
-File: images/Rwindow.png Graphic file (type png)
-
-<use images/Rwindow.png>
-Package pdftex.def Info: images/Rwindow.png used on input line 25.
-(pdftex.def)             Requested size: 107.55333pt x 70.11522pt.
-File: logo.jpg Graphic file (type jpg)
- <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 25.
-(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [69
-
- <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/R
-window.png>]
-("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb")
-File: logo.jpg Graphic file (type jpg)
- <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 43.
-(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [70
 
 ]
@@ -1804,47 +1804,85 @@ Package pdftex.def Info: logo.jpg used on input line 43.
  course.vrb")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 64.
+Package pdftex.def Info: logo.jpg used on input line 28.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [71
+
+]
+("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
+ course.toc")
+File: logo.jpg Graphic file (type jpg)
+ <use logo.jpg>
+Package pdftex.def Info: logo.jpg used on input line 49.
+(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
+ [72
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
  course.vrb")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 82.
-(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [72
-
-]
-("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.toc")
-File: logo.jpg Graphic file (type jpg)
- <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 85.
+Package pdftex.def Info: logo.jpg used on input line 62.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [73
 
 ]
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 64.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (PDFDocEncoding):
+(hyperref)                removing `math shift' on input line 64.
+
+
+("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
+ course.vrb")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 91.
+Package pdftex.def Info: logo.jpg used on input line 73.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [74
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.toc")
+ course.vrb")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 95.
+Package pdftex.def Info: logo.jpg used on input line 89.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [75
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/Rhelp.png, id=4237, 797.68013pt x 431.51213pt>
+ course.vrb")
+File: logo.jpg Graphic file (type jpg)
+ <use logo.jpg>
+Package pdftex.def Info: logo.jpg used on input line 100.
+(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
+ [76
+
+]
+("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
+ course.vrb")
+File: logo.jpg Graphic file (type jpg)
+ <use logo.jpg>
+Package pdftex.def Info: logo.jpg used on input line 117.
+(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
+ [77
+
+]
+("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
+ course.toc")
+File: logo.jpg Graphic file (type jpg)
+ <use logo.jpg>
+Package pdftex.def Info: logo.jpg used on input line 121.
+(pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
+ [78
+
+]
+("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
+ course.vrb" <images/Rhelp.png, id=4422, 797.68013pt x 431.51213pt>
 File: images/Rhelp.png Graphic file (type png)
 
 <use images/Rhelp.png>
@@ -1858,14 +1896,14 @@ Overfull \hbox (18.43869pt too wide) in paragraph at lines 13--14
 )
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 115.
+Package pdftex.def Info: logo.jpg used on input line 141.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [76
+ [79
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/R
 help.png>]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
- course.vrb" <images/SO.png, id=4275, 793.46437pt x 430.0065pt>
+ course.vrb" <images/SO.png, id=4463, 793.46437pt x 430.0065pt>
 File: images/SO.png Graphic file (type png)
 
 <use images/SO.png>
@@ -1874,9 +1912,9 @@ Package pdftex.def Info: images/SO.png used on input line 12.
 )
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 134.
+Package pdftex.def Info: logo.jpg used on input line 160.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [77
+ [80
 
  <C:/Users/ikukuyeva/Documents/Consulting Center/Courses/Graphics-repo/images/S
 O.png>]
@@ -1884,25 +1922,25 @@ O.png>]
  course.toc")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 141.
+Package pdftex.def Info: logo.jpg used on input line 167.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [78
+ [81
 
 ]
 ("C:\Users\ikukuyeva\Documents\Consulting Center\Courses\Graphics-repo\Graphics
  course.vrb")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 175.
+Package pdftex.def Info: logo.jpg used on input line 201.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [79
+ [82
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 175.
+Package pdftex.def Info: logo.jpg used on input line 201.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [80
+ [83
 
 
 ]
@@ -1910,23 +1948,23 @@ Package pdftex.def Info: logo.jpg used on input line 175.
  course.toc")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 185.
+Package pdftex.def Info: logo.jpg used on input line 211.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [81
+ [84
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 200.
+Package pdftex.def Info: logo.jpg used on input line 226.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [82
+ [85
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 218.
+Package pdftex.def Info: logo.jpg used on input line 244.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
- [83
+ [86
 
 ])
 \tf@nav=\write7
@@ -1952,13 +1990,13 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 63.
  ) 
 Here is how much of TeX's memory you used:
- 19760 strings out of 493921
- 377765 string characters out of 3147270
+ 19809 strings out of 493921
+ 379050 string characters out of 3147270
  549966 words of memory out of 3000000
- 22275 multiletter control sequences out of 15000+200000
- 18879 words of font info for 70 fonts, out of 3000000 for 9000
+ 22303 multiletter control sequences out of 15000+200000
+ 20698 words of font info for 77 fonts, out of 3000000 for 9000
  841 hyphenation exceptions out of 8191
- 56i,19n,99p,465b,1968s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,19n,99p,465b,1967s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi6.pfb><C:/Pro
 gram Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi9.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsltt10.pfb><C:/Program Files/MiKT
@@ -1976,9 +2014,9 @@ s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy6.pfb><C:/Program Files/MiKTeX
 ublic/amsfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm
 /cmtt9.pfb>
-Output written on "Graphics course.pdf" (83 pages, 10517895 bytes).
+Output written on "Graphics course.pdf" (86 pages, 10563932 bytes).
 PDF statistics:
- 4663 PDF objects out of 5155 (max. 8388607)
- 205 named destinations out of 1000 (max. 500000)
- 518 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 4866 PDF objects out of 5155 (max. 8388607)
+ 216 named destinations out of 1000 (max. 500000)
+ 558 words of extra memory for PDF output out of 10000 (max. 10000000)
 
