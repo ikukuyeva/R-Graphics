@@ -147,18 +147,16 @@
 %%% --------------------------
 \begin{frame}
   \frametitle{Installing R and RStudio}
-    \begin{columns}
-      \column{0.65\textwidth}
+  		\vspace{-5pt}
         \begin{enumerate}
            \item[R:] Go to \small \url{http://cran.r-project.org/}, select your operating system and download the latest version: 3.2.3 (Release 2015/12/10).
            \item[RStudio:] Go to \small \url{https://www.rstudio.com/products/rstudio/download/}, select your operating system and download the installer (if available).
         \end{enumerate}
 %
-      \column{0.35\textwidth}
+		\vspace{-5pt}
        \begin{center}
-         \includegraphics[width=1\textwidth]{images/Rwindow.png}
+         \includegraphics[width=0.5\textwidth]{images/Rwindow.png}
         \end{center}
-      \end{columns}
 \end{frame}
 
 
@@ -252,11 +250,12 @@ One approach is via \ttfamily read.table(). \normalfont  In the arguments of the
    \end{itemize}
 
 \newpage   
-   	\begin{lstlisting}[ basicstyle=\tiny]
+   	\begin{lstlisting}[ basicstyle=\footnotesize]
 filepath = "http://www.ats.ucla.edu/stat/data/test_missing_comma.txt"
 ### Other valid paths:
 # filepath = "C:/Documents/test_missing_comma.txt"
 # filepath = "./test_missing_comma.txt"
+
 data <- read.table(
 	file=filepath, 
 	header=TRUE, 
@@ -386,7 +385,7 @@ summary(data)
 		\item Base R is what you download off CRAN \url{www.cran.r-project.org} 
 		\item Available packages are listed here: \url{https://cran.r-project.org/web/packages/}
 		\item Install an R package(s) via \ttfamily install.packages(): \normalfont 
-   	\begin{lstlisting}
+   	\begin{lstlisting}[ basicstyle=\small]
 install.packages("lattice")
 install.packages("ggplot2")
 # OR
