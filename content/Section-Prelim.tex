@@ -374,6 +374,25 @@ head(df$gender)
 \end{verbatim}	
 
 \newpage
+	\item Examine how many unique levels a variable has via \ttfamily unique(): \normalfont
+\begin{lstlisting}
+unique(df$gender)
+\end{lstlisting}
+
+\begin{verbatim}
+[1] 0 1
+\end{verbatim}	
+	\item Examine the counts of levels that a variable has via \ttfamily table(): \normalfont
+\begin{lstlisting}
+table(df$gender, useNA='always')
+\end{lstlisting}
+
+\begin{verbatim}
+   0    1 <NA> 
+   7    1    0 
+\end{verbatim}	
+
+\newpage
 		\item Verify ranges and check for missing data via \ttfamily summary(): \normalfont 
 \begin{lstlisting}
 summary(df)
