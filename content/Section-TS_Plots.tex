@@ -58,183 +58,81 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Multivariate Plots: Approach 1}
+\subsection{Multivariate Plots}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[allowframebreaks, fragile]
- \frametitle{Multivariate Time Series Plots (v0.1)}
+ \frametitle{Multivariate Plots: Approach 1}
 
-To plot more than variables one at a time, use \ttfamily mvtsplot()\normalfont [5]:
+To plot more than variables one at a time, use \ttfamily xyplot()\normalfont [5]:
 %\begin{itemize}
 %	\item For documentation, go to: www.jstatsoft.org/v25/c01/paper 
 %	\item Go to: http://www.biostat.jhsph.edu/$\sim$rpeng/RR/mvtsplot/
 %	\item Copy the relevant R Code and paste it into the R Console. Press ENTER.
 %	\item Plot your data
 % \end{itemize}
-		\begin{lstlisting}
-library(mvtsplot)		
-# Data = Daily Closing of Stock Indices:
-data(EuStockMarkets)
-# Purple=low, grey=medium, 
-# green=high, white=missing values:
-mvtsplot(EuStockMarkets)
+		\begin{lstlisting}[ basicstyle=\footnotesize ]
+library(dplyr)
+library(lattice)
+df_LA_CABG <- df %>%
+  filter( 
+    (County == "Los Angeles") & 
+    (Procedure == "CABG") & 
+    (Volume > 0) 
+    )
+
+xyplot( Volume ~ Year | Hospital.Name, 
+  data=df_LA_CABG,
+  par.strip.text=list(cex=0.5),
+  type="b",
+  main="LA Coronary artery bypass grafting (CABG)"
+  )
 		\end{lstlisting}
 
-       \begin{center}
-         \includegraphics[width=0.6\textwidth]{images/Mtvsplot1.pdf}
-        \end{center}
+\newpage
+      \vspace{-10pt} \hspace{-10pt}
+         \includegraphics[width=1.05\textwidth]{images/timeseries_LA_CABG}
 
 \end{frame}
 
-\subsection{Multivariate Plots: Approach 2}
+%---
 \begin{frame}[fragile, allowframebreaks]
- \frametitle{Multivariate Time Series Plots (v0.2)}
-
-Another way to plot more than one variable at a time, is via \ttfamily xyplot()\normalfont :
-
-    \begin{lstlisting}
-library(lattice) 
-data(EuStockMarkets)
-xyplot(EuStockMarkets)
-   \end{lstlisting}
-
-
-       \begin{center}
-         \includegraphics[width=0.6\textwidth]{images/stockPlot0.pdf}
-        \end{center}
-\end{frame}
-
-\begin{frame}[fragile, allowframebreaks]
- \frametitle{Multivariate Time Series Plots (v0.3)}
-
-To customize the output, modify controls of \ttfamily xyplot()\normalfont :
-
-    \begin{lstlisting}[ basicstyle=\small]
-library(lattice)
-library(reshape2)   
-data(EuStockMarkets)
-# Stack data per [2]:
-df = cbind.data.frame(
-  "id"=1:nrow(EuStockMarkets),
-  EuStockMarkets
-  )
-df_stacked = melt(
-  df,
-  id="id"
-  )
-# Adding labels per [3]:
-xyplot( df_stacked$value ~ df_stacked$id, 
-  groups=df_stacked$variable,
-  auto.key = list(space = "right"),
-  scales = list(y = list(rot = 45),
-                x = list(
-                  at=c(0,500, 1000, 1500),
-                  labels=seq(from=1992, to=1998, by=2)
-                  )
-                ),
-  xlab="Time",
-  ylab="Value"
-  )
-    \end{lstlisting}
-%% To modify legend's tick marks
-%% per http://grokbase.com/t/r/r-help/073mmn16mn/r-lattice-key-legend-with-both-points-and-lines
-%%
-% xyplot(1:10 ~ 1:10,
-%   key = list(
-%     text = list(c("prices", "means")),
-%     lines = list(
-%     pch = c("*", ""), type = c("p", "l"),
-%     cex = 2, col = "red", lwd = 3)
-%     )
-% )
-       \begin{center}
-         \includegraphics[width=0.6\textwidth]{images/stockPlot1.pdf}
-        \end{center}
-\end{frame}
-
-%%%%%% New frame
-\subsection{Multivariate Plots: Approach 3}
-\begin{frame}[allowframebreaks, fragile]
- \frametitle{Multivariate Time Series Plots (v0.4)}
+ \frametitle{Multivariate Plots: Approach 2}
 
 Another way to plot more than one variable at a time, is via \ttfamily ggplot()\normalfont :
-		\begin{lstlisting}
-library(ggplot2)
-library(reshape2)   
-data(EuStockMarkets)
-df = cbind.data.frame(
-  "id"=1:nrow(EuStockMarkets),
-  EuStockMarkets
-  )
-df_stacked = melt(
-  df,
-  id="id"
-  )
-# Ading labels per [4]:
-ggplot(
-  data = df_stacked,
-  aes(x = id, y = value, color = variable)
-  ) +
-  geom_point() +
-  scale_x_discrete(name="Time",
-    breaks=seq(from=0, to=1500, by=500),
-    labels=seq(from=1992, to=1998, by=2)
-    )
-		\end{lstlisting}
 
+    \begin{lstlisting}[ basicstyle=\footnotesize ]
+library(ggplot2)
+ggplot( data = df_Cedars ) + 
+  geom_line( aes(
+    x = Year, 
+    y = Volume, 
+    linetype = Procedure) ) +
+  scale_x_continuous( breaks=seq(
+    from=2005, 
+    to=2014, 
+    by=3) ) +
+  theme_classic() +
+  ggtitle( "Volume of Procedures for Cedars Sinai Medical Center" )
+   \end{lstlisting}
+
+\newpage
        \begin{center}
-         \includegraphics[scale=0.4]{images/stockPlot2.pdf}
+         \includegraphics[width=0.9\textwidth]{images/timeseries_Cedars}
         \end{center}
 \end{frame}
-
-\subsection{Multivariate Plots: Approach 5}
-\begin{frame}[fragile, allowframebreaks]
- \frametitle{Multivariate Time Series Plots (v0.5)}
-
-%%% Steamplots
-
-\end{frame}
-
-%
-%%___________________________________
-%\subsection{Customizing Plots}
-%%___________________________________
-
-%\begin{frame}[allowframebreaks, fragile]
-% \frametitle{Customizing Plots}
-
-%%
-%%To plot more than variables one at a time, use \ttfamily xyplot(): \normalfont
-%%		\begin{lstlisting}
-
-%%		\end{lstlisting}
-
-%%       \begin{center}
-%%         \includegraphics[width=0.85\textwidth]{images/???}
-%%        \end{center}
-%\end{frame}
 
 % % ------------------------------------------------------------
 % % ------------------------------------------------------------
 \subsection{Exercise II}
 \begin{frame}[fragile]
 	\frametitle{Exercise II}
-	Analyze the approval ratings of the President of the United States in the data set\ttfamily presidents. \normalfont  What stands out and why?\\
+	In the healthcare data set, what seems to be the most popular procedure in CA?\\
   \vspace{10pt}
   \noindent Hints: \small
-    \begin{itemize}
-      \item Load the data set \ttfamily presidents.\normalfont
-      \item Convert the data set to be in matrix format, one row per year.
-%           \begin{lstlisting}[ basicstyle=\footnotesize]
-% presidents_mat = matrix(
-%   presidents, 
-%   ncol=4, 
-%   byrow=TRUE
-%   )
-%           \end{lstlisting}
-      \item Plot the data set.
-      \item Examine the result.
-    \end{itemize}
+
+    %%% TODO: show how to aggregate it by year and procedure
+
     \normalsize
 \end{frame}
