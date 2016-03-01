@@ -203,16 +203,21 @@ hist(data_clean$Volume)
 
 To compare two variables side-by-side, use \ttfamily beanplot(): \normalfont
 
-	\begin{lstlisting}[ basicstyle=\footnotesize ]
+	\begin{lstlisting}
+### Step 0: Load required packages:
 library(beanplot)
-# Subset the data to LA and SF:
+
+### Step 1: Subset data set to LA and SF:
 data_LA_SF <- subset(
   x = data_clean, 
   County %in% c("Los Angeles", "San Francisco") 
   )
+  \end{lstlisting}
 
-# Orient y-axis labels to be more readable:
-op <- par(las=2)
+\newpage
+  \begin{lstlisting}[ basicstyle = \small]
+### Step 3: Visualize  
+op <- par(las=2)   # orient y-axis labels
 beanplot(
   Volume ~ as.factor(County), 
   data = data_LA_SF, 
@@ -225,7 +230,10 @@ beanplot(
   ll = 0.005,
   show.names=FALSE
   )
+  \end{lstlisting}
 
+\newpage
+  \begin{lstlisting}
 legend(
   x = "bottomleft",
   fill=c( grey(0.5), grey(0.8) ), 

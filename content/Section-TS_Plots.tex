@@ -72,16 +72,23 @@ To plot more than variables one at a time, use \ttfamily xyplot()\normalfont [5]
 %	\item Copy the relevant R Code and paste it into the R Console. Press ENTER.
 %	\item Plot your data
 % \end{itemize}
-		\begin{lstlisting}[ basicstyle=\footnotesize ]
+		\begin{lstlisting}
+### Step 0: Load any required packages:
 library(dplyr)
 library(lattice)
+
+### Step 1: Get data for one procedure:
 df_LA_CABG <- df %>%
   filter( 
     (County == "Los Angeles") & 
     (Procedure == "CABG") & 
     (Volume > 0) 
     )
+    \end{lstlisting}
 
+\newpage    
+    \begin{lstlisting}
+### Step 2: Visualize    
 xyplot( Volume ~ Year | Hospital.Name, 
   data=df_LA_CABG,
   par.strip.text=list(cex=0.5),
@@ -91,7 +98,7 @@ xyplot( Volume ~ Year | Hospital.Name,
 		\end{lstlisting}
 
 \newpage
-      \vspace{-10pt} \hspace{-10pt}
+      \vspace{-20pt} \hspace{-20pt}
          \includegraphics[width=1.05\textwidth]{images/timeseries_LA_CABG}
 
 \end{frame}
@@ -102,8 +109,19 @@ xyplot( Volume ~ Year | Hospital.Name,
 
 Another way to plot more than one variable at a time, is via \ttfamily ggplot()\normalfont :
 
-    \begin{lstlisting}[ basicstyle=\footnotesize ]
+    \begin{lstlisting}
+### Step 0: Load any required packages:
+library(dplyr)
 library(ggplot2)
+
+### Step 1: Get data for one hospital:
+df_Cedars <- df_clean %>%
+  filter( Hospital.Name == 'Cedars Sinai Medical Center')
+   \end{lstlisting}
+
+\newpage
+    \begin{lstlisting}
+### Step 2: Visualize
 ggplot( data = df_Cedars ) + 
   geom_line( aes(
     x = Year, 
