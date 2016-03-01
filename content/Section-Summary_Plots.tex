@@ -5,24 +5,36 @@
 \section{Data Set}
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Data Set for Tutorial}
-	Data set for this tutorial comes from State of California.  Please download it from \\
+	Data set for this tutorial comes from State of California.  Please export it to CSV from: \\
 	\vspace{5pt}
 
-	\noindent \url{https://chhs.data.ca.gov/Healthcare/Number-of-Selected-Inpatient-Medical-Procedures-Ca/mdt8-gwyw}  \\
+	\noindent \url{https://chhs.data.ca.gov/Healthcare/Number-of-Selected-Inpatient-Medical-Procedures-Ca/mdt8-gwyw}
 
-	\vspace{5pt}
+    \begin{center}
+     \includegraphics[width=0.7\textwidth]{images/data.png}
+    \end{center}  
+
+\newpage   
 	\noindent To read it into R, type:
   		\begin{lstlisting}[ basicstyle=\footnotesize ]
-df <- read.csv(
-  file = "Number_of_Selected_Inpatient_Medical_Procedures__California_Hospitals__2005-2014.csv",
+df <- read.table(
+  "Number_of_Selected_Inpatient_Medical_Procedures__California_Hospitals__2005-2014.csv",
+  sep = ",",
+  header=TRUE,
   stringsAsFactors = FALSE
   )
+    \end{lstlisting}
+
+Check that the file was read-in correctly:
+\begin{lstlisting}
+dim(df) # 45,438 rows and 9 columns
+\end{lstlisting}
+
+Rename the first variable to make it easier to work with:
+\begin{lstlisting}
 names(df)[1] = 'Year'
 		\end{lstlisting}
-\newpage
-    \begin{center}
-     \includegraphics[width=1\textwidth]{images/data.png}
-    \end{center}	
+
 \end{frame}
 
 
