@@ -177,12 +177,10 @@ df %>%
 \end{verbatim}
 }
 
+Entry seems to be an aggregate number, not county/year level.  
 \newpage
 
-Entry seems to be an aggregate number, not county/year level.  To remove the outlier:
-
-    \begin{columns}
-      \column{0.50\textwidth}
+To remove any extraneous data points:
   \begin{lstlisting}[ basicstyle=\footnotesize]
 ### Step 0: Load required packages
 library(dplyr)
@@ -199,11 +197,10 @@ hist(data_clean$Volume,
 # Is anything `off' now? (Exercise.)
   \end{lstlisting}
 
-     \column{0.50\textwidth}
+\newpage
     \begin{center}
-       \includegraphics[scale=0.3]{images/histogram2.pdf}
+       \includegraphics[scale=0.42]{images/histogram2.pdf}
     \end{center}   
-\end{columns}
 
 \end{frame}
 
@@ -214,7 +211,7 @@ hist(data_clean$Volume,
 To compare two variables side-by-side, use \ttfamily beanplot(): \normalfont
 
 	\begin{lstlisting}
-### Step 0: Load required packages:
+### Step 0: Load required packages
 library(beanplot)
 
 ### Step 1: Subset data set to LA and SF
@@ -227,7 +224,7 @@ data_LA_SF <- df %>%
 
 \newpage
   \begin{lstlisting}[ basicstyle = \small]
-### Step 3: Visualize  
+### Step 3: Visualize
 op <- par(las=2)   # orient y-axis labels
 beanplot(
   Volume ~ as.factor(County), 

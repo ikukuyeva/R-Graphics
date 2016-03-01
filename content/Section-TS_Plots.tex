@@ -58,12 +58,12 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\subsection{Multivariate Plots}
+\subsection{Multivariate Time Series Plots}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{frame}[allowframebreaks, fragile]
- \frametitle{Multivariate Plots: Approach 1}
+ \frametitle{Multivariate Time Series Plots: Approach 1}
 
 To plot more than variables one at a time, use \ttfamily xyplot()\normalfont [5]:
 %\begin{itemize}
@@ -73,11 +73,11 @@ To plot more than variables one at a time, use \ttfamily xyplot()\normalfont [5]
 %	\item Plot your data
 % \end{itemize}
 		\begin{lstlisting}
-### Step 0: Load any required packages:
+### Step 0: Load any required packages
 library(dplyr)
 library(lattice)
 
-### Step 1: Get data for one procedure:
+### Step 1: Get data for one procedure
 df_LA_CABG <- df %>%
   filter( 
     (County == "Los Angeles") & 
@@ -98,14 +98,16 @@ xyplot( Volume ~ Year | Hospital.Name,
 		\end{lstlisting}
 
 \newpage
-      \vspace{-20pt} \hspace{-20pt}
+      %\vspace{-30pt} 
+      \begin{center}
+        %\hspace{-25pt}
          \includegraphics[width=1.05\textwidth]{images/timeseries_LA_CABG}
-
+      \end{center}
 \end{frame}
 
 %---
 \begin{frame}[fragile, allowframebreaks]
- \frametitle{Multivariate Plots: Approach 2}
+ \frametitle{Multivariate Time Series Plots: Approach 2}
 
 Another way to plot more than one variable at a time, is via \ttfamily ggplot()\normalfont :
 
