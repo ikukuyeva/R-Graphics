@@ -277,10 +277,10 @@ filepath = "http://www.ats.ucla.edu/stat/data/test_missing_comma.txt"
 # filepath = "C:/Documents/test_missing_comma.txt"
 # filepath = "./test_missing_comma.txt"
 
-data <- read.table(
-	file=filepath, 
-	header=TRUE, 
-	sep=","
+df <- read.table(
+	file = filepath, 
+	header = TRUE, 
+	sep = ","
 	)
 	\end{lstlisting}
 \normalfont
@@ -296,7 +296,7 @@ data <- read.table(
 	\begin{itemize}
 		\item View the complete data set by typing the variable name.  (This is not recommended for large data sets.) 
 \begin{lstlisting}
-data
+df
 \end{lstlisting}
 
 { \small
@@ -316,7 +316,7 @@ data
 \newpage		
 		\item View the first 5 lines of the dataset via \ttfamily head(): \normalfont 
 \begin{lstlisting}
-head(data, 5) 
+head(df, 5) 
 \end{lstlisting}
 
 \begin{verbatim}
@@ -331,7 +331,7 @@ head(data, 5)
 \newpage
 		\item View the last 7 lines of the dataset via \ttfamily tail(): \normalfont 
 \begin{lstlisting}
-tail(data, 7)
+tail(df, 7)
 \end{lstlisting}
 
 \begin{verbatim}
@@ -348,7 +348,7 @@ tail(data, 7)
 \newpage
 		\item Check the variable names via \ttfamily names(): \normalfont 
 \begin{lstlisting}
-names(data)
+names(df)
 \end{lstlisting}
 
 { \footnotesize
@@ -358,7 +358,7 @@ names(data)
 }	
 		\item Check the size of the data set via \ttfamily dim(): \normalfont 
 \begin{lstlisting}
-dim(data)
+dim(df)
 \end{lstlisting}
 
 \begin{verbatim}
@@ -366,7 +366,7 @@ dim(data)
 \end{verbatim}	
 		\item See the first 3 entries for variable 'gender' via \ttfamily head(): \normalfont 
 \begin{lstlisting}
-head(data$gender)
+head(df$gender)
 \end{lstlisting}
 
 \begin{verbatim}
@@ -376,7 +376,7 @@ head(data$gender)
 \newpage
 		\item Verify ranges and check for missing data via \ttfamily summary(): \normalfont 
 \begin{lstlisting}
-summary(data)
+summary(df)
 \end{lstlisting}
 
 { \tiny
