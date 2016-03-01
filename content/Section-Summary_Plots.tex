@@ -13,10 +13,11 @@
 	\vspace{5pt}
 	\noindent To read it into R, type:
   		\begin{lstlisting}[ basicstyle=\footnotesize ]
-data <- read.csv(
+df <- read.csv(
   file = "Number_of_Selected_Inpatient_Medical_Procedures__California_Hospitals__2005-2014.csv",
   stringsAsFactors = FALSE
   )
+names(df)[1] = 'Year'
 		\end{lstlisting}
 \newpage
     \begin{center}
@@ -39,7 +40,7 @@ To get a quick peak into the numerical variables in the data \ttfamily scatterpl
 # Load package `car' to use scatterplotMatrix():	
 library(car)	
 scatterplotMatrix(
-  x = data[, c("Latitude", "Longitude", "Volume")], 
+  x = df[, c("Latitude", "Longitude", "Volume")], 
   smoother = FALSE, 
   reg.line = FALSE
   )
@@ -59,7 +60,7 @@ To get a quick peak into the numerical variables and the trends in the data, mod
 ?scatterplotMatrix # for documentation
 library(car)		
 scatterplotMatrix(
-  x = data[, c("Latitude", "Longitude", "Volume")], 
+  x = df[, c("Latitude", "Longitude", "Volume")], 
   reg.line = FALSE
   )
 		\end{lstlisting}
@@ -76,7 +77,7 @@ To improve the color scheme, modify arguments of \ttfamily scatterplotMatrix().
   		\begin{lstlisting}[ basicstyle=\footnotesize]
 library(car)		
 scatterplotMatrix(
-  x = data[, c("Latitude", "Longitude", "Volume")], 
+  x = df[, c("Latitude", "Longitude", "Volume")], 
   reg.line = FALSE,
   col=c(3,
     "orangered",
@@ -133,7 +134,7 @@ To see the distribution of one variable, use \ttfamily hist(): \normalfont
       \column{0.40\textwidth}
   \begin{lstlisting}
 hist(
-  data$Volume, 
+  df$Volume, 
   breaks=1000
   )
 # Is anything `off'?
@@ -150,7 +151,7 @@ hist(
 Let's examine the potential outlier:
   \begin{lstlisting}
 subset(
-  x = data, 
+  x = df, 
   Volume == max(Volume, na.rm=TRUE)
   )
   \end{lstlisting}
@@ -169,7 +170,7 @@ Entry seems to be an aggregate number, not county/year level.  To remove the out
       \column{0.50\textwidth}
   \begin{lstlisting}[ basicstyle=\footnotesize]
 data_clean <- subset(
-  x = data, 
+  x = df, 
   County != "STATEWIDE"
   )
 hist(data_clean$Volume)
