@@ -12,28 +12,43 @@
 \section[Time Series Plots]{Time Series Plots}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\subsection{Univariate Plots}
+\subsection{Univariate Time Series Plots}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-%\begin{frame}[fragile]
-% \frametitle{Univariate Time Series Plot  \footnote{This section is from the SCC Mini-Course "Introductory Time Series \\ with R" by Irina Kukuyeva}}
+\begin{frame}[fragile, allowframebreaks]
+\frametitle{Univariate Time Series Plot}
 
-%To plot one variables one at a time, use \ttfamily plot(): \normalfont 
-%    \begin{columns}
-%      \column{0.55\textwidth}
-%		\begin{lstlisting}
-%data(EuStockMarkets)
-%dax<-EuStockMarkets[, 1]
-%plot(dax)
-%		\end{lstlisting}
+To plot one variables one at a time, use \ttfamily plot(): \normalfont 
+		\begin{lstlisting}
+### Step 0: Load any required packages:
+library(dplyr)
 
-%      \column{0.45\textwidth}
-%       \begin{center}
-%         \includegraphics[width=0.95\textwidth]{images/daxPlot.pdf}
-%        \end{center}
-%      \end{columns}
+### Step 1: Get yearly counts across hospitals and procedures
+df_summary <- df_clean %>%
+  group_by(Year) %>%
+  summarise(Total.for.Year = sum(Volume, na.rm=TRUE))
+  \end{lstlisting}
 
-%\end{frame}
+\newpage
+  \begin{lstlisting}
+### Step 3: Visualize
+plot(
+  x=df_summary$Year,
+  y=df_summary$Total.for.Year,
+  xlab="Year",
+  ylab="Volume",
+  type="b",
+  main="Yearly Volume for 6 procedures in CA"
+  )
+		\end{lstlisting}
+What are some limitations of the data set (and hence plot)?
+
+\newpage
+      \begin{center}
+        \includegraphics[width=0.6\textwidth]{images/univar_ts.png}
+       \end{center}
+
+\end{frame}
 
 %%%%%%% New frame
 %\begin{frame}[allowframebreaks, fragile]
