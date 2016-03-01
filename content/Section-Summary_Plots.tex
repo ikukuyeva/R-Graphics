@@ -162,10 +162,13 @@ hist(
 
 Let's examine the potential outlier:
   \begin{lstlisting}
-subset(
-  x = df, 
-  Volume == max(Volume, na.rm=TRUE)
-  )
+### Step 0: Load required packages
+library(dplyr)
+
+### Step 1: Examine entry when volume is largest in data set
+df %>%
+  filter( Volume == max(Volume, na.rm=TRUE) )
+
   \end{lstlisting}
 { \tiny
 \begin{verbatim}
@@ -181,9 +184,12 @@ Entry seems to be an aggregate number, not county/year level.  To remove the out
     \begin{columns}
       \column{0.50\textwidth}
   \begin{lstlisting}[ basicstyle=\footnotesize]
-data_clean <- subset(
-  x = df, 
-  County != "STATEWIDE"
+### Step 0: Load required packages
+library(dplyr)
+
+### Step 1: Remove any 'statewide' counts
+data_clean <- df %>%
+  filter( County != "STATEWIDE" )
   )
 hist(data_clean$Volume)
 # Is anything `off' now? (Exercise.)
