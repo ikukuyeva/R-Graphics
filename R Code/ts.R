@@ -14,6 +14,8 @@ df <- read.csv(
 names(df)[1] = 'Year'
 # Or directly from https://chhs.data.ca.gov/api/views/mdt8-gwyw/rows.csv?accessType=DOWNLOAD&bom=true
 
+### Checking all available encodings to see if dash can be rendered properly; no
+### -> emailed owner of data set to mention this.
 # for(e in iconvlist()) {
 # print(e)
 # print(read.csv(
@@ -25,38 +27,25 @@ names(df)[1] = 'Year'
 # Sys.sleep(1)
 # }
 
+### Check how dash is rendered using a given encoding:
 # x <- (read.csv(
 #   file = "Number_of_Selected_Inpatient_Medical_Procedures__California_Hospitals__2005-2014.csv",
 #   encoding='UTF-8',
 #   stringsAsFactors = FALSE
 #   )$Hospital.Name[10])
 
-
-
 df_clean <- subset(
   x = df, 
   County != "STATEWIDE"
   )
 
-### Same:
 df_LA_CABG <- df %>%
-	filter(County == "Los Angeles") %>%
-	filter(Procedure == "CABG") %>%
-	filter(Volume > 0)
+  filter( (County == "Los Angeles") & (Procedure == "CABG") & (Volume > 0) )
+## Alternatively:
+# filter(df, (County == "Los Angeles") & (Procedure == "CABG")  & (Volume > 0) )
 
 df_Cedars <- df_clean %>%
 	filter( Hospital.Name == 'Cedars Sinai Medical Center')
-
-# df_Kaiser <- df_clean %>%
-# 	filter(Hospital.Name == 'Kaiser Foundation Hospital <U+0096> Sunset')
-
-
-
-df_LA_CABG <- df %>%
-	filter( (County == "Los Angeles") & (Procedure == "CABG") & (Volume > 0) )
-
-# filter(df, (County == "Los Angeles") & (Procedure == "CABG")  & (Volume > 0) )
-
 
 # sort(unique(df_clean$County))
 
@@ -67,7 +56,6 @@ xyplot(Volume ~ Year | Hospital.Name,
 	type="b",
 	main="Coronary artery bypass grafting (CABG) in LA"
 	)
-
 
 ### For one hospital:
 ggplot( data = df_Cedars ) + 
@@ -80,11 +68,8 @@ ggplot( data = df_Cedars ) +
   theme_classic() +
   ggtitle("Volume of Procedures for Cedars Sinai Medical Center")
   
-
-
-### How many procedures (overall) per County over time:
-yearly <- group_by(df_clean,
-	Year,
-	Procedure
-	)
+### Exercise II: How many procedures (overall) per year:
+data_clean %>%
+  group_by(Year, Procedure) %>%
+  summarise(Total.for.Year = sum(Volume, na.rm=TRUE))
 
