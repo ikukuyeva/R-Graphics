@@ -190,8 +190,12 @@ library(dplyr)
 ### Step 1: Remove any 'statewide' counts
 data_clean <- df %>%
   filter( County != "STATEWIDE" )
+
+### Step 2: Visualize
+hist(data_clean$Volume,
+  xlab="Volume",
+  main=""
   )
-hist(data_clean$Volume)
 # Is anything `off' now? (Exercise.)
   \end{lstlisting}
 
