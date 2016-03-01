@@ -213,11 +213,12 @@ To compare two variables side-by-side, use \ttfamily beanplot(): \normalfont
 ### Step 0: Load required packages:
 library(beanplot)
 
-### Step 1: Subset data set to LA and SF:
-data_LA_SF <- subset(
-  x = data_clean, 
-  County %in% c("Los Angeles", "San Francisco") 
-  )
+### Step 1: Subset data set to LA and SF
+data_LA_SF <- df %>%
+  filter( 
+    (County == "Los Angeles") | 
+    (County == "San Francisco") 
+  ) 
   \end{lstlisting}
 
 \newpage
