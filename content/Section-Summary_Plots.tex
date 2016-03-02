@@ -3,6 +3,8 @@
 % ------------------------------------------------------------
 % ------------------------------------------------------------
 \section{Data Set}
+% ------------------------------------------------------------
+% ------------------------------------------------------------
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Data Set for Tutorial}
 	Data set for this tutorial comes from State of California.  Please export it to CSV from: \\
@@ -37,17 +39,140 @@ names(df)[1] = 'Year'
 
 \end{frame}
 
-
 % ------------------------------------------------------------
 % ------------------------------------------------------------
-\section[Summary Plots]{Summary Plots}
+\section{Plots of Counts}
+% ------------------------------------------------------------
+% ------------------------------------------------------------
+\subsection{Histogram}
+% ------------------------------------------------------------
 
+\begin{frame}[fragile, allowframebreaks]
+  \frametitle{Histogram}
+To see the counts of values that a variable has (i.e. its distribution), use \ttfamily hist(): \normalfont
+
+    \begin{columns}
+      \column{0.5\textwidth}
+  \begin{lstlisting}[ \basicstyle=\small]
+hist(
+  df$Volume, 
+  breaks=1000
+  )
+# Is anything `off'?
+  \end{lstlisting}
+
+     \column{0.5\textwidth}
+        \begin{flushleft}
+           \includegraphics[scale=0.3]{images/histogram.pdf}
+        \end{flushleft}  
+\end{columns}
+
+\newpage      
+Let's examine the potential outlier:
+  \begin{lstlisting}
+### Step 0: Load required packages
+library(dplyr)
+
+### Step 1: Examine entry when volume is largest in data set
+df %>%
+  filter( Volume == max(Volume, na.rm=TRUE) )
+
+  \end{lstlisting}
+{ \tiny
+\begin{verbatim}
+         Year    County Hospital.Name OSHPDID Procedure Volume Longitude Latitude Location
+41783    2005 STATEWIDE     STATEWIDE      NA       PCI  60418        NA       NA         
+\end{verbatim}
+}
+
+Entry seems to be an aggregate number, not county/year level.  
+\newpage
+
+To remove any extraneous data points:
+  \begin{lstlisting}[ basicstyle=\footnotesize]
+### Step 0: Load required packages
+library(dplyr)
+
+### Step 1: Remove any 'statewide' counts
+data_clean <- df %>%
+  filter( County != "STATEWIDE" )
+
+### Step 2: Visualize
+hist(data_clean$Volume,
+  xlab="Volume",
+  main=""
+  )
+# Is anything `off' now? (Exercise.)
+  \end{lstlisting}
+
+\newpage
+    \begin{center}
+       \includegraphics[scale=0.42]{images/histogram2.pdf}
+    \end{center}   
+
+\end{frame}
+
+%----
+\begin{frame}[fragile, allowframebreaks]
+  \frametitle{Side-by-side Histogram}
+
+To compare distributions of two variables side-by-side, use \ttfamily beanplot(): \normalfont
+
+  \begin{lstlisting}
+### Step 0: Load required packages
+library(beanplot)
+
+### Step 1: Subset data set to LA and SF
+data_LA_SF <- df_clean %>%
+  filter( 
+    (County == "Los Angeles") | 
+    (County == "San Francisco") 
+  ) 
+  \end{lstlisting}
+
+\newpage
+  \begin{lstlisting}[ basicstyle = \small]
+### Step 3: Visualize
+op <- par(las=2)   # orient y-axis labels
+beanplot(
+  Volume ~ as.factor(County), 
+  data = data_LA_SF, 
+  xlab = "",
+  log = "y",
+  side = "both", 
+  col =list( c(grey(0.5), "white"), grey(0.8) ), 
+  border = NA, 
+  overallline = "median", 
+  ll = 0.005,
+  show.names=FALSE
+  )
+  \end{lstlisting}
+
+\newpage
+  \begin{lstlisting}
+legend(
+  x = "bottomleft",
+  fill=c( grey(0.5), grey(0.8) ), 
+  legend=c( "LA", "SF" )
+  )
+par(op)
+  \end{lstlisting}
+
+\newpage
+        \begin{center}
+           \includegraphics[width=0.65\textwidth]{images/beanplot.pdf}
+        \end{center}
+
+\end{frame}
+
+% ------------------------------------------------------------
 \subsection{Scatterplot}
+% ------------------------------------------------------------
 %%%%% New frame
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Scatterplot (v0.1)}
 
-To get a quick peak into the numerical variables in the data \ttfamily scatterplotMatrix(): \normalfont
+To compare a few variables in the data set at the same time, use\ttfamily scatterplotMatrix(): \normalfont
   		\begin{lstlisting}[ basicstyle=\footnotesize ]
 # Load package `car' to use scatterplotMatrix():	
 library(car)	
@@ -67,7 +192,7 @@ scatterplotMatrix(
 \begin{frame}[allowframebreaks, fragile]
 \frametitle{Scatterplot (v0.2)}
 
-To get a quick peak into the numerical variables and the trends in the data, modify arguments of \ttfamily scatterplotMatrix(): \normalfont
+To compare a few variables in the data set and their trends at the same time, modify arguments of \ttfamily scatterplotMatrix(): \normalfont
   		\begin{lstlisting}[ basicstyle=\footnotesize ]
 ?scatterplotMatrix # for documentation
 library(car)		
@@ -134,128 +259,6 @@ You can specify a color in R via:
 %          \includegraphics[width=0.6\textwidth]{images/scatterPlot_v4.pdf}
 %         \end{center}
 % \end{frame}
-
-%%%%% New frame
-\subsection{Histogram}
-
-\begin{frame}[fragile, allowframebreaks]
-	\frametitle{Histogram}
-To see the distribution of one variable, use \ttfamily hist(): \normalfont
-
-    \begin{columns}
-      \column{0.5\textwidth}
-  \begin{lstlisting}[ \basicstyle=\small]
-hist(
-  df$Volume, 
-  breaks=1000
-  )
-# Is anything `off'?
-  \end{lstlisting}
-
-     \column{0.5\textwidth}
-        \begin{center}
-           \includegraphics[scale=0.33]{images/histogram.pdf}
-        \end{center}  
-\end{columns}
-
-\newpage      
-
-Let's examine the potential outlier:
-  \begin{lstlisting}
-### Step 0: Load required packages
-library(dplyr)
-
-### Step 1: Examine entry when volume is largest in data set
-df %>%
-  filter( Volume == max(Volume, na.rm=TRUE) )
-
-  \end{lstlisting}
-{ \tiny
-\begin{verbatim}
-         Year    County Hospital.Name OSHPDID Procedure Volume Longitude Latitude Location
-41783    2005 STATEWIDE     STATEWIDE      NA       PCI  60418        NA       NA         
-\end{verbatim}
-}
-
-Entry seems to be an aggregate number, not county/year level.  
-\newpage
-
-To remove any extraneous data points:
-  \begin{lstlisting}[ basicstyle=\footnotesize]
-### Step 0: Load required packages
-library(dplyr)
-
-### Step 1: Remove any 'statewide' counts
-data_clean <- df %>%
-  filter( County != "STATEWIDE" )
-
-### Step 2: Visualize
-hist(data_clean$Volume,
-  xlab="Volume",
-  main=""
-  )
-# Is anything `off' now? (Exercise.)
-  \end{lstlisting}
-
-\newpage
-    \begin{center}
-       \includegraphics[scale=0.42]{images/histogram2.pdf}
-    \end{center}   
-
-\end{frame}
-
-%----
-\begin{frame}[fragile, allowframebreaks]
-	\frametitle{'Nicer' Histogram}
-
-To compare two variables side-by-side, use \ttfamily beanplot(): \normalfont
-
-	\begin{lstlisting}
-### Step 0: Load required packages
-library(beanplot)
-
-### Step 1: Subset data set to LA and SF
-data_LA_SF <- df %>%
-  filter( 
-    (County == "Los Angeles") | 
-    (County == "San Francisco") 
-  ) 
-  \end{lstlisting}
-
-\newpage
-  \begin{lstlisting}[ basicstyle = \small]
-### Step 3: Visualize
-op <- par(las=2)   # orient y-axis labels
-beanplot(
-  Volume ~ as.factor(County), 
-  data = data_LA_SF, 
-  xlab = "",
-  log = "y",
-  side = "both", 
-  col = list( c( grey(0.5), "white"), grey(0.8) ), 
-  border = NA, 
-  overallline = "median", 
-  ll = 0.005,
-  show.names=FALSE
-  )
-  \end{lstlisting}
-
-\newpage
-  \begin{lstlisting}
-legend(
-  x = "bottomleft",
-  fill=c( grey(0.5), grey(0.8) ), 
-  legend=c( "LA", "SF" )
-  )
-par(op)
-	\end{lstlisting}
-
-\newpage
-        \begin{center}
-	         \includegraphics[width=0.65\textwidth]{images/beanplot.pdf}
-        \end{center}
-
-\end{frame}
 
 % ------------------------------------------------------------
 % ------------------------------------------------------------
