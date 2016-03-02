@@ -162,23 +162,30 @@ ggplot() +
 
 \end{frame}
 
-% %%%%%%%%%%%
-% \begin{frame}[fragile]
-% 	\begin{alertblock}{Bonus Feature of the \ttfamily maps \normalfont package:}
-% 		To determine in which part of the world the observations are (based on latitude and longitude), use \ttfamily map.where(): \normalfont
-% 			\begin{lstlisting}		
-% 				in.what.country<-map.where(database="world", quakes$long, quakes$lat)
-% 			\end{lstlisting}
-% 		To determine which observations are in the ocean: \normalfont
-% 			\begin{lstlisting}
-% 				# Number of points in ocean after filtering:
-% 				ind<-sum(is.na(in.what.country)); ind
-% 				# Number of observations: 1000
-% 				# Number in Ocean: 993
-% 			\end{lstlisting}
-% 	\end{alertblock}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsection{Interactive Geographical Plots}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\subsubsection{Geographical Plots via 'ggvis'}
+\begin{frame}[fragile, allowframebreaks]
+	\frametitle{Geographical Plots via 'ggvis'}
+One way to make high resolution and interactive images is via 'ggvis' [13]:
 
-% \end{frame}
+\begin{lstlisting}
+library(ggvis)
+tracts.points %>%
+  ggvis(~long, ~lat) %>%
+  group_by(group, id) %>%
+  layer_paths(strokeOpacity:=0.5, stroke:=grey(0.5)) %>%
+  layer_points(data=df_hosp, x=~Longitude, y=~Latitude, size:=8) %>%
+  hide_legend("fill") %>%
+  set_options(width=400, height=400, keep_aspect=TRUE)
+\end{lstlisting}
+
+\newpage
+       \begin{center}
+		\includegraphics[scale=0.65]{images/shapefile_v2.png}
+	\end{center}
+\end{frame}
 
 % ------------------------------------------------------------
 % ------------------------------------------------------------
