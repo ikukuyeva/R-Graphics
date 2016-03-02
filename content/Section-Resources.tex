@@ -1,25 +1,25 @@
 \part{Working with R}
 % ------------------------------------------------------------
 %---
-%%%%%%%%%%%%%%%%%%%%%%%
-\section{Saving Plots as a PDF} 
-%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}[fragile]
-\frametitle{Saving Plots as a PDF}
-  \framesubtitle{For Static Plots}
+% %%%%%%%%%%%%%%%%%%%%%%%
+% \section{Saving Plots as a PDF} 
+% %%%%%%%%%%%%%%%%%%%%%%%
+% \begin{frame}[fragile]
+% \frametitle{Saving Plots as a PDF}
+%   \framesubtitle{For Static Plots}
 
-  \itshape Note: \normalfont The files will be saved in the folder specified with \ttfamily setwd(). \normalfont
-  To save a static plot in \ttfamily R \normalfont as a PDF, use function \ttfamily pdf(): \normalfont
+%   \itshape Note: \normalfont The files will be saved in the folder specified with \ttfamily setwd(). \normalfont
+%   To save a static plot in \ttfamily R \normalfont as a PDF, use function \ttfamily pdf(): \normalfont
 
-  \begin{lstlisting}
-# To save the image to the desktop:
-setwd("~/Desktop")
-pdf("filename.pdf")
-wireframe(volcano, col.regions = terrain.colors(100), asp = 1, color.key=TRUE, drape=TRUE, scales = list(arrows = FALSE))
-dev.off()
-  \end{lstlisting}
+%   \begin{lstlisting}
+% # To save the image to the desktop:
+% setwd("~/Desktop")
+% pdf("filename.pdf")
+% wireframe(volcano, col.regions = terrain.colors(100), asp = 1, color.key=TRUE, drape=TRUE, scales = list(arrows = FALSE))
+% dev.off()
+%   \end{lstlisting}
 
-\end{frame}
+% \end{frame}
 
 % \begin{frame}[fragile]
 %   \frametitle{Saving Plots as a PDF}
