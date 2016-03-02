@@ -34,10 +34,8 @@ names(df)[1] = 'Year'
 #   stringsAsFactors = FALSE
 #   )$Hospital.Name[10])
 
-df_clean <- subset(
-  x = df, 
-  County != "STATEWIDE"
-  )
+df_clean <- df %>%
+  filter( County != "STATEWIDE" )
 
 df_LA_CABG <- df %>%
   filter( (County == "Los Angeles") & (Procedure == "CABG") & (Volume > 0) )
