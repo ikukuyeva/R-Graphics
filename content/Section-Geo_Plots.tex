@@ -84,31 +84,81 @@ legend("topright",
 What are some limitations of the plot? (Exercise.)
 \end{frame}
 
+%---
+\begin{frame}[fragile, allowframebreaks]
+\frametitle{Geographic Maps (v0.3)}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\subsection{Projection Maps}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\begin{frame}[allowframebreaks, fragile]
-\frametitle{Projection Maps}
-  \framesubtitle{Map of Fiji Earthquakes Since 1964}
-
-For a different perspective of a map, use  \ttfamily mapproject(): \normalfont 
+Another way to visualize geographical information is via shapefiles. Please download shapefiles for California for 2014 from \url{https://www.census.gov/geo/maps-data/data/cbf/cbf_tracts.html} and unzip the folder.
 
 \begin{lstlisting}
-library(mapproj)
-library(maps)
-m <- map('world',plot=FALSE)
-# Projection is Azimuthal with equal-area
-map('world',proj='azequalarea',orient=c(longitude=0,latitude=180,rotation=0))
-map.grid(m,col=2)
-points(mapproject(list(                       y=quakes$lat[which(quakes$mag>=6)],       x=quakes$long[which(quakes$mag>=6)])),    col="blue",pch="x",cex=2)
+### Step 1: Load in required packages
+library(sp)
+library(rgdal)
+\end{lstlisting}
+
+\newpage
+\begin{lstlisting}
+### Step 2: Read in shapefile and add latitude and longitude cordinates to it:
+tracts = spTransform(
+	readOGR(
+		file.path("cb_2014_06_tract_500k"), 
+		layer = "cb_2014_06_tract_500k"
+		), 
+	CRS("+proj=longlat +datum=WGS84")
+	) 
+
+### Step 3: Visualize
+plot(tracts)
 \end{lstlisting}
 
 \newpage
        \begin{center}
-\includegraphics[width = 70mm]{images/Fuji2.pdf}
-\end{center}
+		\includegraphics[scale=0.25]{images/shapefile_v0.png}
+		\caption{Plot of the shapefile tracts.}
+	\end{center}
+
+\newpage
+Now let's add the locations of hospitals to the map [12]:
+
+\begin{lstlisting}
+### Step 1: Load required packages
+library("rgdal") 
+library("maptools")
+library("ggplot2")
+library("plyr")
+
+### Step 2: Preprocess data ahead of plotting
+tracts@data$id = rownames(tracts@data)
+tracts.points = fortify(tracts, region="id")
+tracts.df = join(
+ tracts.points, 
+ tracts@data, 
+ by="id"
+ )
+\end{lstlisting}
+
+\newpage
+\begin{lstlisting}
+### Step 3: Visualize
+ggplot() +
+  geom_polygon(data = tracts.df,
+               aes(x = long, y = lat, group = group),
+               fill = grey(0.6), 
+               color = grey(0.6), 
+               alpha = 0.5
+               ) + 
+  geom_point(data = df_hosp,
+             aes(x = Longitude, y = Latitude),
+             color = "blue4", 
+             alpha = 0.5, 
+             shape = 3,
+             size = 2 )
+\end{lstlisting}
+
+\newpage
+       \begin{center}
+		\includegraphics[scale=0.3]{images/shapefile_v1.png}
+	\end{center}
 
 \end{frame}
 
