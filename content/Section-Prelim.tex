@@ -463,6 +463,45 @@ table(df$gender, useNA='always')
 \end{verbatim}	
 
 \newpage
+		\item View entries for a particular variable:
+\begin{lstlisting}
+## Returns variable as a row/vector:
+df$gender # OR
+df[, 'gender'] 
+## Returns variable as a column: 
+df[ 'gender' ] 
+\end{lstlisting}		
+
+{\tiny
+\begin{verbatim}
+[1] 0 1 0 0 0 0 # OR
+
+  gender
+1      0
+2      1
+3      0
+4      0
+5      0
+6      0
+7      0
+8      0
+\end{verbatim}	
+}
+
+\newpage	
+		\item View entries for a few variables:
+\begin{lstlisting}
+head( df[, c('gender', 'ses') ], 3) 
+\end{lstlisting}		
+
+\begin{verbatim}
+  gender ses
+1      0   4
+2      1   4
+3      0  NA
+\end{verbatim}
+
+\newpage
 		\item Verify ranges and check for missing data via \ttfamily summary(): \normalfont 
 \begin{lstlisting}
 summary(df)
