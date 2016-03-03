@@ -1,40 +1,41 @@
 \beamer@endinputifotherversion {3.36pt}
 \beamer@sectionintoc {1}{Motivation}{4}{1}{1}
-\beamer@sectionintoc {2}{Why R?}{6}{1}{2}
-\beamer@sectionintoc {3}{Why visualize?}{8}{1}{3}
-\beamer@sectionintoc {4}{Tips for Visulizations}{10}{1}{4}
-\beamer@sectionintoc {5}{Installing R and RStudio}{13}{2}{5}
-\beamer@sectionintoc {6}{Overview of R}{15}{2}{6}
-\beamer@subsectionintoc {6}{1}{Creating Objects}{17}{2}{6}
-\beamer@subsectionintoc {6}{2}{(Very) Brief Overview of Functions}{18}{2}{6}
-\beamer@sectionintoc {7}{Working with Data}{19}{2}{7}
-\beamer@subsectionintoc {7}{1}{Reading Data from File}{20}{2}{7}
-\beamer@subsectionintoc {7}{2}{Working with Data Frames}{22}{2}{7}
-\beamer@sectionintoc {8}{Adding Functionality to Base R}{27}{2}{8}
-\beamer@sectionintoc {9}{Data Set}{30}{3}{9}
-\beamer@sectionintoc {10}{Summary Plots}{33}{3}{10}
-\beamer@subsectionintoc {10}{1}{Scatterplot}{34}{3}{10}
-\beamer@subsectionintoc {10}{2}{Histogram}{41}{3}{10}
-\beamer@subsectionintoc {10}{3}{Exercise I}{47}{3}{10}
-\beamer@sectionintoc {11}{Time Series Plots}{48}{3}{11}
-\beamer@subsectionintoc {11}{1}{Multivariate Plots: Approach 1}{49}{3}{11}
-\beamer@subsectionintoc {11}{2}{Multivariate Plots: Approach 2}{51}{3}{11}
-\beamer@subsectionintoc {11}{3}{Multivariate Plots: Approach 3}{56}{3}{11}
-\beamer@subsectionintoc {11}{4}{Multivariate Plots: Approach 5}{59}{3}{11}
-\beamer@subsectionintoc {11}{5}{Exercise II}{60}{3}{11}
-\beamer@sectionintoc {12}{Geographical Plots}{61}{3}{12}
-\beamer@subsectionintoc {12}{1}{Maps}{62}{3}{12}
-\beamer@subsectionintoc {12}{2}{Projection Maps}{66}{3}{12}
-\beamer@subsectionintoc {12}{3}{Exercise III}{68}{3}{12}
-\beamer@sectionintoc {13}{Installation}{70}{4}{13}
-\beamer@subsectionintoc {13}{1}{Software Installation}{71}{4}{13}
-\beamer@subsectionintoc {13}{2}{Saving Plots as a PDF}{71}{4}{13}
-\beamer@sectionintoc {14}{Common Bugs and Fixes}{72}{4}{14}
-\beamer@subsectionintoc {14}{1}{Syntax Error}{73}{4}{14}
-\beamer@subsectionintoc {14}{2}{Trailing $+$}{74}{4}{14}
-\beamer@subsectionintoc {14}{3}{Error When Performing Operations}{75}{4}{14}
-\beamer@subsectionintoc {14}{4}{Error in Calling an Object}{76}{4}{14}
-\beamer@subsectionintoc {14}{5}{Silent Errors}{77}{4}{14}
-\beamer@sectionintoc {15}{Getting R Help}{78}{4}{15}
-\beamer@sectionintoc {16}{Online Resources for R}{81}{4}{16}
-\beamer@sectionintoc {17}{References}{84}{4}{17}
+\beamer@subsectionintoc {1}{1}{Why tutorial?}{5}{1}{1}
+\beamer@subsectionintoc {1}{2}{Why R?}{6}{1}{1}
+\beamer@subsectionintoc {1}{3}{Why visualize?}{7}{1}{1}
+\beamer@sectionintoc {2}{Tips for Visulizations}{10}{1}{2}
+\beamer@sectionintoc {3}{Installing R and RStudio}{13}{2}{3}
+\beamer@sectionintoc {4}{Overview of R}{15}{2}{4}
+\beamer@subsectionintoc {4}{1}{Creating Objects}{17}{2}{4}
+\beamer@subsectionintoc {4}{2}{(Very) Brief Overview of Functions}{19}{2}{4}
+\beamer@subsectionintoc {4}{3}{Comparisons}{20}{2}{4}
+\beamer@subsectionintoc {4}{4}{(More) Notation}{21}{2}{4}
+\beamer@sectionintoc {5}{Working with Data}{23}{2}{5}
+\beamer@subsectionintoc {5}{1}{Reading Data from File}{24}{2}{5}
+\beamer@subsectionintoc {5}{2}{Working with Data Frames}{26}{2}{5}
+\beamer@sectionintoc {6}{Adding Functionality to Base R}{34}{2}{6}
+\beamer@sectionintoc {7}{Data Set}{37}{3}{7}
+\beamer@sectionintoc {8}{Plots of Counts}{40}{3}{8}
+\beamer@subsectionintoc {8}{1}{Histogram}{41}{3}{8}
+\beamer@subsectionintoc {8}{2}{Scatterplot}{49}{3}{8}
+\beamer@subsectionintoc {8}{3}{Exercise I}{56}{3}{8}
+\beamer@sectionintoc {9}{Time Series Plots}{57}{3}{9}
+\beamer@subsectionintoc {9}{1}{Univariate Time Series Plots}{58}{3}{9}
+\beamer@subsectionintoc {9}{2}{Multivariate Time Series Plots}{61}{3}{9}
+\beamer@subsectionintoc {9}{3}{Exercise II}{67}{3}{9}
+\beamer@sectionintoc {10}{Geographical Plots}{68}{3}{10}
+\beamer@subsectionintoc {10}{1}{Plots using Maps}{69}{3}{10}
+\beamer@subsectionintoc {10}{2}{Interactive Geographical Plots}{81}{3}{10}
+\beamer@subsubsectionintoc {10}{2}{1}{Geographical Plots via 'ggvis'}{81}{3}{10}
+\beamer@subsubsectionintoc {10}{2}{2}{Geographical Plots via 'leaflet'}{86}{3}{10}
+\beamer@subsectionintoc {10}{3}{Exercise III}{88}{3}{10}
+\beamer@sectionintoc {11}{Common Bugs and Fixes}{90}{4}{11}
+\beamer@subsectionintoc {11}{1}{Syntax Error}{91}{4}{11}
+\beamer@subsectionintoc {11}{2}{Trailing $+$}{92}{4}{11}
+\beamer@subsectionintoc {11}{3}{Error When Performing Operations}{93}{4}{11}
+\beamer@subsectionintoc {11}{4}{Error in Calling an Object}{94}{4}{11}
+\beamer@subsectionintoc {11}{5}{Silent Errors}{95}{4}{11}
+\beamer@sectionintoc {12}{Where to go from here?}{96}{4}{12}
+\beamer@sectionintoc {13}{Getting R Help}{103}{4}{13}
+\beamer@sectionintoc {14}{Online Resources for R}{106}{4}{14}
+\beamer@sectionintoc {15}{References}{109}{4}{15}

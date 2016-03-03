@@ -1,182 +1,201 @@
-# 08/17/09
+# 03/03/16
+# Author: Irina Kukuyeva
 # Graphics Mini-Course R Code
 
-#____________________________________________
-### Summary Plots
-#____________________________________________
-survey = read.table("http://www.stat.ucla.edu/~mine/students_survey_2008.txt", header = TRUE, sep = "\t")
-names(survey)
-attach(survey)
+### Step 0: Load required packages
+library(beanplot)
+library(car)
+library(ggplot2)
+library(lattice)
+library(maps)
+library(maptools)
+library(rgdal) 
+library(plyr)   
+library(dplyr)
 
-# Segmented Bar Charts
-	barplot(table(gender, hand), col = c("skyblue", "blue"), main = "Segmented Bar Plot \n of Gender")
-	legend("topleft", c("females","males"), col = c("skyblue", "blue"), pch = 16, inset= 0.05)
+#---------------------------------
+# --- Data set
+#---------------------------------
+df <- read.table(
+  "Number_of_Selected_Inpatient_Medical_Procedures__California_Hospitals__2005-2014.csv",
+  sep = ",",
+  header=TRUE,
+  stringsAsFactors = FALSE
+  )
+names(df)[1] = 'Year'
 
-# Pie Chart
-	pie(table(gender))
+### Step 1: Remove any 'statewide' counts
+data_clean <- df %>%
+  filter( County != "STATEWIDE" )
 
+data_LA_SF <- data_clean %>%
+  filter( 
+    (County == "Los Angeles") | 
+    (County == "San Francisco") 
+  ) 
+
+df_summary <- data_clean %>%
+  dplyr::group_by(Year) %>%
+  dplyr::summarise(Total.for.Year = sum(Volume, na.rm=TRUE))
+
+### Step 1: Aggregate data to be at hospital level:
+df_hosp <- data_clean %>%
+  dplyr::group_by( Latitude, Longitude ) %>%
+  dplyr::summarise( Total.for.Hospital = sum(Volume, na.rm=TRUE) )
+	
+### Step 2: Recode 'Volume' to have 2 categories only: high ( >100 cases ) and low ( <= 100 cases ):
+df_hosp$volume_ind <- ifelse( 
+ test = df_hosp$Total.for.Hospital > 100, 
+ yes = 2, 
+ no = 1 )
+
+### Step 2: Read in shapefile and add latitude and longitude cordinates to it:
+tracts = spTransform(
+	readOGR(
+		file.path("cb_2014_06_tract_500k"), 
+		layer = "cb_2014_06_tract_500k"
+		), 
+	CRS("+proj=longlat +datum=WGS84")
+	) 
+
+### Step 2: Preprocess data ahead of plotting
+tracts@data$id = rownames(tracts@data)
+tracts.points = fortify(tracts, region="id")
+tracts.df = plyr::join(
+tracts.points, 
+tracts@data, 
+by="id"
+)
+
+
+#---------------------------------
+# --- Plots of Counts
+#---------------------------------
 # Histograms
 	# 1.
-		hist(ageinmonths, main="Histogram of Age (Mo)")
-		abline(v=mean(ageinmonths), col = "blue")
-		abline(v=median(ageinmonths), col = "green")
-		legend("topright", c("Mean", "Median"), pch = 16, col = c("blue", "green"))
+hist(
+  df$Volume, 
+  breaks=1000
+  )
 
 	# 2.
-		data(presidents)		
-		hist(presidents, prob=T, ylim=c(0, 0.04), breaks=20)
-		lines(density(presidents, na.rm=TRUE), col="red")
-		mu<-mean(presidents, na.rm=TRUE) 
-		sigma<-sd(presidents, na.rm=TRUE)
-		x<-seq(10,100,length=100) 
-		y<-dnorm(x,mu,sigma) 
-		lines(x,y,lwd=2,col="blue") 
 
-# Box-Whisker Plot
-	data(quakes)		
-	# Subset the magnitude:
-	ind<-ifelse(quakes[, 4]<4.5, 0, 1)
-	ind<-as.factor(ind)
-	boxplot(quakes[, 4]~ind)
-	# Alternatively:
-	library(lattice)
-	bwplot(quakes[, 4]~ind, xlab=c("Mag<4.5", "Mag>=4.5"), ylab="Magnitude")
+### Step 2: Visualize
+hist(data_clean$Volume,
+  xlab="Volume",
+  main=""
+  )
 
 # Beanplot
-	library(beanplot)		
-	par(mfrow=c(1,2))
-	data(airquality)
-	boxplot(airquality[, 2], main="Boxplot", xlab="Solar")
-	beanplot(airquality[, 2], main="Beanplot", xlab="Solar")
-	par(mfrow=c(1,1))
+op <- par(las=2)   # orient y-axis labels
+beanplot(
+  Volume ~ as.factor(County), 
+  data = data_LA_SF, 
+  xlab = "",
+  log = "y",
+  side = "both", 
+  col = list( c( grey(0.5), "white"), grey(0.8) ), 
+  border = NA, 
+  overallline = "median", 
+  ll = 0.005,
+  show.names=FALSE
+  )
+legend(
+  x = "bottomleft",
+  fill=c( grey(0.5), grey(0.8) ), 
+  legend=c( "LA", "SF" )
+  )
+par(op)
 
 # Scatterplot
-	data(quakes)
-	library(car)		
-	scatterplot.matrix(quakes[, 1:4])
+scatterplotMatrix(
+  x = df[, c("Latitude", "Longitude", "Volume")], 
+  reg.line = FALSE,
+  col=c(3,
+    "orangered",
+    rgb(176/256, 196/256, 222/256, alpha=0.5)
+    ), 
+  pch=19,
+  lwd=3
+  )
 
-# Equality of Distributions
-	library(lattice)
-	survey = read.table("http://www.stat.ucla.edu/~mine/students_survey_2008.txt", header = TRUE, sep = "\t")
-	attach(survey) 
-	qq(gender~ageinmonths)
 
-# Identify-ing Obs
-	# Generate data and fit a regression curve:
-	set.seed(3012008)
-	x=rnorm(100); y=-x+I(x^2) +rnorm(100)
-	fit<-lm(y~x+I(x^2)); fit
-		
-	# Plot the resulting regression curve:
-	plot(y~x, pch=19)
-	curve(expr=fit[[1]][1]+fit[[1]][2]*x+fit[[1]][3]*I(x^2), from=range(x)[1], to=range(x)[2], add=TRUE, col="blue", lwd=2)
 
-	# Identify the "outlying" observations:
-	# index<-identify(y~x); index	
-
-#____________________________________________
+#---------------------------------
 ### TS Plots
-#____________________________________________
+#---------------------------------
 # Univariate
-	data(EuStockMarkets)
-	dax<-EuStockMarkets[, 1]
-	plot(dax)
+
 
 # Multivariate
 	# 1.
-		# Convert data to a time series via ts() or zoo():
-		data(airquality)
-		a<-airquality[, 1:3]
-		time<-ts(1:nrow(a), start=c(1973, 5), frequency=365)
-		# If your data is stored as a data frame,
-		# coerce it to be a matrix via as.matrix()
-		class(a)
-		a.mat<-as.matrix(a)
-
-		# Make a time series of the two (or more variables)
-		library(zoo)
-		name.zoo<-zoo(cbind(a.mat[, 1], a.mat[, 2]))
-		colnames(name.zoo)<-c("Ozone", "Solar")
-		#### Plot the variables
-		plot(name.zoo)
 
 	#2.
-		# Load MTVSPLOT function code
-		# After processing data as in Approach 1
-		# Plot the variables
-		 mvtsplot(name.zoo)
-		# Purple=low, grey=medium, green=high, white=missing values
 
 	#3.
-		# After processing data as in Approach 1
-		# load both libraries:
-		library(lattice)
-		library(zoo)
-		data(EuStockMarkets)
-		z<-EuStockMarkets
-		xyplot(z, screen = c(1,1,1,1), col = 1:4, strip = FALSE)
-		legend(1992, 5000, colnames(z), lty = 1, col = 1:4)
 
-#____________________________________________
+#---------------------------------
 ### Geo-Plots
-#____________________________________________
+#---------------------------------
 # 1.
-	data(quakes)
-	library(maps)
-	plot(quakes[, 2], quakes[, 1], xlim=c(100, 190), ylim=c(-40, 0))
-	map("world", add=T)
+plot(
+ x = df_clean$Longitude, 
+ y = df_clean$Latitude,
+ xlab = "Longitude",
+ ylab = "Latitude",
+ pch = 16,
+ col = rgb(176/256, 196/256, 222/256, alpha=0.5)
+)
+map("state", "california", add=TRUE)
 
 # 2.
-	library(mapproj)
-	library(maps)
-	m <- map('world',plot=FALSE)
-	# Projection is Azimuthal with equal-area
-	map('world',proj='azequalarea',orient=c(longitude=0,latitude=180,rotation=0))
-	map.grid(m,col=2)
-	points(mapproject(list(y=quakes[which(quakes[, 4]>=6), 1],x=quakes[which(quakes[, 4]>=6), 2])),col="blue",pch="x",cex=2)
 
-# Bonus:
-	# Number of points in ocean after filtering:
-	in.what.country<-map.where(database="world", quakes[, 2], quakes[, 1])
-	ind<-sum(is.na(in.what.country)); ind
-	# Number of observations: 1000
-	# Number in Ocean: 993
+	### Step 3: Plot
+	plot(
+	 x = df_hosp$Longitude, 
+	 y = df_hosp$Latitude, 
+	 pch = 19, 
+	 cex = df_hosp$volume_ind, 
+	 col = df_hosp$volume_ind, 
+	 xlab = "Longitude", 
+	 ylab = "Latitude",
+	 main="Indicator of overall volume between 2005-2014"
+	)
+	map("state", "california", add=TRUE)
 
+	### Step 4: Add legend
+	legend("topright", 
+	 pch = 19, 
+	 pt.cex = 1:2,
+	 col = 1:2, 
+	 c("Vol <= 100", "Vol > 100") 
+	)
+# 3.
+ ### Step 3: Visualize
+plot(tracts)
 
-#____________________________________________
-### 3D Plots
-#____________________________________________
-# lattice
-	# 1.
-		library(lattice)
-		wireframe(volcano, color.palette = terrain.colors, asp = 1, color.key=TRUE, drape=TRUE, scales = list(arrows = FALSE))
-	# 2.
-		library(lattice)
-		levelplot(volcano, color.palette = terrain.colors, asp = 1, color.key=TRUE, drape=TRUE, scales = list(arrows = FALSE), add=TRUE)
-		contour(volcano, add=TRUE, lwd=1.3, labcex=1.3)
+ ### Step 3: Visualize
+ggplot() +
+  geom_polygon(data = tracts.df,
+               aes(x = long, y = lat, group = group),
+               fill = grey(0.6), 
+               color = grey(0.6), 
+               alpha = 0.5
+               ) + 
+  geom_point(data = df_hosp,
+             aes(x = Longitude, y = Latitude),
+             color = "blue4", 
+             alpha = 0.5, 
+             shape = 3,
+             size = 2 )
+# 5.
+library(ggvis)
+tracts.points %>%
+  ggvis(~long, ~lat) %>%
+  group_by(group, id) %>%
+  layer_paths(strokeOpacity:=0.5, stroke:=grey(0.5)) %>%
+  layer_points(data=df_hosp, x=~Longitude, y=~Latitude, size:=8) %>%
+  hide_legend("fill") %>%
+  set_options(width=400, height=400, keep_aspect=TRUE)
 
-# rgl
-	library(rgl)
-	data(quakes)	
-	plot3d(x=quakes[, 2], y=quakes[, 1], z=quakes[, 3], xlab="Longitude", ylab="Latitude", zlab="Depth")
-
-#____________________________________________
-### Simulations
-#____________________________________________
-x=5:6; y=1:3
-outer(x,y)
-
-fcn<-function(x,y){z=x+y}
-outer(x,y,fcn)
-
-# Sample from the random uniform:
-x <- sort(runif(100, min=0, max=10))
-y <- x+runif(1)
-f <- function(x,y) { r <- y*sin(x)}
-z <- outer(x,y,f)
-persp(x, y, z, col = "lightblue", shade = 0.1, ticktype = "detailed", expand=0.7)
-
-contour(x,y,z)
-
-
-
+# 6.

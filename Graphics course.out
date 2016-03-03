@@ -1,43 +1,42 @@
 \BOOKMARK [1][]{Outline1}{Preliminaries}{}% 1
 \BOOKMARK [2][]{Outline1.1}{Motivation}{Outline1}% 2
-\BOOKMARK [2][]{Outline1.2}{Why R?}{Outline1}% 3
-\BOOKMARK [2][]{Outline1.3}{Why visualize?}{Outline1}% 4
-\BOOKMARK [2][]{Outline1.4}{Tips for Visulizations}{Outline1}% 5
-\BOOKMARK [1][]{Outline2}{Introduction to R}{}% 6
-\BOOKMARK [2][]{Outline2.5}{Installing R and RStudio}{Outline2}% 7
-\BOOKMARK [2][]{Outline2.6}{Overview of R}{Outline2}% 8
-\BOOKMARK [3][]{Outline2.6.1.17}{Creating Objects}{Outline2.6}% 9
-\BOOKMARK [3][]{Outline2.6.2.18}{\(Very\) Brief Overview of Functions}{Outline2.6}% 10
-\BOOKMARK [2][]{Outline2.7}{Working with Data}{Outline2}% 11
-\BOOKMARK [3][]{Outline2.7.1.20}{Reading Data from File}{Outline2.7}% 12
-\BOOKMARK [3][]{Outline2.7.2.22}{Working with Data Frames}{Outline2.7}% 13
-\BOOKMARK [2][]{Outline2.8}{Adding Functionality to Base R}{Outline2}% 14
-\BOOKMARK [1][]{Outline3}{Visualizations}{}% 15
-\BOOKMARK [2][]{Outline3.9}{Data Set}{Outline3}% 16
-\BOOKMARK [2][]{Outline3.10}{Summary Plots}{Outline3}% 17
-\BOOKMARK [3][]{Outline3.10.1.34}{Scatterplot}{Outline3.10}% 18
-\BOOKMARK [3][]{Outline3.10.2.41}{Histogram}{Outline3.10}% 19
-\BOOKMARK [3][]{Outline3.10.3.47}{Exercise I}{Outline3.10}% 20
-\BOOKMARK [2][]{Outline3.11}{Time Series Plots}{Outline3}% 21
-\BOOKMARK [3][]{Outline3.11.1.49}{Multivariate Plots: Approach 1}{Outline3.11}% 22
-\BOOKMARK [3][]{Outline3.11.2.51}{Multivariate Plots: Approach 2}{Outline3.11}% 23
-\BOOKMARK [3][]{Outline3.11.3.56}{Multivariate Plots: Approach 3}{Outline3.11}% 24
-\BOOKMARK [3][]{Outline3.11.4.59}{Multivariate Plots: Approach 5}{Outline3.11}% 25
-\BOOKMARK [3][]{Outline3.11.5.60}{Exercise II}{Outline3.11}% 26
-\BOOKMARK [2][]{Outline3.12}{Geographical Plots}{Outline3}% 27
-\BOOKMARK [3][]{Outline3.12.1.62}{Maps}{Outline3.12}% 28
-\BOOKMARK [3][]{Outline3.12.2.66}{Projection Maps}{Outline3.12}% 29
-\BOOKMARK [3][]{Outline3.12.3.68}{Exercise III}{Outline3.12}% 30
-\BOOKMARK [1][]{Outline4}{Working with R}{}% 31
-\BOOKMARK [2][]{Outline4.13}{Installation}{Outline4}% 32
-\BOOKMARK [3][]{Outline4.13.1.71}{Software Installation}{Outline4.13}% 33
-\BOOKMARK [3][]{Outline4.13.2.71}{Saving Plots as a PDF}{Outline4.13}% 34
-\BOOKMARK [2][]{Outline4.14}{Common Bugs and Fixes}{Outline4}% 35
-\BOOKMARK [3][]{Outline4.14.1.73}{Syntax Error}{Outline4.14}% 36
-\BOOKMARK [3][]{Outline4.14.2.74}{Trailing +}{Outline4.14}% 37
-\BOOKMARK [3][]{Outline4.14.3.75}{Error When Performing Operations}{Outline4.14}% 38
-\BOOKMARK [3][]{Outline4.14.4.76}{Error in Calling an Object}{Outline4.14}% 39
-\BOOKMARK [3][]{Outline4.14.5.77}{Silent Errors}{Outline4.14}% 40
-\BOOKMARK [2][]{Outline4.15}{Getting R Help}{Outline4}% 41
-\BOOKMARK [2][]{Outline4.16}{Online Resources for R}{Outline4}% 42
-\BOOKMARK [2][]{Outline4.17}{References}{Outline4}% 43
+\BOOKMARK [3][]{Outline1.1.1.5}{Why tutorial?}{Outline1.1}% 3
+\BOOKMARK [3][]{Outline1.1.2.6}{Why R?}{Outline1.1}% 4
+\BOOKMARK [3][]{Outline1.1.3.7}{Why visualize?}{Outline1.1}% 5
+\BOOKMARK [2][]{Outline1.2}{Tips for Visulizations}{Outline1}% 6
+\BOOKMARK [1][]{Outline2}{Introduction to R}{}% 7
+\BOOKMARK [2][]{Outline2.3}{Installing R and RStudio}{Outline2}% 8
+\BOOKMARK [2][]{Outline2.4}{Overview of R}{Outline2}% 9
+\BOOKMARK [3][]{Outline2.4.1.17}{Creating Objects}{Outline2.4}% 10
+\BOOKMARK [3][]{Outline2.4.2.19}{\(Very\) Brief Overview of Functions}{Outline2.4}% 11
+\BOOKMARK [3][]{Outline2.4.3.20}{Comparisons}{Outline2.4}% 12
+\BOOKMARK [3][]{Outline2.4.4.21}{\(More\) Notation}{Outline2.4}% 13
+\BOOKMARK [2][]{Outline2.5}{Working with Data}{Outline2}% 14
+\BOOKMARK [3][]{Outline2.5.1.24}{Reading Data from File}{Outline2.5}% 15
+\BOOKMARK [3][]{Outline2.5.2.26}{Working with Data Frames}{Outline2.5}% 16
+\BOOKMARK [2][]{Outline2.6}{Adding Functionality to Base R}{Outline2}% 17
+\BOOKMARK [1][]{Outline3}{Visualizations}{}% 18
+\BOOKMARK [2][]{Outline3.7}{Data Set}{Outline3}% 19
+\BOOKMARK [2][]{Outline3.8}{Plots of Counts}{Outline3}% 20
+\BOOKMARK [3][]{Outline3.8.1.41}{Histogram}{Outline3.8}% 21
+\BOOKMARK [3][]{Outline3.8.2.49}{Scatterplot}{Outline3.8}% 22
+\BOOKMARK [3][]{Outline3.8.3.56}{Exercise I}{Outline3.8}% 23
+\BOOKMARK [2][]{Outline3.9}{Time Series Plots}{Outline3}% 24
+\BOOKMARK [3][]{Outline3.9.1.58}{Univariate Time Series Plots}{Outline3.9}% 25
+\BOOKMARK [3][]{Outline3.9.2.61}{Multivariate Time Series Plots}{Outline3.9}% 26
+\BOOKMARK [3][]{Outline3.9.3.67}{Exercise II}{Outline3.9}% 27
+\BOOKMARK [2][]{Outline3.10}{Geographical Plots}{Outline3}% 28
+\BOOKMARK [3][]{Outline3.10.1.69}{Plots using Maps}{Outline3.10}% 29
+\BOOKMARK [3][]{Outline3.10.2.81}{Interactive Geographical Plots}{Outline3.10}% 30
+\BOOKMARK [3][]{Outline3.10.3.88}{Exercise III}{Outline3.10}% 31
+\BOOKMARK [1][]{Outline4}{Working with R}{}% 32
+\BOOKMARK [2][]{Outline4.11}{Common Bugs and Fixes}{Outline4}% 33
+\BOOKMARK [3][]{Outline4.11.1.91}{Syntax Error}{Outline4.11}% 34
+\BOOKMARK [3][]{Outline4.11.2.92}{Trailing +}{Outline4.11}% 35
+\BOOKMARK [3][]{Outline4.11.3.93}{Error When Performing Operations}{Outline4.11}% 36
+\BOOKMARK [3][]{Outline4.11.4.94}{Error in Calling an Object}{Outline4.11}% 37
+\BOOKMARK [3][]{Outline4.11.5.95}{Silent Errors}{Outline4.11}% 38
+\BOOKMARK [2][]{Outline4.12}{Where to go from here?}{Outline4}% 39
+\BOOKMARK [2][]{Outline4.13}{Getting R Help}{Outline4}% 40
+\BOOKMARK [2][]{Outline4.14}{Online Resources for R}{Outline4}% 41
+\BOOKMARK [2][]{Outline4.15}{References}{Outline4}% 42
