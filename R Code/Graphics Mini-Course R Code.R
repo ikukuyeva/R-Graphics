@@ -2,20 +2,73 @@
 # Author: Irina Kukuyeva
 # Graphics Mini-Course R Code
 
-### Step 0: Load required packages
-library(beanplot)
-library(car)
-library(ggplot2)
-library(lattice)
-library(maps)
-library(maptools)
-library(rgdal) 
-library(plyr)   
+# install.packages( c("lattice", "ggplot2") )
 library(dplyr)
+library(beanplot)
+library(car) 
+library(lattice)
+library(ggplot2)
+library(maps)
+library(sp)
+library(rgdal)
+library(maptools)
+library(plyr)
+library(ggvis)
+library(leaflet)
 
 #---------------------------------
-# --- Data set
+# --- Overview of R
 #---------------------------------
+
+### --- Functions
+f <- function(x, y=1){
+  answer <- x * 2 + y + 1
+  return(answer)
+}
+
+f(2)        # 6
+f(3, 2)     # 9
+f(y=3, 2)   # 8
+f(y=3, x=3) # 10
+
+### --- Comparisons
+# Suppose x and y are:
+x = 3
+y = 5
+
+x == 3  # is x 3?
+x != y  # are x and y different?
+x >= y  # is x greater than or equal to y?
+(x==3) & (y==4) # is it true that x is 3 and y is 4?
+(x==3) | (y==4) # is it true that x is 3 or y is 4?
+
+### --- Working with Data Frames:
+filepath = "http://www.ats.ucla.edu/stat/data/test_missing_comma.txt"
+### Other valid paths:
+# filepath = "C:/Documents/test_missing_comma.txt"
+# filepath = "./test_missing_comma.txt"
+
+df <- read.table(
+  file = filepath, 
+  header = TRUE, 
+  sep = ","
+  )
+
+head(df, 5)
+tail(df, 7)
+names(df)
+dim(df)
+head(df$gender)
+unique(df$gender)
+table(df$gender, useNA='always')
+head( df[, c('gender', 'ses') ], 3) 
+summary(df)
+
+#---------------------------------
+# --- Data Set
+#---------------------------------
+
+# Path to file: https://chhs.data.ca.gov/api/views/mdt8-gwyw/rows.csv?accessType=DOWNLOAD
 df <- read.table(
   "Number_of_Selected_Inpatient_Medical_Procedures__California_Hospitals__2005-2014.csv",
   sep = ",",
@@ -24,69 +77,37 @@ df <- read.table(
   )
 names(df)[1] = 'Year'
 
-### Step 1: Remove any 'statewide' counts
-data_clean <- df %>%
-  filter( County != "STATEWIDE" )
-
-data_LA_SF <- data_clean %>%
-  filter( 
-    (County == "Los Angeles") | 
-    (County == "San Francisco") 
-  ) 
-
-df_summary <- data_clean %>%
-  dplyr::group_by(Year) %>%
-  dplyr::summarise(Total.for.Year = sum(Volume, na.rm=TRUE))
-
-### Step 1: Aggregate data to be at hospital level:
-df_hosp <- data_clean %>%
-  dplyr::group_by( Latitude, Longitude ) %>%
-  dplyr::summarise( Total.for.Hospital = sum(Volume, na.rm=TRUE) )
-	
-### Step 2: Recode 'Volume' to have 2 categories only: high ( >100 cases ) and low ( <= 100 cases ):
-df_hosp$volume_ind <- ifelse( 
- test = df_hosp$Total.for.Hospital > 100, 
- yes = 2, 
- no = 1 )
-
-### Step 2: Read in shapefile and add latitude and longitude cordinates to it:
-tracts = spTransform(
-	readOGR(
-		file.path("cb_2014_06_tract_500k"), 
-		layer = "cb_2014_06_tract_500k"
-		), 
-	CRS("+proj=longlat +datum=WGS84")
-	) 
-
-### Step 2: Preprocess data ahead of plotting
-tracts@data$id = rownames(tracts@data)
-tracts.points = fortify(tracts, region="id")
-tracts.df = plyr::join(
-tracts.points, 
-tracts@data, 
-by="id"
-)
-
+dim(df)
 
 #---------------------------------
 # --- Plots of Counts
 #---------------------------------
-# Histograms
-	# 1.
+
+### --- Histogram
 hist(
   df$Volume, 
   breaks=1000
   )
 
-	# 2.
+# Potential outlier detection:
+df %>%
+  filter( Volume == max(Volume, na.rm=TRUE) )
 
-### Step 2: Visualize
+# Remove any 'statewide' counts
+data_clean <- df %>%
+  filter( County != "STATEWIDE" )
+
 hist(data_clean$Volume,
   xlab="Volume",
   main=""
   )
 
-# Beanplot
+### --- Side-by-side histogram
+data_LA_SF <- data_clean %>%
+  filter( 
+    (County == "Los Angeles") | 
+    (County == "San Francisco") 
+  ) 
 op <- par(las=2)   # orient y-axis labels
 beanplot(
   Volume ~ as.factor(County), 
@@ -94,7 +115,7 @@ beanplot(
   xlab = "",
   log = "y",
   side = "both", 
-  col = list( c( grey(0.5), "white"), grey(0.8) ), 
+  col =list( c(grey(0.5), "white"), grey(0.8) ), 
   border = NA, 
   overallline = "median", 
   ll = 0.005,
@@ -107,7 +128,23 @@ legend(
   )
 par(op)
 
-# Scatterplot
+### --- Scatterplot
+
+# v1 
+scatterplotMatrix(
+  x = df[, c("Latitude", "Longitude", "Volume")], 
+  smoother = FALSE, 
+  reg.line = FALSE
+  )
+
+# v2
+?scatterplotMatrix # for documentation  
+scatterplotMatrix(
+  x = df[, c("Latitude", "Longitude", "Volume")], 
+  reg.line = FALSE
+  )
+
+# v3    
 scatterplotMatrix(
   x = df[, c("Latitude", "Longitude", "Volume")], 
   reg.line = FALSE,
@@ -119,28 +156,67 @@ scatterplotMatrix(
   lwd=3
   )
 
-
-
 #---------------------------------
-### TS Plots
+# --- Time Series Plots
 #---------------------------------
-# Univariate
 
+### --- Univariate
+### Step 1: Get yearly counts across hospitals and procedures
+df_summary <- data_clean %>%
+  dplyr::group_by(Year) %>%
+  dplyr::summarise(Total.for.Year = sum(Volume, na.rm=TRUE))
 
-# Multivariate
-	# 1.
-
-	#2.
-
-	#3.
-
-#---------------------------------
-### Geo-Plots
-#---------------------------------
-# 1.
 plot(
- x = df_clean$Longitude, 
- y = df_clean$Latitude,
+  x=df_summary$Year,
+  y=df_summary$Total.for.Year,
+  xlab="Year",
+  ylab="Volume",
+  type="b",
+  main="Yearly Volume for 6 procedures in CA"
+  )
+
+### --- Multivariate 
+# v1
+df_LA_CABG <- df %>%
+  filter( 
+    (County == "Los Angeles") & 
+    (Procedure == "CABG") & 
+    (Volume > 0) 
+    )
+
+xyplot( Volume ~ Year | Hospital.Name, 
+  data=df_LA_CABG,
+  par.strip.text=list(cex=0.5),
+  type="b",
+  main="LA Coronary artery bypass grafting (CABG)"
+  )
+
+# v2
+df_Cedars <- data_clean %>%
+  filter( Hospital.Name == 'Cedars Sinai Medical Center')
+
+ggplot( data = df_Cedars ) + 
+  geom_line( aes(
+    x = Year, 
+    y = Volume, 
+    linetype = Procedure) ) +
+  scale_x_continuous( breaks=seq(
+    from=2005, 
+    to=2014, 
+    by=3) ) +
+  theme_classic() +
+  ggtitle( "Volume of Procedures for Cedars Sinai Medical Center" )
+
+#---------------------------------
+# --- Geo Plots
+#---------------------------------
+
+### --- Static geo plots
+
+# v1
+plot(
+ x = data_clean$Longitude, 
+ y = data_clean$Latitude,
  xlab = "Longitude",
  ylab = "Latitude",
  pch = 16,
@@ -148,33 +224,54 @@ plot(
 )
 map("state", "california", add=TRUE)
 
-# 2.
+# v2
+df_hosp <- data_clean %>%
+  dplyr::group_by( Latitude, Longitude ) %>%
+  dplyr::summarise( Total.for.Hospital = sum(Volume, na.rm=TRUE) )
+  
+df_hosp$volume_ind <- ifelse( 
+ test = df_hosp$Total.for.Hospital > 100, 
+ yes = 2, 
+ no = 1 
+ )
 
-	### Step 3: Plot
-	plot(
-	 x = df_hosp$Longitude, 
-	 y = df_hosp$Latitude, 
-	 pch = 19, 
-	 cex = df_hosp$volume_ind, 
-	 col = df_hosp$volume_ind, 
-	 xlab = "Longitude", 
-	 ylab = "Latitude",
-	 main="Indicator of overall volume between 2005-2014"
-	)
-	map("state", "california", add=TRUE)
+plot(
+ x = df_hosp$Longitude, 
+ y = df_hosp$Latitude, 
+ pch = 19, 
+ cex = df_hosp$volume_ind, 
+ col = df_hosp$volume_ind, 
+ xlab = "Longitude", 
+ ylab = "Latitude",
+ main="Indicator of overall volume between 2005-2014"
+)
+map("state", "california", add=TRUE)
+legend("topright", 
+ pch = 19, 
+ pt.cex = 1:2,
+ col = 1:2, 
+ c("Vol <= 100", "Vol > 100") 
+)
 
-	### Step 4: Add legend
-	legend("topright", 
-	 pch = 19, 
-	 pt.cex = 1:2,
-	 col = 1:2, 
-	 c("Vol <= 100", "Vol > 100") 
-	)
-# 3.
- ### Step 3: Visualize
-plot(tracts)
+# v3
+tracts = spTransform(
+  readOGR(
+    file.path("cb_2014_06_tract_500k"), 
+    layer = "cb_2014_06_tract_500k"
+    ), 
+  CRS("+proj=longlat +datum=WGS84")
+  ) 
 
- ### Step 3: Visualize
+plot(tracts) # plot shapefile
+
+tracts@data$id = rownames(tracts@data)
+tracts.points = fortify(tracts, region="id")
+tracts.df = join(
+ tracts.points, 
+ tracts@data, 
+ by="id"
+ )
+
 ggplot() +
   geom_polygon(data = tracts.df,
                aes(x = long, y = lat, group = group),
@@ -188,8 +285,10 @@ ggplot() +
              alpha = 0.5, 
              shape = 3,
              size = 2 )
-# 5.
-library(ggvis)
+
+### --- Interactive geo plots
+
+# v1
 tracts.points %>%
   ggvis(~long, ~lat) %>%
   group_by(group, id) %>%
@@ -198,4 +297,28 @@ tracts.points %>%
   hide_legend("fill") %>%
   set_options(width=400, height=400, keep_aspect=TRUE)
 
-# 6.
+# v2
+tracts.points %>%
+  ggvis(~long, ~lat) %>%
+  group_by(group, id) %>%
+  layer_paths(
+    strokeOpacity:=0.5, 
+    stroke:=grey(0.5)) %>%
+  layer_points(
+    data=df_hosp, 
+    x=~Longitude, 
+    y=~Latitude, 
+    size:=input_slider(8, 100, value = 12, label='Point size')) %>%
+  hide_legend("fill") %>%
+  set_options(width=400, 
+    height=400, 
+    keep_aspect=TRUE)
+
+# v3
+leaflet(data = df_hosp) %>% 
+  addTiles() %>%
+  addMarkers(
+    ~Longitude, 
+    ~Latitude, 
+    popup = ~as.character(Total.for.Hospital)
+    )
