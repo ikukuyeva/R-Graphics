@@ -24,7 +24,7 @@ One way to plot one variable at a time (over time), is via \ttfamily plot(): \no
 library(dplyr)
 
 ### Step 1: Get yearly counts across hospitals and procedures
-df_summary <- df_clean %>%
+df_summary <- data_clean %>%
   group_by(Year) %>%
   summarise(Total.for.Year = sum(Volume, na.rm=TRUE))
   \end{lstlisting}
