@@ -123,7 +123,7 @@ To compare distributions of two variables side-by-side, use \ttfamily beanplot()
 library(beanplot)
 
 ### Step 1: Subset data set to LA and SF
-data_LA_SF <- df_clean %>%
+data_LA_SF <- data_clean %>%
   filter( 
     (County == "Los Angeles") | 
     (County == "San Francisco") 
