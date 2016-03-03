@@ -98,7 +98,7 @@ library(rgdal)
 
 \newpage
 \begin{lstlisting}
-### Step 2: Read in shapefile and add latitude and longitude cordinates to it:
+### Step 2: Read in shapefile and add latitude and longitude coordinates to it:
 tracts = spTransform(
 	readOGR(
 		file.path("cb_2014_06_tract_500k"), 
@@ -170,7 +170,8 @@ ggplot() +
 	\frametitle{Geographical Plots via 'ggvis'}
 One way to make high resolution and interactive images is via 'ggvis' [13]:
 
-\begin{lstlisting}
+\begin{lstlisting}[ basicstyle=\footnotesize]
+# Please note, it may take some time to load as the shapefile is high resolution:
 library(ggvis)
 tracts.points %>%
   ggvis(~long, ~lat) %>%
@@ -183,7 +184,63 @@ tracts.points %>%
 
 \newpage
        \begin{center}
-		\includegraphics[scale=0.65]{images/shapefile_v2.png}
+		\includegraphics[scale=0.6]{images/shapefile_v2.png}
+	\end{center}
+
+\newpage
+Now we can add (basic) interactivity by resizing the hospital locations:
+
+\begin{lstlisting}[ basicstyle=\tiny]
+library(ggvis)
+tracts.points %>%
+  ggvis(~long, ~lat) %>%
+  group_by(group, id) %>%
+  layer_paths(
+    strokeOpacity:=0.5, 
+    stroke:=grey(0.5)) %>%
+  layer_points(
+    data=df_hosp, 
+    x=~Longitude, 
+    y=~Latitude, 
+    size:=input_slider(8, 100, value = 12, label='Point size')) %>%
+  hide_legend("fill") %>%
+  set_options(width=400, 
+    height=400, 
+    keep_aspect=TRUE)
+\end{lstlisting}
+
+\newpage
+  \begin{center}
+    \includegraphics[scale=0.55]{images/shapefile_v3-4-1.png}
+  \end{center}
+
+\newpage
+  \begin{center}
+    \includegraphics[scale=0.55]{images/shapefile_v3-4-2.png}
+  \end{center}
+
+\end{frame}
+
+%---
+\subsubsection{Geographical Plots via 'leaflet'}
+\begin{frame}[fragile, allowframebreaks]
+	\frametitle{Geographical Plots via 'leaflet'}
+Another way to make interactive images is via 'leaflet':
+
+\begin{lstlisting}
+library(leaflet)
+leaflet(data = df_hosp) %>% 
+  addTiles() %>%
+  addMarkers(
+    ~Longitude, 
+    ~Latitude, 
+    popup = ~as.character(Total.for.Hospital)
+    )
+\end{lstlisting}
+
+\newpage
+  \begin{center}
+		\includegraphics[scale=0.37]{images/leaflet.png}
 	\end{center}
 \end{frame}
 
