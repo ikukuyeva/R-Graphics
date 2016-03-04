@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.26)  3 MAR 2016 15:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.2.26)  3 MAR 2016 16:18
 entering extended mode
 **C:/Users/ikukuyeva/Documents/Consulting*Center/Courses/Graphics-repo/Graphics
 *course.tex
@@ -2221,14 +2221,14 @@ Package pdftex.def Info: logo.jpg used on input line 251.
  course.vrb")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 286.
+Package pdftex.def Info: logo.jpg used on input line 292.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [107
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 286.
+Package pdftex.def Info: logo.jpg used on input line 292.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [108
 
@@ -2238,26 +2238,26 @@ Package pdftex.def Info: logo.jpg used on input line 286.
  course.toc")
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 296.
+Package pdftex.def Info: logo.jpg used on input line 302.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [109
 
 ]
-Overfull \hbox (98.52357pt too wide) in paragraph at lines 319--319
+Overfull \hbox (98.52357pt too wide) in paragraph at lines 327--327
 $\OT1/cmtt/m/n/10.95 making-[]static-[]interactive-[]maps-[]with-[]ggvis-[]usin
 g-[]ggvis-[]maps-[]wshiny/$[]  
  []
 
 File: logo.jpg Graphic file (type jpg)
 <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 319.
+Package pdftex.def Info: logo.jpg used on input line 327.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [110
 
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 319.
+Package pdftex.def Info: logo.jpg used on input line 327.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [111
 
@@ -2265,7 +2265,7 @@ Package pdftex.def Info: logo.jpg used on input line 319.
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 319.
+Package pdftex.def Info: logo.jpg used on input line 327.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
  [112
 
@@ -2273,7 +2273,7 @@ Package pdftex.def Info: logo.jpg used on input line 319.
 ]
 File: logo.jpg Graphic file (type jpg)
  <use logo.jpg>
-Package pdftex.def Info: logo.jpg used on input line 337.
+Package pdftex.def Info: logo.jpg used on input line 345.
 (pdftex.def)             Requested size: 51.08719pt x 21.33955pt.
 
 [113
@@ -2327,9 +2327,9 @@ ublic/amsfonts/cm/cmtt10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/am
 sfonts/cm/cmtt12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/c
 m/cmtt8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt9.p
 fb>
-Output written on "Graphics course.pdf" (113 pages, 8405787 bytes).
+Output written on "Graphics course.pdf" (113 pages, 8407500 bytes).
 PDF statistics:
- 7137 PDF objects out of 7423 (max. 8388607)
+ 7142 PDF objects out of 7423 (max. 8388607)
  271 named destinations out of 1000 (max. 500000)
  570 words of extra memory for PDF output out of 10000 (max. 10000000)
 
