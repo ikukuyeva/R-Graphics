@@ -1,0 +1,37 @@
+### TODOs ahead of next Graphics tutorial:
+
+- fix references that should say data_clean, not df in creating addiitonal data sets
+
+- separate tutorial into 2 parts -- R and Visualizations
+
+- add note RE slashes in paths on Windows vs Mac
+
+- add another example to R section
+
+- add overview of Rstudio environment
+	- changing directory
+	- adding code
+	- saving code
+	- saving history
+	- viewing data set(s)
+
+- add discussion of:
+	- ls
+	- str
+	- setwd
+	- save.image
+	- getwd
+
+- add regex to remove the unicode in titles
+
+- add additional plots:
+	- remove large values for Kaiser (for additional graph) and examine trends
+	- remove large values from Procedure (for additional graph) and examine trends
+	- add counts of lat/long combinations to examine dublicates but different names
+		and aggregating results across procedures
+
+- add slide mentioning other things to check for in data:
+	- negative values for income
+	- non-numeric or character values when should be HR (for example)
+	- different encoding of missing values
+	- lat/long ranges consisten with region of where data should be from?
