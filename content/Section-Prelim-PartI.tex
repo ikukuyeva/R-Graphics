@@ -1,7 +1,3 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part{Preliminaries}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
 %%% --------------------------
 \section{Motivation}
 \subsection{Why tutorial?} 
@@ -51,99 +47,93 @@
 	\end{center} 
 \end{frame}
 
-%%% --------------------------
-\subsection{Why visualize?}
-%%% --------------------------
-\begin{frame}
-	\frametitle{Approach 1: Infographic}
-	\begin{center}
-		\vspace{-10pt}
-  		\begin{block}{Inforgraphic} 
-			\begin{itemize}
-				\item Manually created
-				\item Customized to a data set
-				\item Art
-			\end{itemize}
-		\end{block}
-	\end{center}	
+% %%% --------------------------
+% \subsection{Why visualize?}
+% %%% --------------------------
+% \begin{frame}
+% 	\frametitle{Approach 1: Infographic}
+% 	\begin{center}
+% 		\vspace{-10pt}
+%   		\begin{block}{Inforgraphic} 
+% 			\begin{itemize}
+% 				\item Manually created
+% 				\item Customized to a data set
+% 				\item Art
+% 			\end{itemize}
+% 		\end{block}
+% 	\end{center}	
 
-   \begin{center}
-     \includegraphics[scale=0.25]{images/infographic}[10]
-    \end{center}
+%    \begin{center}
+%      \includegraphics[scale=0.25]{images/infographic}[10]
+%     \end{center}
 
-\end{frame}
-
-
-\begin{frame}[allowframebreaks]
-	\frametitle{Approach 2: Data Visualization}
-  		\begin{block}{Data Visualization} 
-			\begin{itemize}
-				\item Automated via software
-				\item Reproducible for a different data set
-				\item (Less? of an) art
-			\end{itemize}
-		\end{block}
-		There are two types of data visualization:
-			\begin{block}{1. Exploratory} 
-					\begin{itemize}
-						\item \small Capture uncertainty in the data
-						\item Explore potential relationships/trends/missing patterns (or absence thereof)
-					\end{itemize}
-			\end{block}
-			\begin{block}{2. Explanatory}
-					\begin{itemize}
-						\item Convey key information \normalfont
-					\end{itemize}
-			\end{block}
-
-   \begin{center}
-     \includegraphics[scale=0.09]{images/facebook}[8]
-    \end{center}
-
-\end{frame}
-%---
-
-%%% --------------------------
-\section{Tips for Visulizations}
-%%% --------------------------
-\begin{frame}
-	\frametitle{Tips for visualizations} 
-	\begin{itemize}
-		\item Know your audience 
-		\item \itshape{ 15 second rule:} \normalfont if your audience won't be able to understand the graphic in 15 seconds, simplify
-		\item Layout [9] and font choices
-		\item Color choices 
-			\begin{itemize}
-				\item Available colors in R: 
-					\begin{itemize}
-						\item \small{\url{http://research.stowers-institute.org/efg/R/Color/Chart/}} \normalfont
-					\end{itemize}
-				\item Color blindness simulation [11]:
-					\begin{itemize}
-						\item \url{http://vischeck.com}
-						\item \url{http://rsb.info.nih.gov/ij/}
-					\end{itemize}
-			\end{itemize} 
-		\item Add text/labels to figure
-	\end{itemize}		
+% \end{frame}
 
 
-  % \begin{center}
-  % 	\includegraphics[width=0.4\textwidth]{images/geolocation_ex2}[7]
-  % \end{center}
+% \begin{frame}[allowframebreaks]
+% 	\frametitle{Approach 2: Data Visualization}
+%   		\begin{block}{Data Visualization} 
+% 			\begin{itemize}
+% 				\item Automated via software
+% 				\item Reproducible for a different data set
+% 				\item (Less? of an) art
+% 			\end{itemize}
+% 		\end{block}
+% 		There are two types of data visualization:
+% 			\begin{block}{1. Exploratory} 
+% 					\begin{itemize}
+% 						\item \small Capture uncertainty in the data
+% 						\item Explore potential relationships/trends/missing patterns (or absence thereof)
+% 					\end{itemize}
+% 			\end{block}
+% 			\begin{block}{2. Explanatory}
+% 					\begin{itemize}
+% 						\item Convey key information \normalfont
+% 					\end{itemize}
+% 			\end{block}
 
-\end{frame}
-%---
+%    \begin{center}
+%      \includegraphics[scale=0.09]{images/facebook}[8]
+%     \end{center}
+
+% \end{frame}
+% %---
+
+% %%% --------------------------
+% \section{Tips for Visulizations}
+% %%% --------------------------
+% \begin{frame}
+% 	\frametitle{Tips for visualizations} 
+% 	\begin{itemize}
+% 		\item Know your audience 
+% 		\item \itshape{ 15 second rule:} \normalfont if your audience won't be able to understand the graphic in 15 seconds, simplify
+% 		\item Layout [9] and font choices
+% 		\item Color choices 
+% 			\begin{itemize}
+% 				\item Available colors in R: 
+% 					\begin{itemize}
+% 						\item \small{\url{http://research.stowers-institute.org/efg/R/Color/Chart/}} \normalfont
+% 					\end{itemize}
+% 				\item Color blindness simulation [11]:
+% 					\begin{itemize}
+% 						\item \url{http://vischeck.com}
+% 						\item \url{http://rsb.info.nih.gov/ij/}
+% 					\end{itemize}
+% 			\end{itemize} 
+% 		\item Add text/labels to figure
+% 	\end{itemize}		
 
 
+%   % \begin{center}
+%   % 	\includegraphics[width=0.4\textwidth]{images/geolocation_ex2}[7]
+%   % \end{center}
 
+% \end{frame}
+% %---
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\part{Introduction to R}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %%% --------------------------
-\section{Installing R and RStudio}
+\section{Software Installation}
 %%% --------------------------
 \begin{frame}
   \frametitle{Installing R and RStudio}
@@ -161,7 +151,7 @@
 
 
 %%% --------------------------
-\section{Overview of R}
+\section{Introduction to R}
 %%% --------------------------
 \begin{frame}
 	\begin{center}
@@ -214,12 +204,17 @@ Objects can be created in different ways, via:
 		\end{itemize}
 	\end{block}
 
+\newpage
+	\begin{alertblock}{Exercise:}
+		Create a variable called y with a value of -10.
+	\end{alertblock}
+
 \end{frame}
 
 %%% --------------------------
 \subsection{(Very) Brief Overview of Functions}
 %%% --------------------------
-\begin{frame}[fragile]
+\begin{frame}[fragile, allowframebreaks]
 	\frametitle{Functions in R}
 	\vspace{-15pt}
 	\begin{center}
@@ -248,6 +243,12 @@ f(y=3, x=3) # 10
 					%%% Assignment, arguments, named, order, unnamed
 		\end{block}
 	\end{center} 
+
+\newpage
+	\begin{alertblock}{Exercise:}
+		Create a function that squares a given number.
+	\end{alertblock}
+
 \end{frame}
 
 %%% --------------------------

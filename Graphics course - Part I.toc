@@ -1,0 +1,24 @@
+\beamer@endinputifotherversion {3.36pt}
+\beamer@sectionintoc {1}{Motivation}{3}{0}{1}
+\beamer@subsectionintoc {1}{1}{Why tutorial?}{4}{0}{1}
+\beamer@subsectionintoc {1}{2}{Why R?}{5}{0}{1}
+\beamer@sectionintoc {2}{Software Installation}{6}{0}{2}
+\beamer@sectionintoc {3}{Introduction to R}{8}{0}{3}
+\beamer@subsectionintoc {3}{1}{Creating Objects}{10}{0}{3}
+\beamer@subsectionintoc {3}{2}{(Very) Brief Overview of Functions}{13}{0}{3}
+\beamer@subsectionintoc {3}{3}{Comparisons}{14}{0}{3}
+\beamer@subsectionintoc {3}{4}{(More) Notation}{15}{0}{3}
+\beamer@sectionintoc {4}{Working with Data}{17}{0}{4}
+\beamer@subsectionintoc {4}{1}{Reading Data from File}{18}{0}{4}
+\beamer@subsectionintoc {4}{2}{Working with Data Frames}{20}{0}{4}
+\beamer@sectionintoc {5}{Adding Functionality to Base R}{28}{0}{5}
+\beamer@sectionintoc {6}{Common Bugs and Fixes}{31}{1}{6}
+\beamer@subsectionintoc {6}{1}{Syntax Error}{32}{1}{6}
+\beamer@subsectionintoc {6}{2}{Trailing $+$}{33}{1}{6}
+\beamer@subsectionintoc {6}{3}{Error When Performing Operations}{34}{1}{6}
+\beamer@subsectionintoc {6}{4}{Error in Calling an Object}{35}{1}{6}
+\beamer@subsectionintoc {6}{5}{Silent Errors}{36}{1}{6}
+\beamer@sectionintoc {7}{Where to go from here?}{37}{1}{7}
+\beamer@sectionintoc {8}{Getting R Help}{44}{1}{8}
+\beamer@sectionintoc {9}{Online Resources for R}{47}{1}{9}
+\beamer@sectionintoc {10}{References}{50}{1}{10}
