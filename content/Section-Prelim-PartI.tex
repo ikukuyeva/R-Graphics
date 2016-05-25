@@ -398,15 +398,67 @@ z[ z > 3 ]
 			\end{verbatim}						
 	\end{itemize}
 
+\newpage
+	\begin{alertblock}{Let's Develop It:}
+		Create a vector with 4 values and find the 2nd entry of the list.
+	\end{alertblock}	
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\section{R Environment}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%% --------------------------
+\subsection{Navigation}
+%%% --------------------------
+\begin{frame}
+	% cd
+\end{frame}
+
+%%% --------------------------
+\subsection{History}
+%%% --------------------------
+\begin{frame}
+	% view and save history
+\end{frame}
+
+%%% --------------------------
+\subsection{Saving Workspace}
+%%% --------------------------
+\begin{frame}
+	% save.image
+\end{frame}
+
+%%% --------------------------
+\subsection{Adding Functionality to Base R}
+%%% --------------------------
+
+\begin{frame}[fragile]
+	\frametitle{Adding Functionality to Base R}
+
+	\begin{itemize}
+		\item Base R is what you download off CRAN \url{www.cran.r-project.org} 
+		\item Available packages are listed here: \url{https://cran.r-project.org/web/packages/}
+		\item Install an R package(s) via \ttfamily install.packages(): \normalfont 
+   	\begin{lstlisting}[ basicstyle=\small]
+install.packages("lattice")
+install.packages("ggplot2")
+# OR
+install.packages( c("lattice", "ggplot2") )
+
+	\end{lstlisting}
+	\end{itemize} 	
 \end{frame}
 
 
-\section{Working with Data}
-
-\subsection{Reading Data from File}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% --------------------------------------------------- Slide --
+\section{Working with Data}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%%% --------------------------
+\subsection{Reading Data from File}
+%%% --------------------------
+
 \begin{frame}[fragile, allowframebreaks]
  \frametitle{Reading Data from File}
 
@@ -605,27 +657,3 @@ summary(df)
 \end{frame}
 
 
-%%% --------------------------
-\section{Adding Functionality to Base R}
-%%% --------------------------
-
-\begin{frame}[fragile]
-	\frametitle{Adding Functionality to Base R}
-
-	\begin{itemize}
-		\item Base R is what you download off CRAN \url{www.cran.r-project.org} 
-		\item Available packages are listed here: \url{https://cran.r-project.org/web/packages/}
-		\item Install an R package(s) via \ttfamily install.packages(): \normalfont 
-   	\begin{lstlisting}[ basicstyle=\small]
-install.packages("lattice")
-install.packages("ggplot2")
-# OR
-install.packages( c("lattice", "ggplot2") )
-
-	\end{lstlisting}
-	\end{itemize} 	
-\end{frame}
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
